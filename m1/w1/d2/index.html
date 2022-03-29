@@ -6,9 +6,159 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 
 <body>
+
+    <!-- form -->
+
+    <h3>FORM</h3>
+    <!-- con get sporchiamo l'indirizzo e abbiamo un numero di caratteri limitati. Si può scegliere la moalità post e si possono inviare tantissimi dati e non viene sporcato l'indirizzo -->
+    <form method="get" action="backend.php">
+        <!-- Il tag input deve stare sempre dentro al tag form -->
+        <input name="nome" type="text" placeholder="Nome e cognome">
+        <input name="email" type="email" placeholder="La tua email">
+        <textarea name="messaggio" id="" cols="30" rows="10"></textarea>
+        <input type="submit" value="Salva">
+    </form>
+
+    <!-- Tabelle -->
+    <h3>Tabelle</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Anno</th>
+                <th>% di utilizzo</th>
+                <th>Supporto browser</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2000</td>
+                <td>20%</td>
+                <td>17%</td>
+            </tr>
+            <tr>
+                <td>2002</td>
+                <td>35%</td>
+                <td>22%</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <table cellpadding="8" cellspacing="4">
+        <!-- Dopo il table va sempre il caption -->
+        <caption>Titolo tabella</caption>
+        <thead>
+            <tr>
+                <th>Colonna 1</th>
+                <th>Colonna 2</th>
+                <th>Colonna 3</th>
+                <th>Colonna 4</th>
+            </tr>
+        <tbody>
+            <tr>
+                <td>body</td>
+                <td>body</td>
+                <td>body</td>
+                <td>body</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td>body</td>
+                <td>body</td>
+                <td>body</td>
+                <td>body</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td>body</td>
+                <td>body</td>
+                <td>body</td>
+                <td>body</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td>body</td>
+                <td>body</td>
+                <td>body</td>
+                <td>body</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>foot</td>
+                <td>foot</td>
+                <td>foot</td>
+                <td>foot</td>
+            </tr>
+        </tfoot>
+        </thead>
+    </table>
+
+    <form action="" autocomplete="on">
+        <input type="text" name="email" autocomplete="on">
+        <input type="number" min="3" max="5" step=".1" required>
+        <input type="date">
+        <input type="password">
+        <input type="checkbox" required>Testo
+        <input type="radio" name="opzioni">Opzione 1
+        <input type="radio" name="opzioni">Opzione 2
+        <input type="radio" name="opzioni">Opzione 3
+        <input type="reset">
+        <select name="tendina" id="">
+            <option value="" disabled selected>Selezionare variante</option>
+            <option value="v1">Variante 1</option>
+            <option value="v2">Variante 2</option>
+            <option value="v3">Variante 3</option>
+        </select>
+        <button type="submit">Invia</button>
+    </form>
+
+    <!-- <audio src="canzone1.mp3">
+        <source type="audio/mpeg">
+    </audio>
+
+    <video src="video1.mp4">
+        <source type="video/mp4">
+    </video> -->
+
+    <div>
+        <h1>Titolo</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur sunt rem est nihil? Quibusdam nam ut
+            sapiente numquam amet recusandae dolor doloremque libero, blanditiis deleniti? Magnam, harum! Illo, facilis
+            culpa!</p>
+    </div>
+
+    <h3>IFRAME</h3>
+    <iframe src="https://epicode.com" width="500" height="500"></iframe>
+
+    <!-- <header>
+        <nav></nav>
+    </header>
+
+    <main>
+        <section>Sezione 1</section>
+        <section>Sezione 2</section>
+        <section>Sezione 3</section>
+        <section>Sezione 4</section>
+    </main>
+
+    <footer>
+
+    </footer> -->
 
 </body>
 
