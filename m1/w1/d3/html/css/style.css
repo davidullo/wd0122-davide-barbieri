@@ -1,0 +1,48 @@
+/* questo è un commento css */
+body{
+font-family: 'Open Sans', sans-serif;
+font-weight: 400;
+font-size: 18px;
+}
+
+h1{
+    font-size: 18px;
+}
+
+h2, h3, h4 {
+    font-weight: bold;
+}
+
+header {
+    background-color: red;
+}
+
+/* il colore del font si selezione solo con color */
+#numeri{
+    background-color: blue;
+    color: white;
+    text-align: center;
+}
+
+/* mettendo gli spazi si può lavorare con i "figli", come nell esempio sotto, in cui lavoriamo con tutti gli h3, dentro tutti i div che stanno dentro "numeri" */
+#numeri div h3{
+    background-color: red;
+}
+/* il punto davanti sta per indicare di cercare una classe */
+.articolo{
+    width: 200px;
+}
+
+/* max-width è utile per non fare uscire l'immagine oltre il limite, in questo caso il 100% */
+/* .articolo img{
+    max-width: 100%;
+} */
+
+.articolo.articolo-test{
+    background-color:#ccc;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}

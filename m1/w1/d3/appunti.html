@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Ordina una pizza! 🍕</h1>
+
+    <!-- Su ogni campo di un form andrebbe sempre messo l'attributo "name" perchè sarà il dato che verrà inviato. Es. per l'email il name sarà "email" -->
+
+    <form method="get" action="pagina-di-destinazione.php">
+
+        <h3>Scegli il gusto</h3>
+        <select name="gusto" required>
+            <option>Seleziona una pizza</option>
+            <option value="margherita">Margherita</option>
+            <option value="diavola">Diavola</option>
+            <option value="capricciosa">Capricciosa</option>
+        </select>
+
+        <!-- due campi con lo stesso "id" non possono esistere. Inotlre si scrive senza spazi (e si consiglia anche in minuscolo e senza accenti) -->
+
+        <h3>Scegli il tipo di pasta</h3>
+
+        <!-- ci deve essere sempre il value, altrimenti il backend non sa quale informazione è stata inviata -->
+
+        <label for="tipo-sottile">Sottile:</label>
+        <input id="tipo-sottile" type="radio" name="tipo" value="sottile" checked>
+
+        <label for="tipo-napoletana">Napoletana:</label>
+        <input id="tipo-napoletana" type="radio" name="tipo" value="napoletana">
+
+        <h3>Aggiungi ingredienti</h3>
+        <label for="con-bufala">Bufala</label>
+        <input id="con-bufala" type="checkbox" name="con-bufala" value="con-bufala">
+        <label for="con-prosciutto">Prosciutto</label>
+        <input id="con-prosciutto" type="checkbox" name="con-prosciutto" value="con-prosciutto">
+
+        <hr>
+
+        <h3>Dati spedizione</h3>
+        <label for="nome">Nome</label>
+        <input id="nome" type="text" placeholder="Scrivi il tuo nome" name="nome">
+        <button>Ordina</button>
+        <!-- <input type="submit" value="Ordina"> -->
+
+    </form>
+
+
+</body>
+
+</html>
