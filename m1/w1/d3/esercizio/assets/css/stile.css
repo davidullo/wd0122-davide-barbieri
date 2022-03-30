@@ -1,0 +1,154 @@
+/* IMPOSTAZIONI GENERALI */
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+div {
+    padding: 20px;
+}
+
+/* HEADER */
+
+header {
+    background-color: #2BA0C6;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    color: white;
+}
+
+address {
+    margin-top: 1.6em;
+    margin-bottom: 1.6em;
+}
+
+/* MAIN */
+
+span {
+    background-color: white;
+    color: #2BA0C6;
+}
+
+blockquote {
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #E3E3E3;
+    font-style: italic;
+}
+
+b {
+    font-weight: bold;
+}
+
+#hr-header {
+    border: 3px solid #217c9a;
+    margin-top: 0px;
+    width: 100%;
+    height: auto;
+}
+
+hr {
+    border-top: 1px dashed gray;
+}
+
+main h2 {
+    color: #217c9a;
+    font-size: 1.5em;
+    font-weight: 550;
+}
+
+/* ELEMENTI NEL MAIN */
+
+h1, h2, footer, figcaption {
+    text-align: center;
+    margin-right: 1.2em;
+    margin-left: 1.2em;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+    line-height: 2em;
+}
+
+h3 {
+    font-size: 1.6em;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+
+p {
+    font-size: 1.2em;
+    letter-spacing: -.2px;
+}
+
+a {
+    color: salmon;
+}
+
+mark {
+    background-color: #217c9a;
+    color: white;
+}
+
+strong {
+    color: #217c9a;
+}
+
+#foto-postazione {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid white;
+    outline: 1px solid gray;
+    margin-bottom: 1.2em;
+    margin-top: 1.2em;
+}
+
+li {
+    margin-left:3em;
+
+}
+
+.competenze {
+    font-size: 1.2em;
+}
+
+dd {
+    margin-left: 20px;
+}
+
+p, dd, dt, li {
+    line-height: 1.8em;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #404040;
+    color: white;
+    margin: 0 auto;
+    margin-top: 1.5em;
+    border-top: 6px solid #2BA0C6;
+    padding-left: 1.4em;
+    padding-right: 1.4em;
+}
+
+kbd {
+    color: yellow;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.privacy {
+    font-size: 1em;
+    color: #ccc;
+    margin-top: 1.4em;
+    margin-bottom: 1.4em;
+}
