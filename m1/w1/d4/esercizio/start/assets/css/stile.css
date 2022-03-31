@@ -75,7 +75,7 @@ header a:visited {
 
 header p {
     margin-top: 20px;
-    width: max-content;
+    text-align: center;
 }
 
 /* MAIN */
