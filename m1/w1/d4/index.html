@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Mettere sempre il reset CSS (oppure un normalize per mantenere un minimo di stile) altrimenti il browser metterà degli stili propri che incasineranno tutto -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<!-- div.class#id è una scorciatoia per creare, in questo caso un div con una classe chiamata class e un id chiamato id-->
+<!-- Con un plugin di vs che si chiama Emmet ci sono altre scorciatoie -->
+
+<body>
+    <!-- non conviene stilizzare all'interno della pagina html, tranne in casi particolarissimi (tipo nell'html di un email, usando anche codice deprecato) -->
+    <!-- il selettore css si riferisce alla classe, non all'id -->
+
+    <!-- <style>
+        selettore {
+            proprietà/regole: valore;
+            proprietà/regole: valore;
+            proprietà/regole: valore;
+            proprietà/regole: valore;
+            proprietà/regole: valore;
+        }
+    </style> -->
+    <header id="header">
+        <a href="index.html">
+            <img src="img/HTML5_logo_black.svg.png" alt="logo" width="100">
+        </a>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chi-siamo.html">Chi siamo</a></li>
+                <li><a href="#">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="main">
+            <h1>Scriviamo il (tuo) futuro.
+                Una riga di codice
+                dopo l’altra.</h1>
+            <h2>Qui è dove persone brillanti e ambiziose diventano
+                Software Developer o Data Scientist e lanciano la propria
+                carriera nelle migliori aziende in Italia ed Europa.</h2>
+            <a href="#" id="candidati">VOGLIO CANDIDARMI</a>
+        </section>
+        <section id="numeri">
+            <div>
+                <h3>500+</h3>
+                <p>Aziende partner
+                </p>
+            </div>
+            <div>
+                <h3>20+</h3>
+                <p>Nazioni di provenienza
+                    dei nostri studenti</p>
+            </div>
+            <div>
+                <img src="img/5_stars.svg" alt="stelle" width="200">
+            </div>
+            <div>
+                <h3>60</h3>
+                <p>Corsi attivati</p>
+            </div>
+            <div>
+                <h3>1000+</h3>
+                <p>Talenti formati in due anni</p>
+            </div>
+        </section>
+    </main>
+    <!-- sidebar -->
+    <aside>
+        <h3>Ultimi articoli</h3>
+        <!-- raggruppiamo gli articoli in un div perché potremmo voler dare loro lo stesso identico stile -->
+        <div>
+            <!-- article si ua per qualcosa di condivisibile, tipo un articolo di blog -->
+
+            <!-- una classe può essere data a più elementi, ed ogni elemento può avere più classi (divise fra loro da uno spazio) -->
+            <article class="articolo articolo-test">
+                <img src="https://picsum.photos/seed/picsum/200/300" alt="">
+                <h4>Titolo articolo</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia odio recusandae explicabo. Ducimus
+                    voluptates expedita veritatis repellat delectus enim aliquam veniam quibusdam, laboriosam porro sit
+                    vitae excepturi ipsam modi eligendi?</p>
+            </article>
+            <article class="articolo">
+                <img src="https://picsum.photos/seed/picsum/200/300" alt="">
+                <h4>Titolo articolo</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia odio recusandae explicabo. Ducimus
+                    voluptates expedita veritatis repellat delectus enim aliquam veniam quibusdam, laboriosam porro sit
+                    vitae excepturi ipsam modi eligendi?</p>
+            </article>
+            <article class="articolo">
+                <img src="https://picsum.photos/seed/picsum/200/300" alt="">
+                <h4>Titolo articolo</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia odio recusandae explicabo. Ducimus
+                    voluptates expedita veritatis repellat delectus enim aliquam veniam quibusdam, laboriosam porro sit
+                    vitae excepturi ipsam modi eligendi?</p>
+            </article>
+        </div>
+    </aside>
+    <footer></footer>
+</body>
+
+</html>

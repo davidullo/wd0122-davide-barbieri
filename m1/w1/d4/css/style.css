@@ -1,0 +1,99 @@
+/* general styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+
+/* si usa ../ per navigarenella cartella in alto */
+/* main {
+    background-image: url(../img);
+    background-attachment: fixed;
+} */
+
+a {
+    color: red;
+    text-decoration: none;
+}
+
+/* mai dare un'altezza fissa al body */
+
+/* a:hover significa "quando passi il mouse sopra ad a" */
+a:hover {
+    color: blue;
+}
+
+/* header */
+#header {
+    background-color: blue;
+    height: 150px;
+}
+
+/* per spostare conviene usare sempre il margin */
+
+#main {
+    width: fit-content;
+    padding: 50px;
+    background-color: yellow;
+    border: 10px solid black;
+    margin: 30px;
+    border-radius: 10px;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+    box-shadow: 20px 20px black;
+    transform: rotate(10deg);
+}
+
+#main:hover {
+    border: 10px solid red;
+}
+
+/* oppure con foto */
+
+/* #main {
+    padding: 50px;
+    background-image: url(https://picsum.photos/800/400);
+    background-position: center;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    opacity: 0.5;
+} */
+
+/* alcuni attributi come "height" non funzionano agli elementi inline (come "li") */
+/* con "inline-block" gli elementi vengono messi inline ma assumono anche la forma di blocco */
+#main-nav li {
+    display: inline-block;
+    background-color: white;
+    margin-left: -4px;
+    padding: 5px 0;
+    width: calc(100% / 3);
+}
+
+#header a:hover {
+    color: blue;
+}
+
+/* #header li:hover {
+    color: blue;
+} */
+
+#main h1,
+h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.95em;
+}
+
+#main a {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2em;
+}
+
+#candidati {
+    display: inline-block;
+    padding-top: 20px;
+}
+
+/* l'unità di misura vh e vw si misura in centesimi, quindi 100 vw rappresenta la massina larghezza della pagina */
