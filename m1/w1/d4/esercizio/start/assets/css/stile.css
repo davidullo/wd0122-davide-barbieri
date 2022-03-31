@@ -35,6 +35,10 @@ td {
     line-height: 24px;
 }
 
+li {
+    margin-left: 20px;
+}
+
 p {
     padding-bottom: 10px;
 }
@@ -81,6 +85,8 @@ header a:visited {
     list-style-type: none;
     text-align: center;
 }
+
+/* li dell header: per mettere le frecce prima del li basta fare "header li::before" oppure ::after e cercare il carattere unicode per css della freccia */
 
 header p {
     margin-top: 20px;
