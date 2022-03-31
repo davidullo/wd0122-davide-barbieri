@@ -39,20 +39,43 @@ p {
     padding-bottom: 10px;
 }
 
+strong {
+    color: purple;
+    font-weight: 500;
+}
+
+code {
+    background-color: lightgray;
+    border-radius: 6px;
+    border: 1px solid rgb(140, 140, 140);
+    padding: 2px;
+}
+
 /* HEADER */
 
 header {
     background-image: linear-gradient(rgb(60, 157, 187), rgb(36, 117, 152));
     padding: 50px;
     margin: 20px;
+    box-shadow: 0px 2px 4px #404040;
 }
 
 header p,
 header li,
 header a:link,
-header a:active {
+header a:active,
+header a:visited {
     color: white;
     text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center;
+}
+
+header p {
+    margin-top: 20px;
+    width: max-content;
 }
 
 /* MAIN */
@@ -70,7 +93,41 @@ article h1 {
     font-size: 2rem;
 }
 
+iframe {
+    border-radius: 25px;
+    height: 150px;
+}
+
+.autore-data {
+    color: gray;
+    font-weight: 400;
+    margin: 15px 0px 15px 0px;
+}
+
 /* TABELLE */
+
+table caption {
+    font-style: italic;
+    margin-bottom: 2px;
+}
+
+table th {
+    background-color: royalblue;
+    padding: 15px;
+    color: white;
+    font-weight: 500;
+    border: 1px solid white;
+}
+
+table td {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+}
+
+table {
+    margin: 20px 0px 20px 0px;
+}
 
 /* FORM */
 
@@ -116,7 +173,7 @@ aside div a {
 }
 
 .date {
-    margin: 30px 0px 20px 150px;
+    margin: 30px 0px 15px 150px;
 }
 
 .category {
