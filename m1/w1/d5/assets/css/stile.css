@@ -9,6 +9,15 @@ h6 {
     font-weight: bold;
 } */
 
+body {
+    background-color: #393d41;
+}
+
+.content,
+aside {
+    background-color: white;
+}
+
 h1,
 h2,
 h3 {
@@ -144,7 +153,7 @@ aside {
 }
 
 .article {
-    border: 1px solid rgb(209, 209, 209);
+    border: 1px solid #dee1e3;
     margin: 30px 10%;
     border-radius: 5px;
     max-width: 640px;
