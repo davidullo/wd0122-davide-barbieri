@@ -102,6 +102,11 @@ button {
     font-size: 1.05rem;
 }
 
+button a {
+    color: white;
+    text-decoration: none;
+}
+
 .intro {
     height: 350px;
     background-image: url("../images/banner.jpg");
