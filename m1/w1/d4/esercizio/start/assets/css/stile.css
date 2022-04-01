@@ -140,8 +140,15 @@ table td {
     padding: 10px;
 }
 
-table {
+table td table {
     margin: 20px 0px 20px 0px;
+}
+
+/* :nth-of-type(odd)
+   :nth-of-type(even) */
+
+table tr:nth-of-type(odd) {
+    background-color: rgb(229, 229, 229);
 }
 
 /* FORM */
