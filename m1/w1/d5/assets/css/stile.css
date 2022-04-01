@@ -1,0 +1,196 @@
+/* IMPOSTAZIONI GENERALI */
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+} */
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1;
+}
+
+h1 {
+    font-size: 2rem;
+    display: inline-block;
+    padding: 20px 0px 20px 0px;
+    color: #25a2c3;
+    padding: 20px;
+}
+
+h2,
+h3 {
+    font-size: 1.3rem;
+    color: #25a2c3;
+    letter-spacing: 0.025rem;
+    display: inline-block;
+    padding: 30px 0px 15px 0px;
+}
+
+/* h3 {
+    font-size: 1.3rem;
+    color: #25a2c3;
+    display: inline-block;
+    padding: 30px 0px 15px 0px;
+} */
+
+h4,
+h5 {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1;
+    display: block;
+    margin: 10px;
+}
+
+h4 {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.8;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+main,
+footer {
+    text-align: center;
+}
+
+/* HEADER */
+
+header .logo {
+    text-align: center;
+    background-color: black;
+    padding: 40px;
+}
+
+header .logo img {
+    width: 150px;
+}
+
+/* MAIN */
+
+button {
+    text-decoration: none;
+    color: white;
+    background-color: #f04c2f;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 5px;
+    margin-top: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem;
+}
+
+.intro {
+    height: 350px;
+    background-image: url("../images/banner.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 25px 40px;
+}
+
+/* .round-pic {
+    border-radius: 100%;
+    overflow: hidden;
+} */
+
+.round-pic-alt {
+    background-image: url("../images/notebook.jpg");
+    background-size: contain;
+    border-radius: 100%;
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 40px auto;
+}
+
+.content {
+    padding: 50px;
+}
+
+.quotation {
+    background-color: #e22d0e;
+    color: white;
+    padding: 50px 0px 50px 0px;
+}
+
+.quotation h1 {
+    color: white;
+}
+
+.quotation p {
+    font-style: italic;
+    margin: 25px;
+}
+
+/* ELEMENTI NELL' ASIDE */
+
+aside {
+    padding: 50px 0;
+}
+
+.article {
+    border: 1px solid rgb(209, 209, 209);
+    margin: 30px 10%;
+    border-radius: 5px;
+    max-width: 640px;
+    display: inline-block;
+}
+
+.cover img {
+    max-width: 100%;
+}
+
+.article .text h3 {
+    padding: 25px 25px 10px 25px;
+}
+
+.article .text p {
+    display: inline-block;
+    padding: 0px 25px 25px 25px;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #25a2c3;
+    padding: 30px 0 60px 0;
+}
+
+footer h1 {
+    color: white;
+}
+
+.copy {
+    border-top: 1px solid white;
+    padding: 30px 0;
+    margin: 0 25%;
+    color: white;
+}
+
+.copy p {
+    font-size: 1rem;
+}
+
+address {
+    margin-bottom: 30px;
+}
+
+footer a,
+footer p {
+    color: white;
+}
