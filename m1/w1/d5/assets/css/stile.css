@@ -172,7 +172,8 @@ aside {
 
 .cover img {
     max-width: 100%;
-    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .article .text h3 {
