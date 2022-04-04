@@ -1,0 +1,35 @@
+/* per mostrarli in linea si usa inline-block, non inline, altrimenti non avrebbero dimensioni e nn si potrebbe mettere height width etc.
+Gli elementi inline-block hanno sempre un piccolo spazio fra di loro, perché vengono in genere interpretati come se fossero delle lettere, che appunto hanno un minimo di spaziatura fra loro. */
+
+/* in un sito vero e proprio non usare i tag, mettere gli id (o le classi) */
+header,
+footer {
+    height: 50px;
+    background-color: gray;
+}
+
+main {
+    margin: 50px 0;
+}
+
+.blocco {
+    width: calc(100% / 3 - 2px);
+    height: 300px;
+    background-color: red;
+    display: inline-block;
+    margin-left: -4px;
+    margin-bottom: -3px;
+    border: 1px solid black;
+}
+
+/* la differenza tra vw e % sta nel fatto che vw si riferisce alla dimensione della fintestra, mentre le % si riferiscono alla dimensione del parent */
+.blog {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+/* 1rem in dovrebbe essere 16px. Conviene spesso usare i rem piuttosto che gli em, ma non è detto. Conviene usarli più per i testi, non per i box */
+
+/* Conviene mettere gli stili per il responsive su un altro foglio rispetto a quello principale */
+
+/* L'approccio mobile-first prevede che il css principale contenga gli stili per mobile, mentre il responsive.css servirà ad adattare lo stile mobile su schermi più grandi (utilizzando min-width anziche max-width) */

@@ -1,0 +1,38 @@
+/* Con "media" stiamo creando un breakpoint, cioè che alla dimensione della finestra accade qualcosa */
+
+/* @media (max-width:1200px) significa che per tutti i dispositivi sotto i 1200px blog non sara più 1170px ma 1024. */
+
+/* 1220, 1024, 768 sono i breakpoint più utilizzati, poi c'è anche 480 */
+
+@media (max-width:1200px) {
+    .blog {
+        width: 1024px;
+        margin: 0 auto;
+    }
+}
+
+/* man mano che si scende, i cambiamenti più in basso sovrascrivono quelli più in alto */
+
+@media (max-width: 1024px) {
+    .blog {
+        width: 768px;
+    }
+
+    .blocco {
+        width: calc(100% / 2 - 2px);
+    }
+}
+
+@media (max-width: 768px) {
+    .blog {
+        width: 100%;
+    }
+
+    .blocco {
+        width: calc(100% - 2px);
+    }
+}
+
+/* L'approccio mobile-first prevede che il css principale contenga gli stili per mobile, mentre il responsive.css servirà ad adattare lo stile mobile su schermi più grandi (utilizzando min-width anziche max-width) */
+
+/* Si possono concatenare più dimensioni usando "and" es. @media (max-width: 768px) and @media (max-width: 1024px) */
