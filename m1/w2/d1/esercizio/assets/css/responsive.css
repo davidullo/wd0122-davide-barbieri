@@ -59,4 +59,16 @@
     .container-table {
         overflow-x: auto;
     }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    #user_email {
+        width: 100%;
+    }
+
+    #iscriviti {
+        margin: 10px auto;
+    }
 }
