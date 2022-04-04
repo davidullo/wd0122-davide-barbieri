@@ -33,3 +33,7 @@ main {
 /* Conviene mettere gli stili per il responsive su un altro foglio rispetto a quello principale */
 
 /* L'approccio mobile-first prevede che il css principale contenga gli stili per mobile, mentre il responsive.css servirà ad adattare lo stile mobile su schermi più grandi (utilizzando min-width anziche max-width) */
+
+/* tenere conto dello stile display:none per le tabelle */
+
+/* ctrl + p per vedere l'anteprima di stampa */

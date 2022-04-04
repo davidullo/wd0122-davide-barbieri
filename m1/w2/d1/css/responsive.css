@@ -4,7 +4,7 @@
 
 /* 1220, 1024, 768 sono i breakpoint più utilizzati, poi c'è anche 480 */
 
-@media (max-width:1200px) {
+@media (max-width: 1200px) {
     .blog {
         width: 1024px;
         margin: 0 auto;
