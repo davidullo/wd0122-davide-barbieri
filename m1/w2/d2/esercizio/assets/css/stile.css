@@ -199,7 +199,7 @@ button {
 
 .social {
     position: fixed;
-    right: 10px;
+    right: -10px;
     bottom: 160px;
     font-size: 4rem;
     line-height: 0;
@@ -215,7 +215,7 @@ button {
 
 .calendar {
     position: fixed;
-    right: 10px;
+    right: -10px;
     bottom: 100px;
     font-size: 4rem;
     line-height: 0;
@@ -231,7 +231,7 @@ button {
 
 .top {
     position: fixed;
-    right: 10px;
+    right: -10px;
     bottom: 10px;
     font-size: 4rem;
     line-height: 0;
