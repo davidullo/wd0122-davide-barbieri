@@ -1,6 +1,22 @@
 @media print {
-    iframe {
+
+    iframe,
+    header,
+    footer,
+    aside,
+    #news {
         display: none;
+    }
+
+    main {
+        margin: 0;
+        padding: 0;
+    }
+
+    table th {
+        background-color: white;
+        color: black;
+        font-weight: bold;
     }
 }
 
