@@ -1,0 +1,94 @@
+section {
+    width: 300px;
+    margin: 50 auto;
+    position: relative;
+}
+
+.absolute {
+    background-color: red;
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+}
+
+#edit {
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 100%;
+    color: white;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    box-shadow: 0px 5px 5px gray;
+    border: 4px solid rgb(255, 0, 0);
+}
+
+#edit p {
+    display: inline-block;
+    padding-top: 18px;
+    padding-left: 15px;
+}
+
+/* sticky */
+
+.list {
+    height: 40px;
+    background-color: #ccc;
+    border: 1px solid #808080;
+}
+
+/* lo spazio significa "il figlio di", senza spazio significa che deve avere entrambe le classi */
+.list.sticky-list {
+    position: sticky;
+    top: 0;
+}
+
+.spazio {
+    height: 200vh;
+}
+
+.blocco-colorato {
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+    position: absolute;
+    z-index: 6;
+}
+
+.blocco-colorato:nth-of-type(2) {
+    top: 50px;
+    left: 50px;
+    background-color: yellow;
+    z-index: 5;
+}
+
+.blocco-colorato:nth-of-type(3) {
+    top: 100px;
+    left: 100px;
+    background-color: green;
+    z-index: 4;
+}
+
+.blocco-colorato:nth-of-type(4) {
+    top: 150px;
+    left: 150px;
+    background-color: blue;
+    z-index: 3;
+}
+
+.blocco-colorato:nth-of-type(5) {
+    top: 200px;
+    left: 200px;
+    background-color: orange;
+    z-index: 2;
+}
+
+.blocco-colorato:nth-of-type(6) {
+    top: 250px;
+    left: 250px;
+    background-color: purple;
+    z-index: 1;
+}
