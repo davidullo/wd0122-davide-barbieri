@@ -1,0 +1,117 @@
+h3 {
+    color: white;
+    background-color: rgb(178, 0, 0);
+}
+
+/* flex si utilizza sul GENITORE degli elementi che devono formare la griglia!!! */
+.container {
+    display: flex;
+    background-color: royalblue;
+}
+
+
+.blocco {
+    background-color: yellow;
+    border: 1px solid brown;
+    font-size: 4rem;
+    height: 200px;
+    width: 200px;
+}
+
+#n2 {
+    flex-direction: row-reverse;
+}
+
+#n3 {
+    flex-direction: column;
+    height: 500px;
+}
+
+/* di base hanno tutti no-wrap */
+#n4 {
+    flex-direction: column;
+    height: 500px;
+    flex-wrap: wrap;
+}
+
+#n5 {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/*
+justify: orizzontale
+align: verticale
+*/
+
+#n6 {
+    justify-content: flex-end;
+}
+
+#n7 {
+    justify-content: space-between;
+}
+
+#n8 {
+    justify-content: space-evenly;
+}
+
+#n9 {
+    align-items: flex-start;
+}
+
+#n9 .blocco:nth-of-type(1) {
+    height: 100px;
+}
+
+#n9b {
+    align-items: flex-end;
+}
+
+#n9b .blocco:nth-of-type(1) {
+    height: 100px;
+}
+
+#n10 {
+    align-items: baseline;
+    height: 200px;
+}
+
+#n10 .blocco {
+    height: auto;
+}
+
+#n10b {
+    align-items: stretch;
+    height: 400px;
+}
+
+#n10b .blocco {
+    height: auto;
+}
+
+#n10b .blocco:nth-of-type(1) {
+    /* con "order: 2" l'elemento selezionato con nth va avanti di 2. Usare numeri negativi per andare indietro */
+    order: 2;
+}
+
+#n11 .blocco {
+    /* con flex grow diciamo agli elementi di prendersi tutto lo spazio disponibile e dividerselo tra di loro. (in questo modo si evita di fare width: calc(100% / 3);) */
+    flex-grow: 1;
+}
+
+#n11 .blocco:nth-of-type(2) {
+    /* con flex-grow indichiamo quanto deve essere più grande rispetto agli altri, ma non in termini proporzionali */
+    flex-grow: 2;
+}
+
+
+#n11 .blocco:nth-of-type(3) {
+    /* flex-shrink dice che se si restringe la finestra, questo (il 3) si deve restringere di più */
+    flex-shrink: 20;
+}
+
+#n12 .blocco {
+    /* ogni blocco prende il 20% del genitore (possiamo usare anche vw o px). Ottimo per creare un design a colonne. Possiamo usarlo in combinazione con grow e shrink */
+    flex-basis: 20%;
+}

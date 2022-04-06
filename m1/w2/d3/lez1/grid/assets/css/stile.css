@@ -1,0 +1,69 @@
+.container {
+    /* significa che all'interno del container c'è una griglia */
+    display: grid;
+    background-color: royalblue;
+}
+
+.blocco {
+    background-color: yellow;
+    border: 1px solid brown;
+    font-size: 4rem;
+}
+
+/* andiamo a fissare una misura per ogni colonna. Si può usare come unità di misura l' "fr" cioè una frazione */
+#n1 {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 300px 70px 100px;
+}
+
+#n2 {
+    height: 500px;
+    /* repeat funziona solo nelle grid, e serve a dirgli quante volte ripetere una colonna o riga, e la dimensione di ognuna! */
+    grid-template-columns: repeat(4, 70px);
+    /* gap mette uno spazio fra le colonne e righe. Si può usare gap, column-gap e row-gap */
+    row-gap: 10px;
+    column-gap: 5px;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+/* sito */
+
+header {
+    grid-area: header;
+    background-color: yellow;
+}
+
+main {
+    grid-area: main;
+    background-color: orange;
+}
+
+aside {
+    grid-area: aside;
+    background-color: green;
+}
+
+footer {
+    grid-area: footer;
+    background-color: yellow;
+}
+
+/* lavoriamo sul body solo a scopo didattico, altrimenti useremmo un div */
+
+body {
+    display: grid;
+    grid-template-areas:
+        /* andiamo a definire le colonne nel modo seguente */
+        'header header header'
+        'main main aside'
+        'footer footer footer';
+    min-height: 100vh;
+    grid-template-rows: 70px auto 70px;
+}
+
+article {
+    background-color: gray;
+    height: 200px;
+    margin: 10px;
+}

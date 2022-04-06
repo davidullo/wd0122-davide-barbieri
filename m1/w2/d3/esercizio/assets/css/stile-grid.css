@@ -1,0 +1,54 @@
+/* header {
+    grid-area: header;
+}
+
+article {
+    grid-area: article;
+}
+
+section {
+    grid-area: section;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+
+#grid {
+    display: grid;
+    grid-template-areas:
+        'header header'
+        'article aside'
+        'article aside'
+        'article section'
+        'footer footer'
+    ;
+} */
+
+main {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+}
+
+/* articolo */
+article {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+/* correlati */
+aside {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    margin-left: 20px;
+}
+
+section {
+    margin-top: 40px;
+    position: sticky;
+    top: 25vh;
+}

@@ -1,0 +1,38 @@
+/* logo e titolo */
+@media screen and (min-width: 500px) {
+    header div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+/* affiancamento div dell'aside */
+@media screen and (min-width: 500px) and (max-width:799px) {
+    aside .correlati {
+        display: flex;
+        flex-direction: row;
+    }
+
+    aside .correlati div {
+        margin: 0 10px;
+    }
+}
+
+/* affiancamento laterale dell'intero aside */
+@media screen and (min-width: 800px) {
+    main {
+        display: flex;
+    }
+
+    article {
+        flex-grow: 0;
+        flex-shrink: 10;
+    }
+
+    aside {
+        margin: 0 0 0 20px;
+        padding: 0 0 0 30px;
+        flex-grow: 3;
+    }
+}
