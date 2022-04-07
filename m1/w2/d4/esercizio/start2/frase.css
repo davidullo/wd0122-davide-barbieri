@@ -1,0 +1,147 @@
+/*
+1 creazione del testo e formattazione di 1 parola da far ruotare
+2 inserimento delle altre 2 parole
+3 sovrapporre le 3 parole
+4 mostrare 1 parola e nascondere le altre 2
+5 animare 1 parola (fadein - fadeout con spostamento)
+6 animare le altre 2 parole
+7 ritardare progressivamente l'animazione delle altre 2 parole 
+*/
+
+body {
+    font-family: 'Bree Serif', serif;
+    line-height: 2.5rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+span i {
+    position: absolute;
+    display: inline-block;
+    margin-left: 10px;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    color: darkcyan;
+    /* animation-name: animazione; */
+}
+
+#testoAlternato {
+    position: relative;
+    display: block;
+    border: 2px solid black;
+    padding: 2rem 12rem 2rem 2rem;
+}
+
+i:nth-of-type(1) {
+    visibility: visible;
+    /* animation-delay: 0s; */
+    animation-name: animazione1;
+    /* animation-delay: 0s; */
+}
+
+i:nth-of-type(2) {
+    visibility: visible;
+    /* animation-delay: 6s; */
+    animation-name: animazione2;
+    /* animation-delay: 1.5s; */
+}
+
+i:nth-of-type(3) {
+    visibility: visible;
+    /* animation-delay: 12s; */
+    animation-name: animazione3;
+    /* animation-delay: 3s; */
+}
+
+@keyframes animazione1 {
+    0% {
+        opacity: 0%;
+        transform: translateY(-30px);
+    }
+
+    16.5% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+
+    33% {
+        opacity: 0%;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes animazione2 {
+    0% {
+        opacity: 0%;
+    }
+
+    33% {
+        opacity: 0%;
+        transform: translateY(-30px);
+    }
+
+    49.5% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+
+    66% {
+        opacity: 0%;
+        transform: translateY(30px);
+    }
+
+
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes animazione3 {
+    0% {
+        opacity: 0%;
+    }
+
+    66% {
+        opacity: 0%;
+        transform: translateY(-30px);
+    }
+
+    82.5% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+
+    99% {
+        opacity: 0%;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
+/* @keyframes delay1 {
+    animation-delay: 0s;
+}
+
+@keyframes delay2 {
+    animation-delay: 3s;
+}
+
+@keyframes delay3 {
+    animation-delay: 6s;
+} */

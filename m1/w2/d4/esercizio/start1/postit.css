@@ -1,0 +1,78 @@
+body {
+    background-color: gray;
+    font-family: 'Indie Flower', cursive;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+p {
+    display: inline-block;
+    text-align: left;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-left: 3rem;
+}
+
+.giallo {
+    background: linear-gradient(#FFF56D, #FFF56D, #a29f77);
+    transform: rotate(-5deg);
+}
+
+.verde {
+    background: linear-gradient(#99FFCD, #99FFCD, #71a88e);
+    transform: rotate(10deg);
+}
+
+.viola {
+    background: linear-gradient(#9FB4FF, #9FB4FF, #6d7bac);
+    transform: rotate(-10deg);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px;
+}
+
+.postit {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 200px;
+    justify-content: center;
+    margin: 30px;
+    box-shadow: 4px 6px 10px rgb(69, 69, 69);
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.postit:hover {
+    /* animation-duration: 0.5s; */
+    animation-fill-mode: forwards;
+    transform: rotate(0deg);
+    transform: scale(1.5);
+    box-shadow: 10px 10px 30px rgb(50, 50, 50);
+    z-index: 2;
+    cursor: pointer;
+    /* animation-name: rotate-scale; */
+}
+
+/* Come partire da rotazione iniziale? (è diversa per ogni colore di post-it). */
+
+/* @keyframes rotate-scale {
+    0% {
+        transform: rotate(0deg);
+        transform: scale(1);
+    }
+
+    100% {
+        transform: rotate(100deg);
+        transform: scale(1.2);
+    }
+} */
