@@ -157,6 +157,12 @@ nav {
     right: 0px;
 }
 
+#menu {
+    position: absolute;
+    top: 25px;
+    right: 0px;
+}
+
 #ham {
     padding-left: 30px;
 }
