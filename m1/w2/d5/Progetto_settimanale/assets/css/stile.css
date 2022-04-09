@@ -83,9 +83,9 @@ header {
 
 #info {
     animation-name: aura;
-    animation-duration: 1.4s;
+    animation-duration: 1.3s;
     animation-iteration-count: infinite;
-    animation-timing-function: ease-out;
+    animation-timing-function: ease-in;
 }
 
 @keyframes aura {
@@ -93,7 +93,11 @@ header {
         outline: 0px solid rgba(0, 0, 0, 0);
     }
 
-    50% {
+    20% {
+        outline: 0px solid rgba(0, 0, 0, 0);
+    }
+
+    60% {
         outline: 10px solid rgb(0, 0, 0, 0.6);
     }
 
@@ -101,8 +105,6 @@ header {
         outline: 10px solid rgba(0, 0, 0, 0);
     }
 }
-
-/* Commentato perché l'opacity veniva ereditata dal figlio ("hero-text"), risolto con pseudoclasse ::after */
 
 .hero {
     background-image: url("../images/banner.jpg");
@@ -120,26 +122,6 @@ header {
     overflow: auto;
 }
 
-/* #banner {
-    z-index: 0;
-    overflow: hidden;
-    width: 100%;
-} */
-
-/* .hero::after {
-    content: "";
-    background-image: url("../images/banner.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.7;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-} */
 
 .hero-text {
     display: flex;
@@ -155,58 +137,65 @@ header {
     text-align: left;
 }
 
+.menu {
+    display: none;
+}
+
 nav {
-    overflow: hidden;
-    box-shadow: 0px 3px 10px #d3d3d3;
-    background-color: white;
-    height: 70px;
-    max-height: 150px;
+    background-color: #fff;
+    height: 80px;
     position: sticky;
-    top: 0;
-    padding: 20px 20px 0px 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    top: 0px;
     z-index: 2;
+    box-shadow: 0px 3px 10px #d3d3d3;
+    position: sticky;
 }
 
-nav .img {
-    width: 130px;
+#menu {
+    position: absolute;
+    top: 25px;
+    right: 0px;
 }
 
-.bottone-menu i {
+#ham {
+    padding-left: 30px;
+}
+
+#ham i {
     font-size: 2rem;
     color: #e42424;
 }
 
-.bottone-menu {
-    transition-duration: 0.5s;
-    padding-right: 6px;
-    padding-top: 4px;
-}
-
-.dropdown {
-    display: inline-block;
-    position: relative;
-}
-
-.menu {
-    display: none;
-    /* position: absolute;
-    background-color: white;
-    min-width: 200px;
-    height: 200px;
-    z-index: 10;
-    overflow: visible; */
-}
-
-/* .dropdown:hover .menu {
+#menu #list {
+    max-height: 0;
+    transition: max-height 0.15s ease-out;
+    overflow: hidden;
+    background: #fff;
     display: block;
-    z-index: 10;
-} */
+    padding-bottom: 5px;
+    width: 100px;
+    text-align: center;
+    border-radius: 5%;
+}
 
-.dropdown:hover .bottone-menu {
-    transform: scale(1.2);
+#menu #list li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 300;
+}
+
+#list {
+    list-style-type: none;
+}
+
+#menu:hover #list {
+    max-height: 500px;
+    transition: max-height 0.25s ease-in;
+}
+
+.logo {
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 /* MAIN */
@@ -348,7 +337,6 @@ tr:nth-child(odd) {
 .foto {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     justify-content: center;
     align-content: center;
     max-width: 640px;
@@ -421,16 +409,6 @@ textarea {
     width: 200px;
     margin-top: 10px;
 }
-
-/* table {
-    margin: 30px 0;
-}
-
-th {
-    background-color: #6a8eb5;
-    color: white;
-    padding: 20px;
-} */
 
 /* FOOTER */
 
@@ -546,12 +524,18 @@ input[type=submit] {
         margin: 100px 20%;
     }
 
-    .bottone-menu {
+    #menu {
         display: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
     }
 
     .menu {
         display: block;
+        padding-top: 15px;
     }
 
     .menu li {
