@@ -315,13 +315,6 @@ tr:nth-child(odd) {
     background-color: white;
 }
 
-/* .box-motivazionale {} */
-
-/* .motivazionale {
-    display: flex;
-    flex-direction: row;
-} */
-
 .chisiamo {
     display: flex;
     flex-direction: column;
