@@ -7,11 +7,12 @@ var Pet = 'cane';*/
 var petPreferito = 'criceto';
 var PetPreferito = 'coniglio';
 
-var $pet = 'giraffa';
+var $pet = '<div class="coccodrillo">Coccodrillo 🐊</div>';
 console.log($pet);
-var _pet = 'leone';
+var _pet = '<div class="tigre">Tigre 🐅</div>';
 console.log(_pet);
-var _pet2 = '<div class="write">fenicottero 🦩</div>';
+var _pet2 = '<div class="fenicottero">fenicottero 🦩</div>';
+// cambiare la var qui sotto per far uscire gli altri animali
 document.write(_pet2);
 
 //var 12 = 'numero';
