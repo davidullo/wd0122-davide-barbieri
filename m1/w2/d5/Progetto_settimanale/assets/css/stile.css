@@ -199,6 +199,12 @@ nav {
     transition: max-height 0.25s ease-in;
 }
 
+#menu #list .pulsante {
+    color: white;
+    margin-bottom: -5px;
+    padding: 0 5px;
+}
+
 .logo {
     margin-top: 20px;
     margin-left: 20px;
