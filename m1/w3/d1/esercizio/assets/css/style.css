@@ -1,21 +1,50 @@
 body {
+    animation: mymove 5s infinite;
+    background-color: #4D96FF;
+}
+
+main {
+    margin: 0;
+    padding: 0;
     display: flex;
+    flex-direction: column;
+    height: 70%;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-    background-color: #FFF56D;
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
     color: palevioletred;
-
 }
+
+@keyframes mymove {
+    0% {
+        background-color: #FFF56D;
+    }
+
+    50% {
+        background-color: #4D96FF;
+    }
+
+    100% {
+        background-color: #FFF56D;
+    }
+}
+
+/* @keyframes rainbow {
+    0% {
+        -webkit-filter: hue-rotate(0deg);
+    }
+
+    100% {
+        -webkit-filter: hue-rotate(360deg);
+    }
+
+} */
 
 .paragrafo,
 .titolo {
     text-align: center;
-    color: #6BCB77;
+    color: black;
 }
 
 .box-intro {
@@ -23,11 +52,38 @@ body {
     border-radius: 10px;
     box-shadow: 0px 2px 40px gray;
     height: 90%;
-    width: 80%;
+    width: 70%;
     z-index: 0;
     padding: 2rem 2rem 3rem 2rem;
+    margin-top: 30%;
 }
 
 .write {
     text-align: center;
+    animation: hue 2s infinite;
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 3rem;
+}
+
+@keyframes hue {
+    0% {
+        /* -webkit-filter: hue-rotate(0deg); */
+        text-shadow: 0px 2px 4px gray;
+        transform: scale(1);
+    }
+
+    50% {
+        /* -webkit-filter: hue-rotate(360deg); */
+        text-shadow: 0px 6px 20px lightgray;
+        transform: scale(1.1);
+
+    }
+
+    100% {
+        /* -webkit-filter: hue-rotate(0deg); */
+        text-shadow: 0px 2px 4px gray;
+        transform: scale(1);
+    }
+
 }
