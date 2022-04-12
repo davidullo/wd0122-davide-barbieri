@@ -23,13 +23,14 @@ function calcAge(cY, bY) {
     return cY - bY;
 }
 
-// Parafrasi della riga sotto: "Andiamo nel documento, cerca l'elemento con id 'valore' e all'interno del suo contenitore assegna il valore dopo l'uguale."
-
 // Da notare che essendo quella sopra una funzione, che per l'appunto ha come scopo quella di essere utilizzata più volte con valori diversi, i valori della funzione vengono assegnati solo successivamente, ossia nella riga qui sotto.
+
+// Parafrasi della riga sotto: "Andiamo nel documento, cerca l'elemento con id 'valore' e all'interno del suo contenitore assegna il valore dopo l'uguale."
 
 document.getElementById("valore").innerHTML = `${user.firstName} ha ` + '<strong>' + calcAge(currentYear, user.birthYear) + '</strong>' + ' Anni';
 
 // Qui sotto abbiamo preso la proprietà "driverLicense" che è una boolean (true) e un if-else statement con un log che restituisce un risultato diverso a seconda del sul valore.
+
 if (user.driverLicense) {
     console.log('Davide ha la patente')
 } else {
