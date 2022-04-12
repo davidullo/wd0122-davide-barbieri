@@ -35,3 +35,4 @@ if (user.driverLicense) {
 } else {
     console.log('Davide non ha la patente')
 }
+
