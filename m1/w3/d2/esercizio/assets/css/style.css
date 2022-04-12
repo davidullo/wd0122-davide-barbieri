@@ -1,0 +1,29 @@
+h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+p {
+    font-size: 2rem;
+    text-align: center;
+    margin: 25px;
+}
+
+span {
+    font-style: italic;
+    font-weight: bold;
+}
+
+strong {
+    font-weight: bold;
+    color: red;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 40px;
+}
