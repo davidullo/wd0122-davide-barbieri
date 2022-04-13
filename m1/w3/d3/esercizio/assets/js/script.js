@@ -22,11 +22,12 @@ console.log('FUNZIONE DENTRO FUNZIONE: il risultato è ' + risultato);
 
 // UTILIZZARE DEGLI OPERATORI (SPECIALMENTE QUELLI DI COMPARAZIONE)
 const age = 27;
-const drink = age >= 18 ? `vino 🍷` : `acqua 💧`;
-let drink2;
-if (age >= 18) {
-    drink2 = `vino 🍷`;
-} else {
-    drink2 = `acqua 💧`
-}
-console.log(`OPERATORE DI COMPARAZIONE (cambiare età per cambiare risultato): Mi piace bere ${age >= 18 ? `vino 🍷` : `acqua 💧`}`);
+console.log('OPERATORE DI COMPARAZIONE (cambiare età per cambiare risultato):')
+const drink = age >= 18 ? `vino 🍷` : `acqua 💧`; // con arrow function e ternary operator
+console.log('- METODO 1: posso bere ' + drink);
+// if (age >= 18) {
+//     drink2 = `vino 🍷`;
+// } else {
+//     drink2 = `acqua 💧`
+// }
+console.log(`- METODO 2: mi piace bere ${age >= 18 ? `vino 🍷` : `acqua 💧`}`);
