@@ -33,7 +33,7 @@ console.log(persone[2])
 let aggiungiPersona = persone.push('Lorenzo');
 console.log(persone, persone.length);
 // PUNTO 5
-// Crea funzione dove utilizzerai valori numerici tratti da un array
+// Crea una funzione dove utilizzerai valori numerici tratti da un array
 function contaPersone() {
     console.log('Al momento il tuo array contiene ' + (persone.length) + ' persone che conosci, e la terza persona è ' + persone[2] + '.');
 }
