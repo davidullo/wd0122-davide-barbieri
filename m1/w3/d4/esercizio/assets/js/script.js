@@ -14,7 +14,6 @@ console.log(primaParola, secondaParola);
 // - I due selezionati saranno concatenati in una stringa
 let unicaStringa = primaParola + ' ' + secondaParola;
 console.log(unicaStringa);
-
 // PUNTO 2
 // - Crea un array di persone
 let persone = [
