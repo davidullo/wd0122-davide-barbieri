@@ -51,6 +51,12 @@ document.addEventListener('keyup', function (eventoRisultato) {
     }
 })
 
+// Funzione dark-mode
+function darkMode() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+}
+
 // let bottoni = document.querySelectorAll('button')
 
 // bottoni[0].addEventListener('click', sfondoRosso)
