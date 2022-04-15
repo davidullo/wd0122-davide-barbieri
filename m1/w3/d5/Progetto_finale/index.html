@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-grande">
+        <div class="container-memo">
+            <h1 id="titolo">Memo</h1>
+            <div class="memo">
+                <textarea name="memo-input"
+                    id="memo-input">Questo post-it è visibile solo in versione desktop. Puoi usarlo per prendere appunti veloci mentre stai navigando! 😃 Ricorda solo che tutto ciò che scrivi verrà cancellato una volta svuotata la cache o chiuso il browser.</textarea>
+            </div>
+        </div>
+        <div class="container">
+            <h1 id="titolo">Calcolatrice</h1>
+            <div class="grid">
+                <div class="campo"><input type="text" id="display"></div>
+                <div class="tasto" id="uno"><button onclick="aggiungiNumero(this);play()">1</button></div>
+                <div class="tasto" id="due"><button onclick="aggiungiNumero(this);play()">2</button></div>
+                <div class="tasto" id="tre"><button onclick="aggiungiNumero(this);play()">3</button></div>
+                <div class="tasto" id="quattro"><button onclick="aggiungiNumero(this);play()">4</button></div>
+                <div class="tasto" id="cinque"><button onclick="aggiungiNumero(this);play()">5</button></div>
+                <div class="tasto" id="sei"><button onclick="aggiungiNumero(this);play()">6</button></div>
+                <div class="tasto" id="sette"><button onclick="aggiungiNumero(this);play()">7</button></div>
+                <div class="tasto" id="otto"><button onclick="aggiungiNumero(this);play()">8</button></div>
+                <div class="tasto" id="nove"><button onclick="aggiungiNumero(this);play()">9</button></div>
+                <div class="tasto" id="zero"><button onclick="aggiungiNumero(this);play()">0</button></div>
+                <div class="tasto" id="piu"><button onclick="aggiungiNumero(this);play()" class="segno">+</button></div>
+                <div class="tasto" id="meno"><button onclick="aggiungiNumero(this);play()" class="segno">-</button>
+                </div>
+                <div class="tasto" id="per"><button onclick="moltiplicazione(this);play()" class="segno">x</button>
+                </div>
+                <div class="tasto" id="diviso"><button onclick="aggiungiNumero(this);play()" class="segno">/</button>
+                </div>
+                <div class="tasto" id="punto"><button onclick="aggiungiNumero(this);play()">.</button></div>
+                <div class="tasto" id="canc"><button onclick="cancella(this);play()" id="bottone-canc">C</button></div>
+                <div class="tasto tasto-uguale" id="uguale"><button onclick="risultato();play()"
+                        id="bottone-uguale">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="audio" src="assets/sound/key.wav"></audio>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

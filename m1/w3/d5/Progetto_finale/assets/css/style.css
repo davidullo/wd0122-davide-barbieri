@@ -1,0 +1,327 @@
+@font-face {
+    font-family: 'DS-DIGII.TTF';
+    src: url(../font/DS-DIGII.TTF);
+}
+
+body {
+    height: 100vh;
+    background: radial-gradient(#c18101, #fff877);
+}
+
+.container-memo {
+    display: none;
+}
+
+#titolo {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.container {
+    padding: 30px 20px 100px 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "campo campo campo campo campo"
+        "uno due tre piu uguale"
+        "quattro cinque sei meno uguale"
+        "sette otto nove per uguale"
+        "punto zero-num canc diviso uguale";
+    background-color: rgb(150, 150, 150);
+    padding: 20px;
+    border-radius: 30px;
+    border: 15px outset rgb(117, 117, 117);
+    /* outline-color: rgb(145, 145, 145);
+    outline-style: outset;
+    outline-width: 10px; */
+    box-shadow: 0 0 50px rgb(63, 63, 63);
+    height: 400px;
+    max-width: 500px;
+    animation: Scende 1.5s;
+    animation-timing-function: ease-out;
+
+}
+
+@keyframes Scende {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.campo {
+    grid-area: campo;
+    width: 100%;
+}
+
+input[type=text] {
+    width: 100%;
+    height: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    /* display: inline-block; */
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    font-size: 6rem;
+    /* font-family: 'Press Start 2P', cursive; */
+    font-family: 'DS-DIGII.TTF';
+    color: rgb(0, 0, 0);
+    text-shadow: 4px 4px 1px rgb(81, 174, 103);
+    background-color: rgb(104, 226, 133);
+    box-shadow: inset 0 0 30px rgb(65, 141, 83);
+    text-align: right;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    text-decoration: none;
+    font-size: 3rem;
+    color: black;
+    border: 4px solid lightgray;
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+}
+
+button:hover {
+    background-color: rgb(188, 188, 188);
+}
+
+button:active {
+    background-color: gray;
+    border: 4px solid black;
+    transform: scale(0.92);
+    transition-duration: 0.1s;
+}
+
+.tasto {
+    margin: 4px;
+    height: 60px;
+}
+
+.tasto-uguale {
+    height: 264px;
+}
+
+/* .tasto-uguale:hover {
+    background-color: rgb(55, 89, 190);
+} */
+
+.segno {
+    background-color: rgb(255, 162, 1);
+    color: white;
+    border-color: rgb(160, 102, 0);
+}
+
+.segno:hover {
+    background-color: rgb(178, 113, 0);
+}
+
+.segno:active {
+    background-color: rgb(120, 76, 0);
+    border-color: rgb(79, 50, 0);
+}
+
+#bottone-canc {
+    background-color: red;
+    color: white;
+    border-color: rgb(175, 0, 0);
+}
+
+#bottone-canc:hover {
+    background-color: rgb(199, 0, 0);
+}
+
+#bottone-canc:active {
+    background-color: rgb(161, 0, 0);
+    border-color: rgb(118, 0, 0);
+}
+
+#bottone-uguale {
+    background-color: royalblue;
+    color: white;
+    border-color: rgb(44, 68, 139);
+}
+
+#bottone-uguale:hover {
+    background-color: rgb(56, 91, 195);
+}
+
+#bottone-uguale:active {
+    background-color: rgb(43, 70, 153);
+    border-color: rgb(29, 48, 106);
+}
+
+#uno {
+    grid-area: uno;
+}
+
+#due {
+    grid-area: due;
+}
+
+#tre {
+    grid-area: tre;
+}
+
+#quattro {
+    grid-area: quattro;
+}
+
+#cinque {
+    grid-area: cinque;
+}
+
+#sei {
+    grid-area: sei;
+}
+
+#sette {
+    grid-area: sette;
+}
+
+#otto {
+    grid-area: otto;
+}
+
+#nove {
+    grid-area: nove;
+}
+
+#zero {
+    grid-area: zero-num;
+}
+
+#piu {
+    grid-area: piu;
+}
+
+#meno {
+    grid-area: meno;
+}
+
+#per {
+    grid-area: per;
+}
+
+#diviso {
+    grid-area: diviso;
+}
+
+#uguale {
+    grid-area: uguale;
+}
+
+#punto {
+    grid-area: punto;
+}
+
+#canc {
+    grid-area: canc;
+}
+
+@media screen and (min-width: 1279px) {
+    /* .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        height: 100vh;
+        padding: 0;
+    } */
+
+    .container {
+        order: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding: 0;
+    }
+
+    /* .grid {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    } */
+
+    .grid {
+        width: 50vw;
+    }
+
+    #titolo {
+        font-size: 4rem;
+    }
+
+    .container-grande {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .container-memo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .memo {
+        /* display: visible; */
+        position: relative;
+        flex-direction: column;
+        order: 1;
+        width: 400px;
+        height: 400px;
+        background-color: greenyellow;
+        box-shadow: 0 0 50px rgb(63, 63, 63);
+        border: 1px solid rgb(124, 184, 33);
+        animation: Scende 1.5s;
+        animation-timing-function: ease-out;
+    }
+
+    #memo-input {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        background-color: greenyellow;
+        linear-gradient() resize: none;
+        overflow: scroll;
+        border-style: none;
+        transition: transform .1s;
+        transition-timing-function: ease-out;
+        background: rgb(173, 255, 47);
+        background: -moz-linear-gradient(180deg, rgba(173, 255, 47, 1) 0%, rgba(173, 255, 47, 1) 58%, rgba(145, 214, 39, 1) 100%);
+        background: -webkit-linear-gradient(180deg, rgba(173, 255, 47, 1) 0%, rgba(173, 255, 47, 1) 58%, rgba(145, 214, 39, 1) 100%);
+        background: linear-gradient(180deg, rgba(173, 255, 47, 1) 0%, rgba(173, 255, 47, 1) 58%, rgba(145, 214, 39, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#adff2f", endColorstr="#91d627", GradientType=1);
+        resize: none;
+    }
+
+    #memo-input:hover {
+        transform: scale(1.1);
+        border: 2px solid rgb(124, 184, 33);
+    }
+}
