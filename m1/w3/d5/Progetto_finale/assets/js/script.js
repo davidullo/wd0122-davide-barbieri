@@ -31,7 +31,7 @@ function play() {
 }
 // Fine suono
 
-// Input text già selezionato al caricamento della pagina
+// Input text già selezionato al caricamento della pagina.
 window.onload = document.getElementById('display').select();
 
 // PARTE SPERIMENTALE
