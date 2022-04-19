@@ -51,6 +51,8 @@ document.addEventListener('keyup', function (eventoRisultato) {
     }
 })
 
+// test
+
 // Funzione dark-mode
 function darkMode() {
     var element = document.body;
