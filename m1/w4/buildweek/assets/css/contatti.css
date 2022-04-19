@@ -28,12 +28,29 @@
     font-size: 2.3rem;
 }
 
+#contatti {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 #contatti-in hr {
     border-width: 1px solid black;
     margin-bottom: 20px;
 }
 
 
+
+#contatti-in input {
+    width: 100%;
+}
+
+#contatti-in textarea {
+    width: 100%;
+}
+
+#contatti-in form {
+    width: 100%;
+}
 
 
 #contatti h3 {

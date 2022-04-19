@@ -54,7 +54,7 @@
 }
 
 .articles:hover>.foto-articles>img {
-    transform: rotate(12deg) scale(1.2);
+    transform: rotate(12deg) scale(1.3);
 }
 
 .foto-articles {
@@ -82,11 +82,12 @@
     padding: 40px;
     box-sizing: border-box;
     order: 2;
+    line-height: 1.2rem;
 }
 
 .testo-articles h4 {
     width: 60%;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     text-align: center;
 }
 
@@ -97,9 +98,10 @@
 
 .testo-articles p {
     width: 80%;
-    padding-top: 20px;
+    padding-top: 10px;
     font-size: 0.7rem;
     text-align: center;
+    color: gray;
 }
 
 #more-info {
