@@ -1,0 +1,127 @@
+#header {
+    /* position: absolute; */
+
+    background-image: url("../img/header.jpg");
+    background-size: cover;
+    height: 500px;
+
+}
+
+#cane {
+    display: none;
+}
+
+
+.rest {
+    font-size: 3rem;
+    color: #938463;
+}
+
+#bloccol {
+
+    background-color: white;
+    position: sticky;
+    top: 0;
+    /* width: 50%; */
+    margin: -120px 10% 0 10%;
+    opacity: 0.9;
+    padding: 0 5px 0 25px;
+    z-index: 1;
+}
+
+#nowrap.a:hover {
+    background-color: black;
+    text-decoration: underline;
+    text-decoration-color: orange;
+}
+
+#grande {
+    /* height: 100px; */
+    /* width: 50%; */
+
+    z-index: 2;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 15px;
+    flex-wrap: nowrap;
+}
+
+#grande a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+#nowrap {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#nowrap a {
+    white-space: nowrap;
+}
+
+
+@media screen and (max-width: 1200px) {}
+
+@media screen and (max-width: 992px) {}
+
+@media screen and (max-width: 768px) {
+
+    #bloccol {
+        display: none;
+    }
+
+    #cane {
+        /* position: relative; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        /* width: 50%; */
+        margin: -120px 5% 0 5%;
+        padding: 10px;
+        opacity: 0.9;
+        background-color: white;
+        text-align: right;
+        z-index: 2;
+
+        overflow: hidden;
+    }
+
+    #gatto {
+
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s;
+        margin-top: 25px;
+    }
+
+    #piccola a {
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+    }
+
+    #apri-gatto {
+        display: none;
+        /* position: absolute; */
+        bottom: 10;
+    }
+
+    input:checked+#gatto {
+        height: 100px;
+    }
+
+    #header {
+        height: 200px;
+    }
+
+    #piccola {
+        display: flex;
+        align-items: center;
+
+    }
+}

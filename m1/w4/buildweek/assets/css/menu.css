@@ -1,0 +1,100 @@
+#menu {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    padding-bottom: 250px;
+}
+
+#menu-prezzi {
+    margin-left: 90px;
+    margin-right: 90px;
+    padding-bottom: 100px;
+}
+
+#menu-prezzi button {
+    padding: 30px 80px;
+    background-color: white;
+    border-color: orangered;
+    color: orangered;
+    float: right;
+
+
+}
+
+#menu-prezzi button:hover {
+    background-color: orangered;
+    color: white;
+}
+
+#menu-titolo h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.4rem;
+
+    color: black;
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
+#menu-titolo hr {
+    width: 150px;
+    color: rgb(204, 204, 204);
+    margin-bottom: 40px;
+}
+
+
+#menu-titolo span {
+    font-size: 2.3rem;
+    color: rgb(255, 60, 0);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#menu-titolo p {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: grey;
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;
+    line-height: 1.5rem;
+    padding-bottom: 100px;
+}
+
+#menu-prezzi-titolo h2 {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    padding-bottom: 40px;
+}
+
+#menu-titolo-span {
+    color: rgb(255, 60, 0);
+}
+
+.pietanza h2 {
+    font-size: 1.3rem;
+    display: inline-block;
+    position: relative;
+}
+
+.pietanza p {
+    margin-right: 90px;
+    font-size: 0.65rem;
+    font-weight: bolder;
+    color: grey;
+    padding-top: 20px;
+    padding-bottom: 35px;
+    position: relative;
+}
+
+.pietanza span {
+    color: #938463;
+    position: sticky;
+    float: right;
+    font-size: 0.8rem;
+
+}
+
+.puntini {
+    border-bottom: 1px dotted grey;
+
+}

@@ -1,0 +1,76 @@
+body {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+hr {
+    border: 1px solid white;
+    width: 200px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+header {
+    /* position: relative; */
+    /* background-color: orange; */
+    width: 100%;
+    height: 300px;
+
+}
+
+nav {
+    /* position: absolute; */
+    bottom: 0;
+    /* background-color: lightgray; */
+    height: 100px;
+
+}
+
+#featured {
+    background-color: gray;
+    height: 300px;
+
+}
+
+#about-us {
+    background-color: lightgray;
+    height: 600px;
+}
+
+#blog {
+    background-color: rgb(190, 154, 102);
+    height: 800px;
+}
+
+#menu {
+    background-color: rgb(255, 217, 0);
+    height: 800px;
+}
+
+#newsletter {
+
+    height: 400px;
+}
+
+#contatti {
+    background-color: whitesmoke;
+    height: 900px;
+}
+
+footer {
+    background-color: rgb(113, 113, 113);
+    height: 50px;
+}
+
+/* Copiate i seguenti breakpoint e posizionateli modificandoli nel CSS in cui state lavorando. */
+
+@media screen and (max-width: 1200px) {}
+
+@media screen and (max-width: 992px) {}
+
+@media screen and (max-width: 768px) {}
