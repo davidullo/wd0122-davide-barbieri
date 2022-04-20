@@ -11,7 +11,7 @@
 
     margin-left: 40px;
     margin-right: 40px;
-    margin-top: 40px;
+    margin-top: 180px;
 }
 
 #contatti span {
@@ -19,13 +19,13 @@
 }
 
 #contatti h1 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 700;
-
+    margin-bottom: 40px;
 }
 
 #titcontatti span {
-    font-size: 2.3rem;
+    font-size: 2rem;
 }
 
 #contatti {
@@ -34,7 +34,9 @@
 }
 
 #contatti-in hr {
-    border-width: 1px solid black;
+    height: 1px;
+    border-width: 2;
+    background-color: black;
     margin-bottom: 20px;
 }
 
@@ -42,16 +44,48 @@
 
 #contatti-in input {
     width: 100%;
+    margin-bottom: 10px;
 }
 
 #contatti-in textarea {
+    text-align: left;
     width: 100%;
+    height: 90px;
 }
 
 #contatti-in form {
     width: 100%;
 }
 
+#contatti-in {
+    text-align: center;
+}
+
+#contatti-in h3 {
+    text-align: left;
+}
+
+
+
+
+
+#contatti-in button {
+    margin-top: 20px;
+    padding: 15px 120px;
+    border: 0;
+    background-color: rgb(255, 60, 0);
+    color: white;
+
+}
+
+#contatti-in button:hover {
+    cursor: pointer;
+    background-color: red;
+}
+
+#contact-info {
+    margin-bottom: 70px;
+}
 
 #contatti h3 {
     font-weight: 700;
@@ -65,9 +99,76 @@
 }
 
 
+#photo-stream img {
+    margin-right: 15px;
+}
 
-@media screen and (max-width: 1200px) {}
 
-@media screen and (max-width: 992px) {}
+@media screen and (min-width:1200px) {
+    #contatti {
+        display: flex;
+        flex-direction: column;
+    }
 
-@media screen and (max-width: 768px) {}
+    #contatti-out {
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #contact-info {}
+
+    #blog-posts {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    #stream-us {}
+}
+
+@media screen and (max-width: 1200px) {
+    #contatti {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contatti-out {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #blog-posts {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
+
+
+@media screen and (max-width: 992px) {
+    #contatti {}
+
+    #contatti-out {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #blog-posts {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    #contatti {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contatti-out {
+        display: flex;
+        flex-direction: column;
+    }
+}

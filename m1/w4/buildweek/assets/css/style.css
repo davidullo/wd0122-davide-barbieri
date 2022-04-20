@@ -4,15 +4,15 @@ body {
 
 }
 
-hr {
-    border: 1px solid white;
-    width: 200px;
-}
-
 .container {
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+
+hr {
+    border: 1px solid white;
+    width: 200px;
 }
 
 header {
@@ -58,12 +58,12 @@ nav {
 }
 
 #contatti {
-    background-color: whitesmoke;
-    height: 900px;
+
+    height: 1200px;
 }
 
 footer {
-    background-color: rgb(113, 113, 113);
+    background-color: whitesmoke;
     height: 50px;
 }
 

@@ -8,6 +8,7 @@
     background-size: cover;
     padding: 100px auto;
     position: relative;
+    margin-top: 150px;
 
 
 }
@@ -46,24 +47,87 @@
 #scritte p {
     padding-top: 30px;
     padding-bottom: 20px;
+    font-size: 15px;
 }
 
 #scritte span {
     color: orangered;
 }
 
+
 #form-button {
-    display: block;
+    display: flex;
+    justify-content: center;
+
+
 }
 
-#form-button form {
-    display: inline-block;
-    padding: 0px 20px 70px 0px;
+#form-button input {
+    margin: 0;
+    width: 40%;
+    padding-left: 10px;
+
 }
 
 #form-button button {
     padding: 20px 70px;
     background-color: #65bebc;
     border-color: #65bebc;
+    margin: 0;
+    border: solid #65bebc;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 770px) {
+    #form-piccola {
+        display: none;
+
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    #foto-newsletter {
+        margin-top: 350px;
+        margin-bottom: 850px
+    }
+
+    #separazione {
+        margin-bottom: 200px;
+    }
+
+    #scritte span {
+        font-size: 20px;
+    }
+
+    #form-button {
+        display: none;
+
+    }
+
+    #form-piccola {
+        display: grid;
+
+        margin-left: 30px;
+    }
+
+    #form-piccola input {
+        padding: 10px 20px;
+        background-color: white;
+        width: 87%;
+
+    }
+
+    #form-piccola button {
+
+        padding: 10px auto;
+        width: 140px;
+        height: 40px;
+        background-color: #70f6f4;
+        border-color: #70f6f4;
+        margin-top: 10px;
+        border: solid #70f6f4;
+        cursor: pointer;
+    }
 
 }

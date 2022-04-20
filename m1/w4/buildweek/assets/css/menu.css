@@ -1,5 +1,5 @@
 #menu {
-    font-family: 'Poppins', sans-serif;
+
     background-color: white;
     padding-bottom: 250px;
 }
@@ -12,6 +12,7 @@
 
 #menu-prezzi button {
     padding: 30px 80px;
+
     background-color: white;
     border-color: orangered;
     color: orangered;
@@ -22,6 +23,7 @@
 #menu-prezzi button:hover {
     background-color: orangered;
     color: white;
+    cursor: pointer;
 }
 
 #menu-titolo h1 {
@@ -34,10 +36,12 @@
     padding-bottom: 40px;
 }
 
-#menu-titolo hr {
+.hrhr {
     width: 150px;
-    color: rgb(154, 154, 154);
+    color: rgb(177, 173, 173);
     margin-bottom: 40px;
+    border: 0.5px solid;
+    text-align: center;
 
 }
 
@@ -63,38 +67,95 @@
 #menu-prezzi-titolo h2 {
     font-size: 1.2rem;
     font-weight: bolder;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 #menu-titolo-span {
     color: rgb(255, 60, 0);
 }
 
+.pietanza {
+
+    display: flex;
+    flex-direction: column;
+}
+
 .pietanza h2 {
     font-size: 1.3rem;
     display: inline-block;
     position: relative;
+    border-bottom: none;
+    background: white;
+    margin: 0;
+    white-space: nowrap;
 }
+
+
 
 .pietanza p {
     margin-right: 90px;
     font-size: 0.65rem;
     font-weight: bolder;
     color: grey;
-    padding-top: 20px;
+    padding-top: 30px;
     padding-bottom: 35px;
-    position: relative;
+
+
 }
+
+.item {
+    display: block;
+}
+
+
+.row {
+    display: flex;
+}
+
 
 .pietanza span {
     color: #938463;
-    position: sticky;
     float: right;
+    width: 100%;
     font-size: 0.8rem;
-
+    margin: 0;
+    border-bottom: 0.7px dotted grey;
+    text-align: right;
+    padding-bottom: 5px;
 }
 
-.puntini {
-    border-bottom: 1px dotted grey;
+#spazio-foto-button {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    #menu-prezzi {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .pietanza span {
+        border: none;
+        text-align: left;
+        margin-top: 15px;
+        font-size: 16px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .pietanza p {
+        width: 100%;
+        font-size: 11px;
+        font-weight: normal;
+
+    }
+
+    #spazio-foto-button {
+        padding-top: 400px;
+        padding-bottom: 300px;
+    }
+
 
 }
