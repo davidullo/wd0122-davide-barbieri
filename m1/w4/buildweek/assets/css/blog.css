@@ -224,7 +224,7 @@
 
     .testo-articles {
         width: 90%;
-        order: 1;
+        order: 2;
     }
 
     .foto-articles {
@@ -234,7 +234,7 @@
         width: 90%;
         height: 100%;
         overflow: hidden;
-        order: 2;
+        order: 1;
     }
 
     .foto-articles img {
@@ -243,11 +243,11 @@
     }
 
     .testo-reverse {
-        order: 1;
+        order: 2;
     }
 
     .foto-reverse {
-        order: 2;
+        order: 1;
     }
 
     .grid-bottone {

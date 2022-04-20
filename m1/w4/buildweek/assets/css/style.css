@@ -59,12 +59,12 @@ nav {
 
 #contatti {
 
-    height: 1200px;
+    height: 1050px;
 }
 
 footer {
     background-color: whitesmoke;
-    height: 50px;
+    height: 40px;
 }
 
 /* Copiate i seguenti breakpoint e posizionateli modificandoli nel CSS in cui state lavorando. */

@@ -8,10 +8,10 @@
 
 
 #contatti {
-
     margin-left: 40px;
     margin-right: 40px;
     margin-top: 180px;
+    margin-bottom: 40px;
 }
 
 #contatti span {
@@ -103,11 +103,15 @@
     margin-right: 15px;
 }
 
+#contatti-info span {
+    margin-left: 25px;
+}
 
 @media screen and (min-width:1200px) {
     #contatti {
         display: flex;
         flex-direction: column;
+
     }
 
     #contatti-out {
@@ -115,22 +119,37 @@
         flex-direction: row;
         margin-left: auto;
         margin-right: auto;
+        margin-top: 5vw;
     }
 
-    #contact-info {}
+    #contact-info {
+        margin-right: 10vw;
+    }
 
     #blog-posts {
         padding-left: 40px;
         padding-right: 40px;
     }
 
-    #stream-us {}
+    #stream-us {
+        margin-left: 10vw;
+    }
+
+    footer {
+        margin-top: 100px
+    }
+
+    #contatti-in button {
+        float: right;
+    }
 }
+
 
 @media screen and (max-width: 1200px) {
     #contatti {
         display: flex;
         flex-direction: column;
+
     }
 
     #contatti-out {
@@ -143,6 +162,16 @@
         padding-right: 20px;
     }
 
+    #contatti-in button {
+        float: right;
+    }
+
+}
+
+@media screen and (min-width:992px) {
+    #contatti {
+        height: 600px;
+    }
 }
 
 
@@ -157,6 +186,10 @@
     #blog-posts {
         padding-left: 0px;
         padding-right: 0px;
+    }
+
+    #contatti-in button {
+        float: none;
     }
 
 }
