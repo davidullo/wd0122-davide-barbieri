@@ -1,5 +1,9 @@
+/* serve per fixare il posizionamento dello slide a seguito dell' click sul bottone */
+html {
+    scroll-padding-top: 700px;
+}
+
 #featured {
-    margin: 0 5px;
     position: relative;
     background-color: #fff;
 }
@@ -28,14 +32,29 @@
 }
 
 #slider {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    overflow: hidden;
+    /* nuove modifiche */
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: row;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* fine nuove modifiche */
+
+    /* display: grid;
+    grid-template-columns: repeat(8, 1fr); 
+    overflow: hidden; */
+}
+
+#slider::-webkit-scrollbar {
+    /* WebKit */
+    width: 0;
+    height: 0;
 }
 
 #slider img {
     border-radius: 5px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     height: 170px;
 }
 
@@ -49,6 +68,17 @@
     margin: 0;
 }
 
+/* #slider::before {
+    display: block;
+    content: " ";
+    margin-top: -685px;
+    height: 685px;
+    visibility: hidden;
+    pointer-events: none;
+} */
+
+/* scroll-margin-top: 400px; */
+
 .active {
     background-color: #FF5333;
 }
@@ -57,6 +87,7 @@
     text-align: center;
     padding-bottom: 60px;
 }
+
 
 @media screen and (max-width: 479px) {
     #slider img {
@@ -77,8 +108,8 @@
 
     .dot-2,
     .dot-4,
-    .dot-6,
-    .dot-8 {
+    .dot-5,
+    .dot-6 {
         display: none;
     }
 

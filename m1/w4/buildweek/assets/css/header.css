@@ -23,7 +23,7 @@
     position: sticky;
     top: 0;
     /* width: 50%; */
-    margin: -120px 10% 0 10%;
+    margin: -110px 10% 0 10%;
     opacity: 0.9;
     padding: 0 5px 0 25px;
     z-index: 1;
@@ -62,6 +62,52 @@
     white-space: nowrap;
 }
 
+.open-sale {
+    height: auto !important;
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid #e94c3d;
+    padding-left: 15px;
+    height: 0px;
+    padding: 10px;
+    position: sticky;
+    top: 66px;
+    z-index: 50;
+    opacity: 0.9;
+    text-align: left !important;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+
+}
+
+#saliera {
+    color: #e94c3d;
+    font-size: 1.2rem;
+}
+
+.speck {
+    color: black;
+    text-decoration: none;
+    margin-top: 5px;
+
+}
+
+.speck:hover {
+    border-bottom: 2px solid #e94c3d;
+}
+
+.brie:hover {
+    border-bottom: 2px solid #e94c3d;
+}
+
+
+
+#tendina {
+    text-align: center;
+    height: 0px;
+}
 
 @media screen and (max-width: 1200px) {}
 
@@ -112,9 +158,9 @@
         bottom: 10;
     }
 
-    input:checked+#gatto {
+    /* input:checked+#gatto {
         height: 100px;
-    }
+    } */
 
     #header {
         height: 200px;

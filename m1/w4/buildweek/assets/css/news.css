@@ -8,7 +8,7 @@
     background-size: cover;
     padding: 100px auto;
     position: relative;
-    margin-top: 150px;
+    margin-top: 25vh;
 
 
 }
@@ -28,7 +28,7 @@
     text-align: center;
     color: white;
     opacity: 1;
-    padding-top: 130px;
+    padding-top: 15vh;
 
     position: relative;
 }
@@ -84,21 +84,32 @@
 
     }
 
+    #separazione {
+        margin-top: 10vh;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
-    #foto-newsletter {
-        margin-top: 350px;
-        margin-bottom: 850px
+    #newsletter {
+        margin-top: 30vh;
     }
 
+
+
     #separazione {
-        margin-bottom: 200px;
+        margin-bottom: 10vh;
     }
 
     #scritte span {
         font-size: 20px;
     }
+
+    #scritte {
+        margin-top: 0px;
+    }
+
+
 
     #form-button {
         display: none;
@@ -129,5 +140,18 @@
         border: solid #70f6f4;
         cursor: pointer;
     }
+
+    #more-info-button {
+        padding: 17px 60px;
+        background-color: #65bebc;
+        border-color: #65bebc;
+        margin: 0;
+        border: solid #65bebc;
+        cursor: pointer;
+
+
+    }
+
+
 
 }

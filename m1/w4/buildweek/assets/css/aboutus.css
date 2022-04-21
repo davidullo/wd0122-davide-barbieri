@@ -5,15 +5,15 @@
     font-weight: bold;
     margin-top: 30px;
     font-size: 12px;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 300px;
+    padding-right: 300px;
 }
 
 .about-us {
     height: 600px;
     background-color: rgb(235, 235, 235);
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     padding-left: 50px;
     padding-right: 50px;
     margin-top: 60px;
@@ -42,3 +42,14 @@
     width: 100px;
     border-top: 1px solid gray;
 }
+
+@media screen and (max-width: 1200px) {
+    .pabout {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 992px) {}
+
+@media screen and (max-width: 768px) {}

@@ -8,8 +8,12 @@
     height: 100%;
     background-image: url("../img/overlay-pattern.png"), url("../img/blog/blog-bg.jpg");
     background:
-        url("../img/overlay-pattern2.png") center repeat,
-        url("../img/blog/blog-bg.jpg") fixed no-repeat;
+        url("../img/overlay-pattern2.png") repeat fixed center,
+        url("../img/blog/blog-bg.jpg") no-repeat fixed center/cover;
+    /* background-image: url("../img/overlay-pattern.png"), url("../img/blog/blog-bg.jpg");
+    background-repeat: repeat, no-repeat;
+    background-size: cover, cover;
+    background-attachment: fixed, fixed; */
 }
 
 #div-blog {

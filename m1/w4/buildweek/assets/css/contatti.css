@@ -10,8 +10,8 @@
 #contatti {
     margin-left: 40px;
     margin-right: 40px;
-    margin-top: 180px;
-    margin-bottom: 40px;
+    margin-top: 200px;
+    margin-bottom: 50px;
 }
 
 #contatti span {
@@ -103,8 +103,12 @@
     margin-right: 15px;
 }
 
-#contatti-info span {
-    margin-left: 25px;
+#contact-info i {
+    margin-right: 20px;
+}
+
+#contatti-out p {
+    font-size: 0.7rem;
 }
 
 @media screen and (min-width:1200px) {
@@ -144,6 +148,29 @@
     }
 }
 
+#follow-us {
+    display: flex;
+    flex-direction: column;
+}
+
+#gruppo-icone {
+    display: flex;
+    flex-direction: row;
+}
+
+#ico-twitter,
+#ico-fb,
+#ico-browser,
+#ico-behance {
+    margin-right: 10px;
+    background-color: grey;
+    color: white;
+    padding: 10px;
+    border-radius: 100%;
+}
+
+
+
 
 @media screen and (max-width: 1200px) {
     #contatti {
@@ -176,7 +203,6 @@
 
 
 @media screen and (max-width: 992px) {
-    #contatti {}
 
     #contatti-out {
         display: flex;
