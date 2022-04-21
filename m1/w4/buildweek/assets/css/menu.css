@@ -1,7 +1,8 @@
 #menu {
-
+    z-index: 1;
     background-color: white;
-    padding-bottom: 250px;
+    /* padding-bottom: 250px;
+} */
 }
 
 #menu-prezzi {
@@ -12,12 +13,11 @@
 
 #menu-prezzi button {
     padding: 30px 80px;
-
     background-color: white;
-    border-color: orangered;
+    border: 1px solid orangered;
     color: orangered;
     float: right;
-
+    transition: 0.3s;
 }
 
 #menu-prezzi button:hover {
@@ -26,14 +26,22 @@
     cursor: pointer;
 }
 
+/* #menu-prezzi #more-info-button:hover {
+    background-color: orangered;
+    color: white;
+    cursor: pointer;
+} */
+
 #menu-titolo h1 {
     text-align: center;
     font-weight: 700;
     font-size: 1.7rem;
 
     color: black;
-    padding-top: 14vh;
-    padding-bottom: 8vh;
+    /* padding-top: 14vh;
+    padding-bottom: 8vh; */
+    padding-top: 100px;
+    padding-bottom: 50px;
 }
 
 .hrhr {
@@ -128,9 +136,13 @@
     display: none;
 }
 
-#separazione-due {
+/* #separazione-due {
     margin-top: 7vh;
-}
+} */
+
+/* #menu {
+    height: 720px;
+} */
 
 @media screen and (max-width: 768px) {
     #menu-prezzi {
@@ -156,10 +168,10 @@
 
     }
 
-    #spazio-foto-button {
+    /* #spazio-foto-button {
         padding-top: 20px;
         padding-bottom: 20px;
-    }
+    } */
 
     #menu-titolo p {
         margin-left: 30px;
