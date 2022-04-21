@@ -28,7 +28,7 @@
     text-align: center;
     color: white;
     opacity: 1;
-    padding-top: 15vh;
+    padding-top: 8vh;
 
     position: relative;
 }
@@ -59,13 +59,16 @@
     display: flex;
     justify-content: center;
 
-
 }
 
 #form-button input {
     margin: 0;
     width: 40%;
     padding-left: 10px;
+    border-style: none;
+    opacity: 0.9;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
 
 }
 
@@ -76,6 +79,9 @@
     margin: 0;
     border: solid #65bebc;
     cursor: pointer;
+    color: white;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
 }
 
 @media screen and (min-width: 770px) {
@@ -118,7 +124,7 @@
 
     #form-piccola {
         display: grid;
-
+        border-style: none;
         margin-left: 30px;
     }
 
@@ -126,6 +132,7 @@
         padding: 10px 20px;
         background-color: white;
         width: 87%;
+        border-style: none;
 
     }
 
@@ -134,11 +141,16 @@
         padding: 10px auto;
         width: 140px;
         height: 40px;
-        background-color: #70f6f4;
-        border-color: #70f6f4;
+        background-color: #65bebc;
+        border-color: #65bebc;
         margin-top: 10px;
-        border: solid #70f6f4;
+        border: solid #65bebc;
         cursor: pointer;
+        color: white;
+        letter-spacing: 0.1rem;
+        font-size: 0.8rem;
+        font-weight: bold;
+        padding: 10px 30px 10px 30px;
     }
 
     #more-info-button {

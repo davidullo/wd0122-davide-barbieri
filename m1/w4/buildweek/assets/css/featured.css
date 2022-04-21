@@ -8,6 +8,10 @@ html {
     background-color: #fff;
 }
 
+.slider-container {
+    margin: 0 10px;
+}
+
 #slider-title {
     padding: 60px 0 30px;
     position: relative;
