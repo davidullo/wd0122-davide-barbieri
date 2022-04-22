@@ -79,7 +79,7 @@
     height: auto !important;
     width: 100%;
     background-color: white;
-    border-top: 1px solid #e94c3d;
+    /* border-top: 1px solid #e94c3d; */
     padding-left: 15px;
     height: 0px;
     padding: 10px;
@@ -189,5 +189,21 @@
 
     #tendina {
         display: flex !important;
+    }
+
+    .speck:hover {
+        padding-bottom: 4px;
+    }
+
+    .brie:hover {
+        padding-bottom: 4px;
+    }
+
+    .sandra {
+        padding-bottom: 4px;
+    }
+
+    .sandra2 {
+        padding-bottom: 4px;
     }
 }

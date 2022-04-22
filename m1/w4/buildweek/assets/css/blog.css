@@ -127,6 +127,7 @@
     width: 293px;
     grid-column-start: 4;
     grid-column-end: 5;
+    opacity: 0;
 }
 
 #more-info button {

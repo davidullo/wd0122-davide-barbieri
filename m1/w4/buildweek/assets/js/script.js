@@ -66,18 +66,14 @@ function getImg(x) {
 
 window.addEventListener("scroll", function (e) {
     var animazioneGenerale = this.scrollY
-    var s1 = document.querySelector(".about-us").offsetTop - 1600;
+    var s1 = document.querySelector(".about-us").offsetTop - 800;
     // console.log(s1)
-    var s2 = document.querySelector("#blog").offsetTop - 1000;
-    var s3 = document.querySelector("#menu").offsetTop - 1400;
-    var s4 = document.querySelector("#newsletter").offsetTop - 1600;
-    var s5 = document.querySelector("#separazione").offsetTop - 1000;
-    var s6 = document.querySelector("#separazione").offsetTop - 1000;
-    var s7 = document.querySelector("#menu-prezzi").offsetTop - 1000;
-    var s8 = document.querySelector(".bottone2").offsetTop - 1000;
-    var s9 = document.querySelector("#separazione").offsetTop - 1000;
-    var s10 = document.querySelector("#separazione").offsetTop - 1000;
-    var s11 = document.querySelector("#separazione").offsetTop - 1000;
+    var s2 = document.querySelector("#blog").offsetTop - 800;
+    var s3 = document.querySelector("#menu").offsetTop - 800;
+    var s4 = document.querySelector("#newsletter").offsetTop - 800;
+    var s5 = document.querySelector("#separazione").offsetTop - 800;
+    var s6 = document.querySelector(".bottone3").offsetTop - 800;
+
 
     // if (animazioneGenerale < s1) {
     //     // document.getElementsByClassName("animaz")[0].classList.remove("animaz")
@@ -99,14 +95,14 @@ window.addEventListener("scroll", function (e) {
         document.getElementsByClassName("articles")[3].classList.add("animaz-davide23")
         document.getElementsByClassName("articles")[4].classList.add("animaz-davide24")
         document.getElementsByClassName("articles")[5].classList.add("animaz-davide12")
-        document.querySelector("#more-info").classList.add("animaz-davide3")
+        document.querySelector("#more-info").classList.add("animaz-davide31")
 
     }
     if (animazioneGenerale >= s3) {
         document.querySelector("#menu-titolo").classList.add("animaz-davide1")
         document.querySelector("#menu-prezzi-titolo").classList.add("animaz-davide12")
         document.querySelector("#tutte-pietanze").classList.add("animaz-davide12")
-        document.querySelector(".bottone2").classList.add("animaz-davide3")
+        document.querySelector(".bottone2").classList.add("animaz-davide31")
     }
     if (animazioneGenerale >= s4) {
         document.querySelector(".titolo-news").classList.add("animaz-davide1")
@@ -120,12 +116,15 @@ window.addEventListener("scroll", function (e) {
         document.querySelector("#contattate").classList.add("animaz-davide2")
         document.querySelector("#mailaddress").classList.add("animaz-davide14")
         document.querySelector("#recensione").classList.add("animaz-davide15")
-        document.querySelector(".bottone3").classList.add("animaz-davide3")
-
-
+        document.querySelector(".bottone3").classList.add("animaz-davide31")
+        document.querySelector("#hrrr").classList.add("animaz-davide1")
+    }
+    if (animazioneGenerale >= s6) {
+        document.querySelector("#contact-info").classList.add("animaz-davide2")
+        document.querySelector("#blog-posts").classList.add("animaz-davide21")
+        document.querySelector("#stream-us").classList.add("animaz-davide22")
 
     }
-
 
 
 }

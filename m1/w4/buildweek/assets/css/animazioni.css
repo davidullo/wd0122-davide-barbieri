@@ -12,13 +12,9 @@ Div a cui applicare: imgabout, titoloabout, pabout, menuuu, hrhr, p-titolo-menu,
     -o-animation: top-opacity 1.5s ease-out;
     animation: top-opacity 1.5s ease-out;
     -webkit-animation-fill-mode: forwards;
-    /* Chrome 16+, Safari 4+ */
     -moz-animation-fill-mode: forwards;
-    /* FF 5+ */
     -o-animation-fill-mode: forwards;
-    /* Not implemented yet */
     -ms-animation-fill-mode: forwards;
-    /* IE 10+ */
     animation-fill-mode: forwards;
 }
 
@@ -27,15 +23,11 @@ Div a cui applicare: imgabout, titoloabout, pabout, menuuu, hrhr, p-titolo-menu,
     -moz-animation: top-opacity 1.5s ease-out;
     -o-animation: top-opacity 1.5s ease-out;
     animation: top-opacity 1.5s ease-out;
-    animation-delay: 0.4s;
+    /* animation-delay: 0.4s; */
     -webkit-animation-fill-mode: forwards;
-    /* Chrome 16+, Safari 4+ */
     -moz-animation-fill-mode: forwards;
-    /* FF 5+ */
     -o-animation-fill-mode: forwards;
-    /* Not implemented yet */
     -ms-animation-fill-mode: forwards;
-    /* IE 10+ */
     animation-fill-mode: forwards;
 }
 
@@ -44,17 +36,13 @@ Div a cui applicare: imgabout, titoloabout, pabout, menuuu, hrhr, p-titolo-menu,
     -moz-animation: top-opacity 1.5s ease-out;
     -o-animation: top-opacity 1.5s ease-out;
     animation: top-opacity 1.5s ease-out;
-    animation-delay: 0.4s;
+    /* animation-delay: 0.4s; */
     -webkit-animation-fill-mode: forwards;
-    /* Chrome 16+, Safari 4+ */
     -moz-animation-fill-mode: forwards;
-    /* FF 5+ */
     -o-animation-fill-mode: forwards;
-    /* Not implemented yet */
     -ms-animation-fill-mode: forwards;
-    /* IE 10+ */
     animation-fill-mode: forwards;
-    animation-delay: 1s;
+    animation-delay: 0.8s;
 }
 
 .animaz-davide13 {
@@ -62,15 +50,11 @@ Div a cui applicare: imgabout, titoloabout, pabout, menuuu, hrhr, p-titolo-menu,
     -moz-animation: top-opacity 1.5s ease-out;
     -o-animation: top-opacity 1.5s ease-out;
     animation: top-opacity 1.5s ease-out;
-    animation-delay: 0.4s;
+    /* animation-delay: 0.4s; */
     -webkit-animation-fill-mode: forwards;
-    /* Chrome 16+, Safari 4+ */
     -moz-animation-fill-mode: forwards;
-    /* FF 5+ */
     -o-animation-fill-mode: forwards;
-    /* Not implemented yet */
     -ms-animation-fill-mode: forwards;
-    /* IE 10+ */
     animation-fill-mode: forwards;
     animation-delay: 0.3s;
 }
@@ -80,15 +64,11 @@ Div a cui applicare: imgabout, titoloabout, pabout, menuuu, hrhr, p-titolo-menu,
     -moz-animation: top-opacity 1.5s ease-out;
     -o-animation: top-opacity 1.5s ease-out;
     animation: top-opacity 1.5s ease-out;
-    animation-delay: 0.4s;
+    /* animation-delay: 0.4s; */
     -webkit-animation-fill-mode: forwards;
-    /* Chrome 16+, Safari 4+ */
     -moz-animation-fill-mode: forwards;
-    /* FF 5+ */
     -o-animation-fill-mode: forwards;
-    /* Not implemented yet */
     -ms-animation-fill-mode: forwards;
-    /* IE 10+ */
     animation-fill-mode: forwards;
     animation-delay: 0.6s;
 }
@@ -98,15 +78,11 @@ Div a cui applicare: imgabout, titoloabout, pabout, menuuu, hrhr, p-titolo-menu,
     -moz-animation: top-opacity 1.5s ease-out;
     -o-animation: top-opacity 1.5s ease-out;
     animation: top-opacity 1.5s ease-out;
-    animation-delay: 0.4s;
+    /* animation-delay: 0.4s; */
     -webkit-animation-fill-mode: forwards;
-    /* Chrome 16+, Safari 4+ */
     -moz-animation-fill-mode: forwards;
-    /* FF 5+ */
     -o-animation-fill-mode: forwards;
-    /* Not implemented yet */
     -ms-animation-fill-mode: forwards;
-    /* IE 10+ */
     animation-fill-mode: forwards;
     animation-delay: 0.9s;
 }
@@ -215,13 +191,9 @@ Div a cui applicare: ogni singolo .articles eccetto l'ultimo articles, sign-up, 
     -o-animation: right-opacity 1s ease-out;
     animation: right-opacity 1s ease-out;
     -webkit-animation-fill-mode: forwards;
-    /* Chrome 16+, Safari 4+ */
     -moz-animation-fill-mode: forwards;
-    /* FF 5+ */
     -o-animation-fill-mode: forwards;
-    /* Not implemented yet */
     -ms-animation-fill-mode: forwards;
-    /* IE 10+ */
     animation-fill-mode: forwards;
 }
 
@@ -232,13 +204,9 @@ Div a cui applicare: ogni singolo .articles eccetto l'ultimo articles, sign-up, 
     animation: right-opacity 1s ease-out;
     animation-delay: 0.2s;
     -webkit-animation-fill-mode: forwards;
-    /* Chrome 16+, Safari 4+ */
     -moz-animation-fill-mode: forwards;
-    /* FF 5+ */
     -o-animation-fill-mode: forwards;
-    /* Not implemented yet */
     -ms-animation-fill-mode: forwards;
-    /* IE 10+ */
     animation-fill-mode: forwards;
 }
 
@@ -249,13 +217,9 @@ Div a cui applicare: ogni singolo .articles eccetto l'ultimo articles, sign-up, 
     animation: right-opacity 1s ease-out;
     animation-delay: 0.4s;
     -webkit-animation-fill-mode: forwards;
-    /* Chrome 16+, Safari 4+ */
     -moz-animation-fill-mode: forwards;
-    /* FF 5+ */
     -o-animation-fill-mode: forwards;
-    /* Not implemented yet */
     -ms-animation-fill-mode: forwards;
-    /* IE 10+ */
     animation-fill-mode: forwards;
 }
 
@@ -266,13 +230,9 @@ Div a cui applicare: ogni singolo .articles eccetto l'ultimo articles, sign-up, 
     animation: right-opacity 1s ease-out;
     animation-delay: 0.6s;
     -webkit-animation-fill-mode: forwards;
-    /* Chrome 16+, Safari 4+ */
     -moz-animation-fill-mode: forwards;
-    /* FF 5+ */
     -o-animation-fill-mode: forwards;
-    /* Not implemented yet */
     -ms-animation-fill-mode: forwards;
-    /* IE 10+ */
     animation-fill-mode: forwards;
 }
 
@@ -283,13 +243,9 @@ Div a cui applicare: ogni singolo .articles eccetto l'ultimo articles, sign-up, 
     animation: right-opacity 1s ease-out;
     animation-delay: 0.8s;
     -webkit-animation-fill-mode: forwards;
-    /* Chrome 16+, Safari 4+ */
     -moz-animation-fill-mode: forwards;
-    /* FF 5+ */
     -o-animation-fill-mode: forwards;
-    /* Not implemented yet */
     -ms-animation-fill-mode: forwards;
-    /* IE 10+ */
     animation-fill-mode: forwards;
 }
 
@@ -398,6 +354,29 @@ Div a cui applicare: bottone, bottone2, bottone3
     -o-transform-origin: 50% 25%;
     -ms-transform-origin: 50% 25%;
     transform-origin: 50% 25%;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.animaz-davide31 {
+    -webkit-animation: bounce 1s ease-out;
+    -moz-animation: bounce 1s ease-out;
+    -o-animation: bounce 1s ease-out;
+    animation: bounce 1s ease-out;
+    -webkit-transform-origin: 50% 25%;
+    -moz-transform-origin: 50% 25%;
+    -o-transform-origin: 50% 25%;
+    -ms-transform-origin: 50% 25%;
+    transform-origin: 50% 25%;
+    animation-delay: 1.2s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes bounce {

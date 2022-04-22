@@ -195,8 +195,20 @@
 
 }
 
+.contact-us,
+#fname,
+#contattate,
+#mailaddress,
+#recensione,
+.bottone3 {
+    opacity: 0;
+}
 
-
+#contact-info,
+#blog-posts,
+#stream-us {
+    opacity: 0;
+}
 
 @media screen and (max-width: 1200px) {
     #contatti {
