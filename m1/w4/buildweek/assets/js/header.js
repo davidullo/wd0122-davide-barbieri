@@ -7,12 +7,12 @@ function sale() {
 
 window.addEventListener("scroll", function (e) {
     var actscor = this.scrollY
-    var s1 = document.querySelector(".about-us").offsetTop;
+    var s1 = document.querySelector(".about-us").offsetTop - 300;
     // console.log(s1)
-    var s2 = document.querySelector("#blog").offsetTop;
-    var s3 = document.querySelector("#menu").offsetTop;
-    var s4 = document.querySelector("#newsletter").offsetTop;
-    var s5 = document.querySelector("#separazione").offsetTop;
+    var s2 = document.querySelector("#blog").offsetTop - 300;
+    var s3 = document.querySelector("#menu").offsetTop - 300;
+    var s4 = document.querySelector("#newsletter").offsetTop - 300;
+    var s5 = document.querySelector("#separazione").offsetTop - 300;
 
 
     if (actscor < s1) {
@@ -43,12 +43,12 @@ window.addEventListener("scroll", function (e) {
 
 window.addEventListener("scroll", function (e) {
     var actscor = this.scrollY
-    var s1 = document.querySelector(".about-us").offsetTop;
+    var s1 = document.querySelector(".about-us").offsetTop - 250;
     // console.log(s1)
-    var s2 = document.querySelector("#blog").offsetTop;
-    var s3 = document.querySelector("#menu").offsetTop;
-    var s4 = document.querySelector("#newsletter").offsetTop;
-    var s5 = document.querySelector("#separazione").offsetTop;
+    var s2 = document.querySelector("#blog").offsetTop - 250;
+    var s3 = document.querySelector("#menu").offsetTop - 250;
+    var s4 = document.querySelector("#newsletter").offsetTop - 250;
+    var s5 = document.querySelector("#separazione").offsetTop - 250;
 
 
     if (actscor < s1) {

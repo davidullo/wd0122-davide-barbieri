@@ -43,6 +43,7 @@ window.addEventListener("scroll", function (e) {
         this.document.querySelectorAll("nav li")[1].style.borderBottom = "none"
     }
 
+
     if (posizioneScroll >= s2 && < s3) {
         this.document.querySelectorAll("nav li")[1].style.borderBottom = "solid 1px orange"
     } else {

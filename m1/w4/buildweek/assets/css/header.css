@@ -126,6 +126,7 @@
 #tendina {
     text-align: center;
     height: 0px;
+    display: none !important;
 }
 
 @media screen and (max-width: 1200px) {}
@@ -144,6 +145,10 @@
     #bloccol {
         margin: -110px 5% 0 5%;
     }
+
+    /* #tendina {
+        display: none !important;
+    } */
 }
 
 @media screen and (max-width: 767px) {
@@ -179,5 +184,10 @@
         display: flex;
         align-items: center;
 
+    }
+
+
+    #tendina {
+        display: flex !important;
     }
 }

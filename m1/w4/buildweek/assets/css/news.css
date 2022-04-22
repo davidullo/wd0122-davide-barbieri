@@ -91,6 +91,12 @@
     border: solid #4e9796;
 }
 
+#form-piccola input {
+    font-size: .7rem;
+    font-family: 'Poppins', sans-serif;
+
+}
+
 @media screen and (min-width: 770px) {
     #form-piccola {
         display: none;
