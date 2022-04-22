@@ -9,11 +9,11 @@
 
 
 #contatti {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 3%;
+    margin-right: 3%;
     margin-top: 100px;
     margin-bottom: 50px;
-    padding: 0px 10% 0px 10%;
+    padding: 0px 5% 0px 5%;
 }
 
 #contatti span {
@@ -233,6 +233,9 @@
     #contatti-in button {
         float: right;
     }
+
+
+
 
 }
 
