@@ -29,18 +29,18 @@
     color: white;
     opacity: 1;
     padding-top: 8vh;
-
     position: relative;
+    /* opacity: 0; */
+    /* per l'animazione */
 }
 
 #scritte h2 {
-
     font-size: 2rem;
     padding-bottom: 30px;
 }
 
 #scritte hr {
-    opacity: 0.5;
+    /* opacity: 0.5; */
     width: 170px;
 }
 
@@ -95,6 +95,12 @@
     font-size: .7rem;
     font-family: 'Poppins', sans-serif;
 
+}
+
+.titolo-news,
+.hr-news,
+.scrivete {
+    opacity: 0;
 }
 
 @media screen and (min-width: 770px) {

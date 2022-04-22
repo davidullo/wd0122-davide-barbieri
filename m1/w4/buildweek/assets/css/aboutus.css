@@ -32,6 +32,12 @@
     margin-top: 50px;
 }
 
+.titoloabout,
+.imgabout,
+.pabout {
+    opacity: 0;
+}
+
 .orangeabout {
     color: orangered;
     font-size: 2.2rem;

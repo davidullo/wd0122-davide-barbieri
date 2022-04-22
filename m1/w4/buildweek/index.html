@@ -92,10 +92,7 @@
             <div class="slider-container">
                 <div id="slider-title">
                     <h3>FEATURTED <span>WORKS</span></h3>
-                    <a class="next" onclick="forward()">
-                        &#10095;
-
-                    </a>
+                    <a class="next" onclick="forward()"><i class="fas fa-angle-right"></i></a>
                 </div>
                 <div id="slider">
                     <div id="slide1"><img class="slider-img" src="assets/img/slider/slider-img-1.jpg" alt="foto-1">
@@ -116,28 +113,30 @@
                     </div>
                 </div>
                 <div id="dots-slider">
-                    <a class="dot dot-1 active" href="#slide1"></a>
-                    <a class="dot dot-2" href="#slide2"></a>
-                    <a class="dot dot-3" href="#slide3"></a>
-                    <a class="dot dot-4" href="#slide4"></a>
-                    <a class="dot dot-5" href="#slide5"></a>
-                    <a class="dot dot-6" href="#slide6"></a>
-                    <a class="dot dot-7" href="#slide7"></a>
-                    <a class="dot dot-8" href="#slide8"></a>
+                    <a class="dot dot-1 active" href="#slide1" onclick="getImg(0)"></a>
+                    <a class="dot dot-2" href="#slide2" onclick="getImg(1)"></a>
+                    <a class="dot dot-3" href="#slide3" onclick="getImg(2)"></a>
+                    <a class="dot dot-4" href="#slide4" onclick="getImg(3)"></a>
+                    <a class="dot dot-5" href="#slide5" onclick="getImg(4)"></a>
+                    <a class="dot dot-6" href="#slide6" onclick="getImg(5)"></a>
+                    <a class="dot dot-7" href="#slide7" onclick="getImg(6)"></a>
+                    <a class="dot dot-8" href="#slide8" onclick="getImg(7)"></a>
                 </div>
             </div>
         </div>
 
         <br>
 
-        <div class="about-us animaz">
+        <div class="about-us">
             <img class="imgabout" src="assets/img/cooker-img.png" alt="">
             <h3 id="about-us" class="titoloabout">Your <span class="orangeabout"> Restaurant's </span>
                 <br> Website Has
                 To Look
                 <span class="orangeabout">Good</span>
+                <hr>
+
             </h3>
-            <hr>
+
             <p class="pabout">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Et maiores placeat quo itaque modi beatae
                 provident, tempore dolorem ex possimus qui? Aperiam saepe harum pariatur quos
@@ -154,7 +153,7 @@
                 </div>
                 <hr class="spazio-blog">
                 <div id="latest">
-                    <div class="articles animaz-davide2">
+                    <div class="articles">
                         <div class="testo-articles">
                             <h4>Homestyle Chicken Pot Pie</h4>
                             <hr>
@@ -206,7 +205,7 @@
                     </div>
                 </div>
                 <div class="grid-bottone">
-                    <div class="bottone animaz-davide3" id="more-info"><button>
+                    <div class="bottone" id="more-info"><button>
                             <p>MORE INFO</p>
                         </button></div>
                 </div>
@@ -230,95 +229,97 @@
                 <div id="menu-prezzi-titolo">
                     <h2> FEATURED <span id="menu-titolo-span"> ON THE WEEK</span></h2>
                 </div>
-                <ul>
-                    <li>
-                        <div class="item">
+                <div id="tutte-pietanze">
+                    <ul>
+                        <li>
+                            <div class="item">
+                                <div class="pietanza">
+                                    <div class="row">
+                                        <h2>Pancakes n' Such</h2>
+                                        <!-- <div id="puntini-mezzo"> </div> -->
+
+
+                                        <span> $ 25.00 </span>
+                                    </div>
+                                    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, magni eligendi.
+                                        Ipsam,
+                                        libero culpa! Deleniti et vel veritatis eum aut, ea dolorem.
+                                    </p>
+
+
+
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li>
                             <div class="pietanza">
                                 <div class="row">
-                                    <h2>Pancakes n' Such</h2>
-                                    <!-- <div id="puntini-mezzo"> </div> -->
+                                    <h2>Homestyle Chicken Pot Pie</h2>
 
-
-                                    <span> $ 25.00 </span>
+                                    <span> $ 10.00 </span>
                                 </div>
                                 <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, magni eligendi.
                                     Ipsam,
-                                    libero culpa! Deleniti et vel veritatis eum aut, ea dolorem.
-                                </p>
-
-
-
+                                    libero culpa! Deleniti et vel veritatis eum aut, ea dolorem. </p>
                             </div>
+                        </li>
 
-                        </div>
-                    </li>
+                        <li>
+                            <div class="pietanza">
+                                <div class="row">
+                                    <h2>Cereal, Panecillos y Frutos</h2>
 
-                    <li>
-                        <div class="pietanza">
-                            <div class="row">
-                                <h2>Homestyle Chicken Pot Pie</h2>
-
-                                <span> $ 10.00 </span>
+                                    <span> $ 5.00</span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, magni eligendi.
+                                    Ipsam,
+                                    libero culpa! Deleniti et vel veritatis eum aut, ea dolorem.</p>
                             </div>
-                            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, magni eligendi.
-                                Ipsam,
-                                libero culpa! Deleniti et vel veritatis eum aut, ea dolorem. </p>
-                        </div>
-                    </li>
+                        </li>
 
-                    <li>
-                        <div class="pietanza">
-                            <div class="row">
-                                <h2>Cereal, Panecillos y Frutos</h2>
+                        <li>
+                            <div class="pietanza">
+                                <div class="row">
+                                    <h2>Meat of Skewers</h2>
 
-                                <span> $ 5.00</span>
+                                    <span> $ 15.00</span>
+                                </div>
+                                <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, magni eligendi.
+                                    Ipsam,
+                                    libero culpa! Deleniti et vel veritatis eum aut, ea dolorem.</p>
                             </div>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, magni eligendi.
-                                Ipsam,
-                                libero culpa! Deleniti et vel veritatis eum aut, ea dolorem.</p>
-                        </div>
-                    </li>
+                        </li>
 
-                    <li>
-                        <div class="pietanza">
-                            <div class="row">
-                                <h2>Meat of Skewers</h2>
+                        <li>
+                            <div class="pietanza">
 
-                                <span> $ 15.00</span>
+                                <div class="row">
+                                    <h2>Steak with a Garlic and Parsley Risotto</h2>
+
+                                    <span> $ 75.00</span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, magni eligendi.
+                                    Ipsam,
+                                    libero culpa! Deleniti et vel veritatis eum aut, ea dolorem.</p>
                             </div>
-                            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, magni eligendi.
-                                Ipsam,
-                                libero culpa! Deleniti et vel veritatis eum aut, ea dolorem.</p>
-                        </div>
-                    </li>
+                        </li>
 
-                    <li>
-                        <div class="pietanza">
+                        <li>
+                            <div class="pietanza">
+                                <div class="row">
+                                    <h2>Caesar Salad</h2>
 
-                            <div class="row">
-                                <h2>Steak with a Garlic and Parsley Risotto</h2>
-
-                                <span> $ 75.00</span>
+                                    <span> $ 7.00 </span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, magni eligendi.
+                                    Ipsam,
+                                    libero culpa! Deleniti et vel veritatis eum aut, ea dolorem.</p>
                             </div>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, magni eligendi.
-                                Ipsam,
-                                libero culpa! Deleniti et vel veritatis eum aut, ea dolorem.</p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="pietanza">
-                            <div class="row">
-                                <h2>Caesar Salad</h2>
-
-                                <span> $ 7.00 </span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, magni eligendi.
-                                Ipsam,
-                                libero culpa! Deleniti et vel veritatis eum aut, ea dolorem.</p>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                </div>
 
                 <button class="bottone2">MORE INFO</button>
             </div>
@@ -333,9 +334,13 @@
 
                 <div id="scritte">
                     <div>
-                        <h2 class="titolo-news"> SUBSCRIBE <span>to our</span> NEWSLETTER</h2>
+                        <h2 class="titolo-news"> SUBSCRIBE <span>to our</span> NEWSLETTER
+
+                        </h2>
+
                     </div>
                     <hr class="hr-news">
+
                     <p id="scrivete" class="scrivete">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod
                     </p>
@@ -379,7 +384,7 @@
                 <h3 id="contattate" class="sign-up">SIGN UP FOR <span>EMAIL ALERTS</span></h3>
                 <form>
                     <input type="text" id="fname" name="fname" placeholder="Write yor full name here..."
-                        class="dati-news animaz-davide4"><br>
+                        class="dati-news"><br>
                     <input type="email" id="mailaddress" name="mailaddress"
                         placeholder="Write your email address here..." class="dati-news">
                 </form>
