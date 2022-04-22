@@ -63,7 +63,7 @@
 
 #menu-titolo p {
     font-size: 0.75rem;
-    font-weight: bold;
+    font-weight: 500;
     color: grey;
     text-align: center;
     margin-left: 20vw;
@@ -103,7 +103,7 @@
 .pietanza p {
     margin-right: 90px;
     font-size: 0.65rem;
-    font-weight: bolder;
+    font-weight: 500;
     color: grey;
     padding-top: 30px;
     padding-bottom: 35px;

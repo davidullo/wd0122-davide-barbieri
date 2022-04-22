@@ -258,8 +258,13 @@
     }
 
     #more-info {
-        grid-column-start: 2;
-        grid-column-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        margin-left: 14%;
+    }
+
+    #more-info button:hover {
+        border-radius: 12px;
     }
 
     .articles:after {

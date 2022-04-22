@@ -9,12 +9,11 @@
 
 
 #contatti {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-top: 100px;
     margin-bottom: 50px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0px 10% 0px 10%;
 }
 
 #contatti span {
@@ -39,7 +38,7 @@
 }
 
 #contatti-in input {
-    width: 100%;
+    width: 97%;
     margin-bottom: 10px;
     border: 1px solid lightgray;
     padding: 15px;
@@ -49,7 +48,7 @@
 
 #contatti-in textarea {
     text-align: left;
-    width: 100%;
+    width: 97%;
     height: 90px;
     font-family: 'Poppins', sans-serif;
     border: 1px solid lightgray;
@@ -109,6 +108,12 @@
     margin-right: 20px;
 }
 
+#contatti-out {
+    display: flex;
+    justify-content: center;
+    line-height: 1.2rem;
+}
+
 #contatti-out p {
     font-size: 0.7rem;
 }
@@ -121,8 +126,6 @@
     }
 
     #contatti-out {
-        display: flex;
-        flex-direction: row;
         margin-left: auto;
         margin-right: auto;
         margin-top: 5vw;
