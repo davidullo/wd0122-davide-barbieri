@@ -46,3 +46,12 @@ setInterval(function () {
 - Sostituire il numero del mese con il relativo nome
 - Chiarimento "Creare un sistema per la formattazione in formato europeo"
 */
+
+const options = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+};
+
+console.log(dataAttuale.toLocaleDateString('it-IT', options));
