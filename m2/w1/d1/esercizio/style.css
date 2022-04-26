@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100%;
+    align-content: space-between;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+}
+
+.amsg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex: 0;
+}
+
+.oms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8rem;
+    margin-bottom: auto;
+    flex: 0;
+}
+
+
+.anno,
+.mese,
+.giorno {
+    margin: 2rem;
+}
+
+.campo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3d3d3d;
+    border-radius: 5px;
+    box-shadow: 0 4px 14px gray;
+    color: white;
+    font-size: 5rem;
+    height: 100px;
+    min-width: 100px;
+    margin: 2rem 1rem;
+    padding: 2rem;
+}
+
+.titolo {
+    color: #3d3d3d;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.credits {
+    display: flex;
+    font-size: 2.2rem;
+    text-align: center;
+    /* margin-top: 200px; */
+    flex: 1;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    letter-spacing: 0.1rem;
+    text-shadow: 0 2px 10px rgb(114, 114, 114);
+}
