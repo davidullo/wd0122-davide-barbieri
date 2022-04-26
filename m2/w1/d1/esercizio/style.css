@@ -38,6 +38,10 @@ body {
     justify-content: center;
     align-items: center;
     flex: 0;
+    background-color: white;
+    border-radius: 30px;
+    margin: 10px;
+    box-shadow: 0 2px 12px rgb(146, 146, 146);
 }
 
 .oms {
@@ -46,20 +50,17 @@ body {
     justify-content: center;
     align-items: center;
     column-gap: 8rem;
-    margin-bottom: auto;
+    margin: 30px 0;
     flex: 0;
+    background-color: white;
+    border-radius: 30px;
+    margin: 10px;
+    box-shadow: 0 2px 12px rgb(146, 146, 146);
 }
 
 .amsg,
 .oms {
-    padding: 0 20px;
-}
-
-
-.anno,
-.mese,
-.giorno {
-    margin: 2rem;
+    padding: 20px 20px;
 }
 
 .campo {
@@ -67,7 +68,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #3d3d3d;
-    border-radius: 5px;
+    border-radius: 20px;
     box-shadow: 0 4px 14px gray;
     color: white;
     font-size: 5rem;
