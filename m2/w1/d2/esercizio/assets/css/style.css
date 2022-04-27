@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(82, 182, 245);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    min-height: 400px;
+}
+
+span {
+    color: #000;
+    font-weight: 600;
+}
+
+.contenitore {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottone-inizia {
+    border-style: none;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.bottone-inizia:hover {
+    background-color: lightgrey;
+}
+
+.bottone-inizia:active {
+    background-color: rgb(173, 173, 173);
+}
+
+.titolo,
+.bottone-inizia {
+    margin: 10px;
+}
+
+.output {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9rem;
+    /* height: 400px;
+    overflow-y: scroll; */
+}
+
+/* #output-spesa {} */
+
+#output-spesa::-webkit-scrollbar {
+    display: none;
+}
+
+#meta {
+    color: rgb(255, 204, 0);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#esaurito {
+    color: rgb(255, 0, 0);
+    font-size: 2rem;
+    font-weight: 600;
+}
