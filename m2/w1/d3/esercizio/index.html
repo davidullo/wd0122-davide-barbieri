@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <nav>
+        <div class="navbar">
+            <div class="menu">
+                <button class="hamburger" onclick="apriMenu()">
+                    <i class='bx bx-menu'></i>
+                </button>
+                <div id="pannello" class="pannello">
+                    <a href="#">Home</a>
+                    <a href="#">Chi sono</a>
+                    <a href="#">Contatti</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- AREA FORMATTAZIONE TESTO -->
+        <div class="area-testo">
+            <h1 id="modificami">Modificami!</h1>
+            <div class="area-bottoni">
+                <input type="button" value="Ingrandisci" class="modifica"
+                    onclick="document.getElementById('modificami').style.transform = 'scale(1.3)'">
+                <input type="button" value="Colora" class="modifica"
+                    onclick="document.getElementById('modificami').style.color = 'hotpink'">
+                <input type="button" value="Slogan" class="modifica"
+                    onclick="document.getElementById('modificami').style.transform = 'matrix(1, -0.3, 0, 1, 0, 0)'">
+                <input type="button" value="Nascondi" class="modifica"
+                    onclick="document.getElementById('modificami').style.visibility = 'hidden'">
+                <input type="button" value="Mostra" class="modifica"
+                    onclick="document.getElementById('modificami').style.visibility = 'visible'">
+                <input type="button" value="Specchia" class="modifica"
+                    onclick="document.getElementById('modificami').style.transform = 'rotateY(150deg)'">
+            </div>
+        </div>
+
+        <!-- AREA LISTA IMPEGNI -->
+        <div class="todo">
+            <div class="contenuto">
+                <h2>To do</h2>
+                <input id="testo" type="text" placeholder="Scrivi...">
+                <button id="inserisci">
+                    <i class='bx bx-plus'></i>
+                </button>
+                <ul id="lista-todo">
+                    <li>Tagliare i capelli</li>
+                    <li>Bere acqua</li>
+                    <li>Finire esercizi</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+    <footer></footer>
+
+    <script src="assets/script/script.js"></script>
+</body>
+
+</html>
