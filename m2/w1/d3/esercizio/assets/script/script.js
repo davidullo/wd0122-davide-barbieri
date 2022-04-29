@@ -11,7 +11,9 @@ bottone.addEventListener('click', function () {
     let testo = document.querySelector('#testo')
     todoWrap.innerText = testo.value
     toDoArea.append(todoWrap)
-
+    // prova
+    // document.getElementById('lista-todo').lastChild
+    // fine prova
     testo.value = ''
 })
 
