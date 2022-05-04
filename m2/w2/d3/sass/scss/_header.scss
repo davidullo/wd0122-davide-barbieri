@@ -1,0 +1,19 @@
+// Con sass si possono "innestare" i tag/classi
+
+header {
+    width: 200px;
+
+    li {
+        background-color: red;
+        color: white;
+
+        &:hover {
+            background-color: aqua;
+            color: $verde;
+        }
+
+        a {
+            color: royalblue;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+header {
+  width: 200px; }
+  header li {
+    background-color: red;
+    color: white; }
+    header li:hover {
+      background-color: aqua;
+      color: green; }
+    header li a {
+      color: royalblue; }
+
+body {
+  background-color: green; }
