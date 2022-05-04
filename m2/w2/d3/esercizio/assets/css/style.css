@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap");
+nav {
+  background-color: #00a2ff;
+  color: white; }
+  nav .nav-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; }
+    nav .nav-container .ul-nav {
+      display: flex;
+      list-style-type: none; }
+      nav .nav-container .ul-nav li {
+        padding: 0 5px; }
+
+header {
+  margin-top: 50px; }
+  header .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    header .hero .img {
+      margin-left: 15px; }
+      header .hero .img img {
+        border-radius: 10px;
+        max-width: 500px;
+        width: 100%; }
+    header .hero .testo {
+      margin-top: 20px;
+      margin-right: 15px;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; }
+      header .hero .testo h1,
+      header .hero .testo p {
+        text-align: right;
+        margin: 10px 0; }
+
+@media screen and (max-width: 1200px) {
+  header .hero {
+    flex-direction: column; }
+    header .hero .testo {
+      order: 1;
+      justify-content: center;
+      margin-right: 0; }
+      header .hero .testo h1,
+      header .hero .testo p {
+        text-align: center; }
+    header .hero .img {
+      order: 0;
+      margin-left: 0; } }
+
+.bottoni {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px; }
+  .bottoni button {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    border-style: none;
+    margin: 0 5px;
+    background-color: royalblue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s; }
+    .bottoni button:hover {
+      transform: scale(1.1); }
+  .bottoni .prezzi-btn {
+    background: #ffe100;
+    color: #000; }
+
+@media screen and (max-width: 1200px) {
+  .bottoni {
+    display: flex;
+    justify-content: space-evenly; } }
+
+body {
+  background-color: #b4e3ff;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0; }
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700; }

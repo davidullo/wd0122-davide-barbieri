@@ -1,0 +1,37 @@
+.bottoni {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+
+    button {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        border-style: none;
+        margin: 0 5px;
+        background-color: royalblue;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            transform: scale(1.1);
+
+        }
+    }
+
+    .prezzi-btn {
+        background: rgb(255, 225, 0);
+        color: #000;
+    }
+
+    .contattaci-btn {}
+}
+
+@media screen and (max-width: 1200px) {
+    .bottoni {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
