@@ -1,0 +1,45 @@
+// Mixins. Con i mixin siamo agevolati per le coppie chiave-valore che si ripetono più spesso, come nell'esempio qui sotto.
+@mixin testi($peso, $bg) {
+    margin-top: 10px;
+    color: #808080;
+    padding: 15px;
+    font-weight: #{$peso};
+    background-color: #{$bg};
+}
+
+@mixin colore($modifica, $valore) {
+    #{$modifica}color: $valore;
+}
+
+@import 'functions';
+
+h1 {
+    // margin-top: 10px;
+    // color: #808080;
+    font-size: 1.5rem;
+    @include testi(bold, #fff);
+}
+
+p {
+    // margin-top: 10px;
+    // color: #808080;
+    font-size: 1rem;
+    @include testi(400, rgb(0, 12, 141));
+}
+
+#p1 {
+    @include colore('', red)
+}
+
+#p2 {
+    @include colore('background-', red);
+    color: #fff;
+    width: miaFunzione();
+}
+
+$sfondo: rgb(255, 255, 0);
+
+#d1 {
+    background-color: $sfondo;
+    color: set-color($sfondo);
+}

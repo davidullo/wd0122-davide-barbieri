@@ -1,0 +1,47 @@
+@import 'navbar';
+@import 'aside';
+@import 'main';
+@import 'footer';
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
+
+$arancione: rgb(255, 119, 0);
+$grandezzaTesto: 1rem;
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+}
+
+p {
+    font-size: $grandezzaTesto;
+}
+
+h1 {
+    font-size: $grandezzaTesto*2;
+}
+
+a {
+    text-decoration: none;
+    font-style: italic;
+    color: $arancione;
+}
+
+.warning-button {
+    border: 2px outset lightgray;
+    background-color: $arancione;
+    padding: 10px 20px;
+    color: white;
+}
+
+input {
+    margin-bottom: 5px;
+}

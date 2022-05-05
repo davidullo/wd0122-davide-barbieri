@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--     
+    1) Facciamo una cartella "scss" e una "css", e nella cartella scss creiamo il file "style.scss"
+    2) Entriamo da terminale nella root del progetto (in questo caso sass1)
+    3) Diamo "npm init" e premiamo invio per confermare i vari passaggi (in questo modo creiamo il file "package.json")
+    3b) Avremo quindi una root con cartelle "css", "scss", e file "index.html" e "package.json"
+    4) Chiudiamo il file "package.json" per evitare conflitti, quindi diamo quindi "npm i node-sass" per installare sass
+    fra i node modules
+    5) Entriamo nel "package.json" ed a riga 7 al posto di "test" scriviamo "compile:sass", e al posto del valore sulla
+    destra scriviamo "node-sass scss/style.scss css/style.css -w" (controllare la struttura dei percorsi dei due file)
+    5b) La stringa qui sopra indica il modulo che viene richiamato, il percorso dello style.scss, il percorso dello
+    style.css e "-w" che comunica di attivare la "watch mode"
+    6) Dare il comando "npm run compile:sass" che farà partire il compilatore sass
+ -->
+
+    <h1>Titolo</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit quas facilis qui laboriosam ipsa itaque
+        incidunt ea nostrum dolorum neque nam nemo, aperiam explicabo ipsam eveniet animi non quos voluptates.</p>
+    <p id="p1">Prova 1</p>
+    <p id="p2">Prova 2</p>
+    <div id="d1">Prova 3</div>
+
+
+</body>
+
+</html>

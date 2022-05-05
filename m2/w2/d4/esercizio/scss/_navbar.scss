@@ -1,0 +1,21 @@
+nav {
+    background-color: darkblue;
+    border: 2px solid white;
+    border-radius: 14px;
+    box-shadow: 0px 2px 6px rgb(255, 184, 129);
+
+    ul {
+        display: flex;
+        list-style-type: none;
+
+        li {
+            font-style: italic;
+            padding: 0 10px;
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+}

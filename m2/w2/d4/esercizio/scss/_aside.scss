@@ -1,0 +1,14 @@
+aside {
+    ul {
+        list-style-type: none;
+
+        li {
+            border-bottom: 1px dashed lightgray;
+            padding: 10px 20px;
+
+            &:hover {
+                background-color: lightgray;
+            }
+        }
+    }
+}

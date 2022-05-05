@@ -1,0 +1,13 @@
+#main {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 10%;
+
+    article {
+        flex-basis: 70%;
+    }
+
+    aside {
+        flex-basis: 20%;
+    }
+}
