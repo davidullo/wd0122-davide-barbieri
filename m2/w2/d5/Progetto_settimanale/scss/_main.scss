@@ -9,6 +9,10 @@ main {
         .hero-text {
             padding: 100px 0;
 
+            h1 {
+                text-shadow: $ombra-testo;
+            }
+
             .btn-hero {
                 background-color: $giallo;
                 transition: 0.2s;
@@ -39,6 +43,11 @@ main {
     }
 }
 
+#partners-div {
+    // background-image: url('../img/wave.svg');
+    // background-position: bottom;
+}
+
 .partner {
     margin: 20px 0;
     fill: $giallo;
@@ -66,7 +75,7 @@ main {
 
     h5,
     p {
-        text-shadow: 0 0 10px black;
+        text-shadow: $ombra-testo;
     }
 }
 
