@@ -7825,6 +7825,8 @@ main .hero {
   background-size: cover; }
   main .hero .hero-text {
     padding: 100px 0; }
+    main .hero .hero-text h1, main .hero .hero-text .h1 {
+      text-shadow: 0 0 10px black; }
     main .hero .hero-text .btn-hero {
       background-color: #ffe600;
       transition: 0.2s; }
@@ -7843,6 +7845,11 @@ main .tile {
   transition: 0.2s; }
   main .tile:hover {
     transform: scale(1.1); }
+
+.partners-container {
+  background-image: url("../img/wave.svg") !important;
+  background-position: bottom;
+  background-repeat: no-repeat; }
 
 .partner {
   margin: 20px 0;
