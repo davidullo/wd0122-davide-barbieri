@@ -7826,7 +7826,7 @@ main .hero {
   main .hero .hero-text {
     padding: 100px 0; }
     main .hero .hero-text h1, main .hero .hero-text .h1 {
-      text-shadow: 0 0 10px black; }
+      text-shadow: 0 0 10px #2d2d2d; }
     main .hero .hero-text .btn-hero {
       background-color: #ffe600;
       transition: 0.2s; }
@@ -7885,4 +7885,5 @@ footer .copy {
   font-size: 0.8rem; }
 
 body {
-  background-color: #1a1a1a; }
+  background-color: #1a1a1a;
+  scroll-behavior: smooth; }
