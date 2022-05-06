@@ -1,0 +1,19 @@
+@import 'variables';
+
+.footer-container {
+    background-color: $nero !important;
+}
+
+footer {
+    ul {
+        li {
+            a {
+                color: white !important;
+            }
+        }
+    }
+
+    .copy {
+        font-size: 0.8rem;
+    }
+}

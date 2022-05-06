@@ -1,0 +1,11 @@
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+// @import '../node_modules/bootstrap-icons/font/bootstrap-icons.scss';
+@import 'navbar';
+@import 'main';
+@import 'footer';
+@import 'variables';
+@import 'function';
+
+body {
+    background-color: $nero;
+}

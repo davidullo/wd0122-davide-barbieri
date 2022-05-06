@@ -1,0 +1,79 @@
+@import 'variables';
+
+main {
+    .hero {
+        background: url(../img/main-bike-blur.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .hero-text {
+            padding: 100px 0;
+
+            .btn-hero {
+                background-color: $giallo;
+                transition: 0.2s;
+
+                &:hover {
+                    transform: $scale;
+                }
+            }
+
+        }
+    }
+
+    .div-tiles {
+        background-color: $giallo;
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+    }
+
+    .tile {
+        box-shadow: $box;
+        background-color: $nero;
+        color: white;
+        transition: 0.2s;
+
+        &:hover {
+            transform: $scale;
+        }
+    }
+}
+
+.partner {
+    margin: 20px 0;
+    fill: $giallo;
+    transition: 0.2s;
+
+    img {
+        width: 100px;
+        fill: #000;
+    }
+
+    &:hover {
+        transform: $scale;
+    }
+}
+
+#carouselMain {
+    max-width: 500px;
+}
+
+#container-carousel {
+    background-color: $giallo;
+}
+
+.carousel-caption {
+
+    h5,
+    p {
+        text-shadow: 0 0 10px black;
+    }
+}
+
+.carousel-item {
+
+    img {
+        border-radius: 50%;
+        height: 50%;
+    }
+}
