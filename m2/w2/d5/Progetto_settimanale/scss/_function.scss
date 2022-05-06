@@ -1,0 +1,10 @@
+//imposto un colore bianco o nero in base alla luminosità del colore inserito
+@function set-color($colore) {
+    @if(lightness($colore) >=50) {
+        @return #000;
+    }
+
+    @else {
+        @return #fff;
+    }
+}
