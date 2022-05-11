@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container p-5">
+        <h1 class="display-1 pb-3">Esercizio 1</h1>
+        <div class="row">
+            <div class="col-12">
+                <h3 id="titolo">Nessun dato.</h3>
+            </div>
+            <div class="col-12">
+                <form action="">
+                    <input type="text" class="form-control mb-2" placeholder="Scrivi nome..." id="scrivi">
+                    <button class="btn btn-primary mb-2 me-2" id="salva">Salva</button>
+                    <button class="btn btn-danger mb-2 me-2" id="cancella">Cancella</button>
+                </form>
+            </div>
+            <div class="col-12">
+                <div class="alert alert-success" role="alert">
+                    <p>Cliccando il pulsante <strong>Salva</strong> il dato inserito verrà salvato nella <i>Session
+                            Storage</i>.</p>
+                    <p>Cliccando il pulsante <strong>Cancella</strong> il dato verrà cancellato.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container p-5">
+        <h1 class="display-1 pb-3">Esercizio 2</h1>
+        <div class="row">
+            <div class="col-12">
+                <h3>Timer: <span id="secondi" style="color: red"></span> </h3>
+            </div>
+            <div class="col-12">
+                <div class="alert alert-success" role="alert">
+                    <p>Il <strong>Timer</strong> indica i secondi dall'inizio della sessione.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script/script.js"></script>
+</body>
+
+</html>

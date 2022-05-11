@@ -1,0 +1,55 @@
+{
+    "ricette": [
+        {
+            "name": "Amatriciana",
+            "type": "Pasta",
+            "origin": "Italian",
+            "ingredients": [
+                {
+                    "label": "spaghetti"
+                },
+                {
+                    "label": "pancetta"
+                },
+                {
+                    "label": "tomato sauce"
+                }
+            ]
+        },
+        {
+            "name": "Carbonara",
+            "type": "Pasta",
+            "origin": "Italian",
+            "ingredients": [
+                {
+                    "label": "spaghetti"
+                },
+                {
+                    "label": "pancetta"
+                },
+                {
+                    "label": "egg"
+                }
+            ]
+        },
+        {
+            "name": "Ramen",
+            "type": "Soup",
+            "origin": "Japan",
+            "ingredients": [
+                {
+                    "label": "noodles"
+                },
+                {
+                    "label": "chicken broth"
+                },
+                {
+                    "label": "egg"
+                },
+                {
+                    "label": "pork meat"
+                }
+            ]
+        }
+    ]
+}

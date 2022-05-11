@@ -1,0 +1,52 @@
+{
+    "articoli": [
+        {
+            "title": "Come fare la pasta alla carbonara.",
+            "month": "Gennaio",
+            "author": "Gianni Fantoni",
+            "tags": [
+                {
+                    "label": "cibo"
+                },
+                {
+                    "label": "pasta"
+                },
+                {
+                    "label": "guide"
+                }
+            ]
+        },
+        {
+            "title": "La nuova auto elettrica targata FIAT.",
+            "month": "Aprile",
+            "author": "Gianmarco Patrizi",
+            "tags": [
+                {
+                    "label": "auto"
+                },
+                {
+                    "label": "tech"
+                },
+                {
+                    "label": "promo"
+                }
+            ]
+        },
+        {
+            "title": "Guerra in Ucraina: gli ultimi aggiornamenti.",
+            "month": "Gennaio",
+            "author": "Gianni Fantoni",
+            "tags": [
+                {
+                    "label": "guerra"
+                },
+                {
+                    "label": "ucraina"
+                },
+                {
+                    "label": "news"
+                }
+            ]
+        }
+    ]
+}
