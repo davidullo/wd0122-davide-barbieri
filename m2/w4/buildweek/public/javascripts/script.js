@@ -54,7 +54,7 @@ fetch(APPURL)
             tdPhone.innerHTML = utente.phone
             let tdWebsite = document.createElement('td')
             tdWebsite.innerHTML = utente.website
-            tr.append(tdID, tdName, tdUser, tdEmail, tdPhone, tdWebsite)
+            tr.append(tdID, tdUser, tdName, tdEmail, tdPhone, tdWebsite)
 
             // ****** BOTTONE VEDI
             // let viewModal = document.getElementById('viewModalContent')
