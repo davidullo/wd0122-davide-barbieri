@@ -60,6 +60,7 @@ fetch(APPURL)
             // let viewModal = document.getElementById('viewModalContent')
             let tdVedi = document.createElement('td')
             let btnVedi = document.createElement('button')
+            let vediModal = document.getElementById('viewModalContent')
             btnVedi.innerHTML = '<i class="bi bi-eye"></i>'
             btnVedi.setAttribute("data-bs-toggle", "modal");
             btnVedi.setAttribute("data-bs-target", "#viewModal");
@@ -69,10 +70,24 @@ fetch(APPURL)
                     method: 'GET'
                 }).then(function (res) {
                     console.log(res);
+                    vediModal.append('prova');
                 })
             })
             tdVedi.append(btnVedi)
             tr.append(tdVedi)
+
+            // let bottoneVedi = document.getElementsByClassName('viewButton');
+            // console.log(bottoneVedi);
+            // let vediModal = document.getElementById('viewModalContent');
+            // let provaTesto = 'bla bla bla';
+            // console.log(bottoneVedi.length);
+            // for (let vedi of bottoneVedi) {
+            //     console.log(vedi);
+            //     vedi.addEventListener('click', function () {
+            //         vediModal.append(provaTesto);
+            //         console.log(provaTesto);
+            //     });
+            // }
 
             // ****** FINE BOTTONE VEDI
 
@@ -148,12 +163,17 @@ bottone.addEventListener('click', function (e) {
             console.log(res);
         })
 })
+
 console.log('test1');
 
-let bottoneVedi = document.querySelectorAll('.viewButton');
-console.log(bottoneVedi);
-let vediModal = document.getElementById('viewModalContent');
-let provaTesto = 'testblabla';
+
+
+// for (var i = 0; i < bottoneVedi.length; i++) {
+//     bottoneVedi[i].addEventListener('click', function () {
+//         console.log(provaTesto);
+//     });
+// }
+
 
 // for (let vedi of bottoneVedi) {
 //     vedi.addEventListener('click', function () {
@@ -165,21 +185,6 @@ let provaTesto = 'testblabla';
 // bottoneVedi.addEventListener('click', function () {
 //     console.log('test_vedi');
 // })
-
-for (var i = 0; i < bottoneVedi.length; i++) {
-    bottoneVedi[i].addEventListener('click', function () {
-        console.log(provaTesto);
-    });
-}
-
-// for (let vedi of bottoneVedi) {
-//     vedi.addEventListener('click', function () {
-//         console.log('che che che');
-//     });
-// }
-
-// const toggleButton = document.getElementById("toggle-btn"); // Get the element
-// toggleButton.addEventListener("click", checkButtonClass);
 
 // consigli flavio:
 // Non usare file .json
