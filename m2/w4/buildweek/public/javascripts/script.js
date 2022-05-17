@@ -32,6 +32,16 @@ fetch("http://jsonplaceholder.typicode.com/users/13").then(res=>res.json()).then
 
 const APPURL = 'https://jsonplaceholder.typicode.com/users'
 let tabella = document.querySelector('#tbody')
+let editNome = document.getElementById('editNome')
+let editUsername = document.getElementById('editUsername')
+let editEmail = document.getElementById('editEmail')
+let editTelefono = document.getElementById('editTelefono')
+let editWebsite = document.getElementById('editWebsite')
+let editVia = document.getElementById('editVia')
+let editCivico = document.getElementById('editCivico')
+let editCitta = document.getElementById('editCitta')
+let editCap = document.getElementById('editCap')
+let editID = document.getElementById('idUtente')
 fetch(APPURL)
     .then(res => res.json())
     .then(res => {
@@ -70,7 +80,21 @@ fetch(APPURL)
                     method: 'GET'
                 }).then(function (res) {
                     console.log(res);
-                    vediModal.append('prova');
+                    // let stringaAddress = JSON.stringify(utente.address)
+
+                    if (vediModal.innerHTML !== "") {
+                        console.log('non è vuoto');
+                        vediModal.innerHTML = ""
+                        vediModal.innerHTML = (` <h4>ID</h4> <p> ${utente.id} </p> <hr> <h4>Username</h4> <p> ${utente.username} </p> <hr> <h4>Nome e cognome</h4> <p> ${utente.name} </p> <hr> <h4>Email</h4> <p> ${utente.email} </p> <hr> <h4>Numero</h4> <p> ${utente.phone} </p> <hr> <h4>Sito web</h4> <p> ${utente.website} </p> <hr> <h4>Indirizzo</h4> <h5>Via</h5> <p> ${utente.address.street} </p> <h5>N° civico</h5> <p> ${utente.address.suite} </p> <h5>Città</h5> <p> ${utente.address.city} </p> <h5>CAP</h5> <p> ${utente.address.zipcode} </p>`)
+                    } else (vediModal.innerHTML = (` <h4>ID</h4> <p> ${utente.id} </p> <hr> <h4>Username</h4> <p> ${utente.username} </p> <hr> <h4>Nome e cognome</h4> <p> ${utente.name} </p> <hr> <h4>Email</h4> <p> ${utente.email} </p> <hr> <h4>Numero</h4> <p> ${utente.phone} </p> <hr> <h4>Sito web</h4> <p> ${utente.website} </p> <hr> <h4>Indirizzo</h4> <h5>Via</h5> <p> ${utente.address.street} </p> <h5>N° civico</h5> <p> ${utente.address.suite} </p> <h5>Città</h5> <p> ${utente.address.city} </p> <h5>CAP</h5> <p> ${utente.address.zipcode} </p>`));
+
+                    // if (vediModal.innerHTML == "") {
+                    //     vediModal.append(utente.id, utente.name, utente.username, utente.email, utente.phone, utente.website);
+                    // } else {
+                    //     vediModal.innerHTML = ""
+                    // };
+
+                    // console.log(utente.id, utente.name, utente.username, utente.email, utente.address, utente.phone, utente.website, utente.company);
                 })
             })
             tdVedi.append(btnVedi)
@@ -98,15 +122,28 @@ fetch(APPURL)
             btnModifica.setAttribute("data-bs-toggle", "modal");
             btnModifica.setAttribute("data-bs-target", "#editModal");
             btnModifica.classList.add('btn', 'btn-warning', 'editButton')
-            // btnModifica.addEventListener('click', function () {
-            //     fetch(APPURL + '/' + utente.id, {
-            //         method: 'PUT'
-            //     }).then(function (res) {
-            //         console.log(res);
-            //     })
-            // })
+            btnModifica.addEventListener('click', function () {
+                fetch(APPURL + '/' + utente.id, {
+                    method: 'GET'
+                }).then(function (res) {
+                    console.log(res);
+                    editNome.value = utente.name
+                    editUsername.value = utente.username
+                    editEmail.value = utente.email
+                    editTelefono.value = utente.phone
+                    editWebsite.value = utente.website
+                    editVia.value = utente.address.street
+                    editCivico.value = utente.address.suite
+                    editCitta.value = utente.address.city
+                    editCap.value = utente.address.zipcode
+                    editID.value = utente.id
+                })
+
+            })
+
             tdModifica.append(btnModifica)
             tr.append(tdModifica)
+
             // ****** FINE BOTTONE MODIFICA
 
             // ***** BOTTONE ELIMINA
@@ -140,15 +177,25 @@ bottone.addEventListener('click', function (e) {
     let name = document.querySelector('#name')
     let username = document.querySelector('#username')
     let email = document.querySelector('#email')
-    let number = document.querySelector('#number')
+    let telefono = document.querySelector('#telefono')
     let website = document.querySelector('#website')
+    let via = document.querySelector('#via')
+    let civico = document.querySelector('#civico')
+    let citta = document.querySelector('#citta')
+    let cap = document.querySelector('#cap')
 
     let user = {
         name: name.value,
         username: username.value,
         email: email.value,
-        number: number.value,
-        website: website.value
+        phone: telefono.value,
+        website: website.value,
+        address: {
+            street: via.value,
+            suite: civico.value,
+            city: citta.value,
+            zipcode: cap.value,
+        }
     }
 
     fetch(APPURL, {
@@ -165,6 +212,32 @@ bottone.addEventListener('click', function (e) {
 })
 
 console.log('test1');
+
+let salvaModifica = document.getElementById('salvaModifica')
+salvaModifica.addEventListener('click', function () {
+
+    let user = {
+        name: editNome.value,
+        username: editUsername.value,
+        email: editEmail.value,
+        phone: editTelefono.value,
+        website: editWebsite.value,
+        address: {
+            street: editVia.value,
+            suite: editCivico.value,
+            city: editCitta.value,
+            zipcode: editCap.value,
+        }
+    }
+
+    fetch(APPURL + '/' + editID.value, {
+        method: 'PUT',
+        body: JSON.stringify(user)
+    }).then(function (res) {
+        console.log(res);
+
+    })
+})
 
 
 
