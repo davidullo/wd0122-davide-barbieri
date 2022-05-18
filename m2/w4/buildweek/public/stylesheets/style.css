@@ -33,6 +33,7 @@ input {
   border: 1px solid lightgray;
   background-color: white;
   padding: .5rem;
+  cursor: pointer;
 }
 
 .card>.header {
@@ -42,6 +43,10 @@ input {
 .card>.body {
   font-size: .8rem;
   color: #777;
+}
+
+.card>.id {
+  display: none;
 }
 
 .hide {

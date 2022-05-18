@@ -252,8 +252,17 @@ salvaModifica.addEventListener('click', function () {
 
 const userCardTemplate = document.querySelector('[data-user-template]')
 const userCardContainer = document.querySelector('[data-user-cards-container]')
+
 const card = document.querySelectorAll('.card')
-const arrayCard = Array.from(card);
+// const arrayCard = Array.from(card);
+
+// for (const carta of card) {
+//     let buttonVedi = document.createElement('button')
+//     cardA.appendChild(buttonVedi)
+
+
+
+// }
 const searchInput = document.querySelector('[data-search]')
 
 let users = []
@@ -269,10 +278,14 @@ searchInput.addEventListener("input", e => {
             userCardContainer.classList.add('d-none')
         } else {
             userCardContainer.classList.remove('d-none')
+
+
         }
 
     });
 })
+
+
 
 fetch(APPURL)
     .then(res => res.json())
@@ -285,30 +298,34 @@ fetch(APPURL)
             header.textContent = user.name
             body.textContent = user.email
             userCardContainer.append(card)
+            card.addEventListener("click", () => {
+                document.getElementsByClassName("viewButton")[user.id - 1].click()
+
+
+                const id = card.querySelector('[data-id]')
+                id.textContent = user.id
+
+                // for (let id of user.id) {
+
+                // }
+
+
+
+                // let ordine = user.id
+
+
+
+
+            })
+
+
             return { name: user.name, email: user.email, element: card }
 
         })
     })
 
-console.log(arrayCard);
 
-function cliccabile() {
-    console.log("Hai cliccato una card!");
-    // for (let i = 0; i < arrayCard.length; i++) {
-    for (let singola of arrayCard) {
-        card.addEventListener('click', function () {
-            fetch(APPURL + '/' + utente.id, {
-                method: 'GET'
-            }).then(function (res) {
-                console.log(res);
-                if (vediModal.innerHTML !== "") {
-                    vediModal.innerHTML = ""
-                    vediModal.innerHTML = (` <h4>ID</h4> <p> ${utente.id} </p> <hr> <h4>Username</h4> <p> ${utente.username} </p> <hr> <h4>Nome e cognome</h4> <p> ${utente.name} </p> <hr> <h4>Email</h4> <p> ${utente.email} </p> <hr> <h4>Numero</h4> <p> ${utente.phone} </p> <hr> <h4>Sito web</h4> <p> ${utente.website} </p> <hr> <h4>Indirizzo</h4> <h5>Via</h5> <p> ${utente.address.street} </p> <h5>N° civico</h5> <p> ${utente.address.suite} </p> <h5>Città</h5> <p> ${utente.address.city} </p> <h5>CAP</h5> <p> ${utente.address.zipcode} </p>`)
-                } else (vediModal.innerHTML = (` <h4>ID</h4> <p> ${utente.id} </p> <hr> <h4>Username</h4> <p> ${utente.username} </p> <hr> <h4>Nome e cognome</h4> <p> ${utente.name} </p> <hr> <h4>Email</h4> <p> ${utente.email} </p> <hr> <h4>Numero</h4> <p> ${utente.phone} </p> <hr> <h4>Sito web</h4> <p> ${utente.website} </p> <hr> <h4>Indirizzo</h4> <h5>Via</h5> <p> ${utente.address.street} </p> <h5>N° civico</h5> <p> ${utente.address.suite} </p> <h5>Città</h5> <p> ${utente.address.city} </p> <h5>CAP</h5> <p> ${utente.address.zipcode} </p>`));
-            })
-        })
-    }
-}
+
 
 
 // ************* FINE SEARCH BAR
