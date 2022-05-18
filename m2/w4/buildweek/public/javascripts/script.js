@@ -42,6 +42,7 @@ let editCivico = document.getElementById('editCivico')
 let editCitta = document.getElementById('editCitta')
 let editCap = document.getElementById('editCap')
 let editID = document.getElementById('idUtente')
+let vediModal = document.getElementById('viewModalContent')
 fetch(APPURL)
     .then(res => res.json())
     .then(res => {
@@ -69,7 +70,6 @@ fetch(APPURL)
             // ****** BOTTONE VEDI
             let tdVedi = document.createElement('td')
             let btnVedi = document.createElement('button')
-            let vediModal = document.getElementById('viewModalContent')
             btnVedi.innerHTML = '<i class="bi bi-eye"></i>'
             btnVedi.setAttribute("data-bs-toggle", "modal");
             btnVedi.setAttribute("data-bs-target", "#viewModal");
@@ -79,20 +79,10 @@ fetch(APPURL)
                     method: 'GET'
                 }).then(function (res) {
                     console.log(res);
-                    // let stringaAddress = JSON.stringify(utente.address)
-
                     if (vediModal.innerHTML !== "") {
                         vediModal.innerHTML = ""
                         vediModal.innerHTML = (` <h4>ID</h4> <p> ${utente.id} </p> <hr> <h4>Username</h4> <p> ${utente.username} </p> <hr> <h4>Nome e cognome</h4> <p> ${utente.name} </p> <hr> <h4>Email</h4> <p> ${utente.email} </p> <hr> <h4>Numero</h4> <p> ${utente.phone} </p> <hr> <h4>Sito web</h4> <p> ${utente.website} </p> <hr> <h4>Indirizzo</h4> <h5>Via</h5> <p> ${utente.address.street} </p> <h5>N° civico</h5> <p> ${utente.address.suite} </p> <h5>Città</h5> <p> ${utente.address.city} </p> <h5>CAP</h5> <p> ${utente.address.zipcode} </p>`)
                     } else (vediModal.innerHTML = (` <h4>ID</h4> <p> ${utente.id} </p> <hr> <h4>Username</h4> <p> ${utente.username} </p> <hr> <h4>Nome e cognome</h4> <p> ${utente.name} </p> <hr> <h4>Email</h4> <p> ${utente.email} </p> <hr> <h4>Numero</h4> <p> ${utente.phone} </p> <hr> <h4>Sito web</h4> <p> ${utente.website} </p> <hr> <h4>Indirizzo</h4> <h5>Via</h5> <p> ${utente.address.street} </p> <h5>N° civico</h5> <p> ${utente.address.suite} </p> <h5>Città</h5> <p> ${utente.address.city} </p> <h5>CAP</h5> <p> ${utente.address.zipcode} </p>`));
-
-                    // if (vediModal.innerHTML == "") {
-                    //     vediModal.append(utente.id, utente.name, utente.username, utente.email, utente.phone, utente.website);
-                    // } else {
-                    //     vediModal.innerHTML = ""
-                    // };
-
-                    // console.log(utente.id, utente.name, utente.username, utente.email, utente.address, utente.phone, utente.website, utente.company);
                 })
             })
             tdVedi.append(btnVedi)
@@ -262,6 +252,8 @@ salvaModifica.addEventListener('click', function () {
 
 const userCardTemplate = document.querySelector('[data-user-template]')
 const userCardContainer = document.querySelector('[data-user-cards-container]')
+const card = document.querySelectorAll('.card')
+const arrayCard = Array.from(card);
 const searchInput = document.querySelector('[data-search]')
 
 let users = []
@@ -277,16 +269,6 @@ searchInput.addEventListener("input", e => {
             userCardContainer.classList.add('d-none')
         } else {
             userCardContainer.classList.remove('d-none')
-
-            // userCardContainer.addEventListener("click", function () {
-            //     for () {  proviamo a mettere qui lo stesso for() del visualizza che crea pero dobbiamo vedere come accedere all'oggetto dell'utente (utente.id) , forse con una chiamata 
-
-
-
-
-            //     }
-
-            // })
         }
 
     });
@@ -308,7 +290,25 @@ fetch(APPURL)
         })
     })
 
+console.log(arrayCard);
 
+function cliccabile() {
+    console.log("Hai cliccato una card!");
+    // for (let i = 0; i < arrayCard.length; i++) {
+    for (let singola of arrayCard) {
+        card.addEventListener('click', function () {
+            fetch(APPURL + '/' + utente.id, {
+                method: 'GET'
+            }).then(function (res) {
+                console.log(res);
+                if (vediModal.innerHTML !== "") {
+                    vediModal.innerHTML = ""
+                    vediModal.innerHTML = (` <h4>ID</h4> <p> ${utente.id} </p> <hr> <h4>Username</h4> <p> ${utente.username} </p> <hr> <h4>Nome e cognome</h4> <p> ${utente.name} </p> <hr> <h4>Email</h4> <p> ${utente.email} </p> <hr> <h4>Numero</h4> <p> ${utente.phone} </p> <hr> <h4>Sito web</h4> <p> ${utente.website} </p> <hr> <h4>Indirizzo</h4> <h5>Via</h5> <p> ${utente.address.street} </p> <h5>N° civico</h5> <p> ${utente.address.suite} </p> <h5>Città</h5> <p> ${utente.address.city} </p> <h5>CAP</h5> <p> ${utente.address.zipcode} </p>`)
+                } else (vediModal.innerHTML = (` <h4>ID</h4> <p> ${utente.id} </p> <hr> <h4>Username</h4> <p> ${utente.username} </p> <hr> <h4>Nome e cognome</h4> <p> ${utente.name} </p> <hr> <h4>Email</h4> <p> ${utente.email} </p> <hr> <h4>Numero</h4> <p> ${utente.phone} </p> <hr> <h4>Sito web</h4> <p> ${utente.website} </p> <hr> <h4>Indirizzo</h4> <h5>Via</h5> <p> ${utente.address.street} </p> <h5>N° civico</h5> <p> ${utente.address.suite} </p> <h5>Città</h5> <p> ${utente.address.city} </p> <h5>CAP</h5> <p> ${utente.address.zipcode} </p>`));
+            })
+        })
+    }
+}
 
 
 // ************* FINE SEARCH BAR
