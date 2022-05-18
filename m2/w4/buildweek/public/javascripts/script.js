@@ -69,6 +69,7 @@ fetch(APPURL)
 
             // ****** BOTTONE VEDI
             let tdVedi = document.createElement('td')
+            tdVedi.classList.add('text-center')
             let btnVedi = document.createElement('button')
             btnVedi.innerHTML = '<i class="bi bi-eye"></i>'
             btnVedi.setAttribute("data-bs-toggle", "modal");
@@ -105,6 +106,7 @@ fetch(APPURL)
 
             // ****** BOTTONE MODIFICA
             let tdModifica = document.createElement('td')
+            tdModifica.classList.add('text-center')
             let btnModifica = document.createElement('button')
             btnModifica.innerHTML = '<i class="bi bi-pencil-square"></i>'
             btnModifica.setAttribute("data-bs-toggle", "modal");
@@ -136,6 +138,7 @@ fetch(APPURL)
 
             // ***** BOTTONE ELIMINA
             let tdElimina = document.createElement('td')
+            tdElimina.classList.add('text-center')
             let btnElimina = document.createElement('button')
             btnElimina.innerHTML = '<i class="bi bi-trash"></i>'
             btnElimina.classList.add('btn', 'btn-danger')
