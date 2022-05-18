@@ -247,6 +247,13 @@ salvaModifica.addEventListener('click', function () {
     }).then(function (res) {
         console.log(res);
 
+    }).then(res => {
+        Swal.fire({
+            icon: 'success',
+            title: 'Utente aggiornato',
+            html: `L'utente ${user.name} è stato aggiornato con successo!`,
+        })
+
     })
 })
 
