@@ -67,7 +67,6 @@ fetch(APPURL)
             tr.append(tdID, tdUser, tdName, tdEmail, tdPhone, tdWebsite)
 
             // ****** BOTTONE VEDI
-            // let viewModal = document.getElementById('viewModalContent')
             let tdVedi = document.createElement('td')
             let btnVedi = document.createElement('button')
             let vediModal = document.getElementById('viewModalContent')
@@ -155,6 +154,12 @@ fetch(APPURL)
                     method: 'DELETE'
                 }).then(function (res) {
                     console.log(res);
+                }).then(res => {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Utente eliminato',
+                        html: `L'utente ${utente.name} è stato eliminato con successo!`,
+                    })
                 })
             })
             tdElimina.append(btnElimina)
@@ -207,6 +212,13 @@ bottone.addEventListener('click', function (e) {
         .then(res => res.json())
         .then(function (res) {
             console.log(res);
+        }).then(res => {
+            Swal.fire({
+                icon: 'success',
+                title: 'Utente aggiunto',
+                html: `L'utente ${user.name} è stato aggiunto con successo!`,
+            })
+
         })
 })
 
@@ -258,6 +270,16 @@ searchInput.addEventListener("input", e => {
             userCardContainer.classList.add('d-none')
         } else {
             userCardContainer.classList.remove('d-none')
+
+            // userCardContainer.addEventListener("click", function () {
+            //     for () {  proviamo a mettere qui lo stesso for() del visualizza che crea pero dobbiamo vedere come accedere all'oggetto dell'utente (utente.id) , forse con una chiamata 
+
+
+
+
+            //     }
+
+            // })
         }
 
     });
