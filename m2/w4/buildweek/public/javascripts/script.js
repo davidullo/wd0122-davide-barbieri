@@ -55,16 +55,22 @@ fetch(APPURL)
             let tr = document.createElement('tr')
             let tdID = document.createElement('td')
             tdID.innerHTML = utente.id
+            tdID.classList.add('fw-bold', 'text-center', 'align-middle')
             let tdName = document.createElement('td')
             tdName.innerHTML = utente.name
+            tdName.classList.add('align-middle')
             let tdUser = document.createElement('td')
             tdUser.innerHTML = utente.username
+            tdUser.classList.add('align-middle')
             let tdEmail = document.createElement('td')
             tdEmail.innerHTML = utente.email
+            tdEmail.classList.add('align-middle')
             let tdPhone = document.createElement('td')
             tdPhone.innerHTML = utente.phone
+            tdPhone.classList.add('align-middle')
             let tdWebsite = document.createElement('td')
             tdWebsite.innerHTML = utente.website
+            tdWebsite.classList.add('align-middle')
             tr.append(tdID, tdUser, tdName, tdEmail, tdPhone, tdWebsite)
 
             // ****** BOTTONE VEDI
