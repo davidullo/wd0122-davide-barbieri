@@ -7,7 +7,14 @@ a {
   color: #00B7FF;
 }
 
-/* searchbar */
+/* .accordion-button {
+  background-color: #198754;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #42a577;
+} */
+
 .search-wrapper {
   display: flex;
   flex-direction: column;
