@@ -83,7 +83,6 @@ fetch(APPURL)
                     // let stringaAddress = JSON.stringify(utente.address)
 
                     if (vediModal.innerHTML !== "") {
-                        console.log('non è vuoto');
                         vediModal.innerHTML = ""
                         vediModal.innerHTML = (` <h4>ID</h4> <p> ${utente.id} </p> <hr> <h4>Username</h4> <p> ${utente.username} </p> <hr> <h4>Nome e cognome</h4> <p> ${utente.name} </p> <hr> <h4>Email</h4> <p> ${utente.email} </p> <hr> <h4>Numero</h4> <p> ${utente.phone} </p> <hr> <h4>Sito web</h4> <p> ${utente.website} </p> <hr> <h4>Indirizzo</h4> <h5>Via</h5> <p> ${utente.address.street} </p> <h5>N° civico</h5> <p> ${utente.address.suite} </p> <h5>Città</h5> <p> ${utente.address.city} </p> <h5>CAP</h5> <p> ${utente.address.zipcode} </p>`)
                     } else (vediModal.innerHTML = (` <h4>ID</h4> <p> ${utente.id} </p> <hr> <h4>Username</h4> <p> ${utente.username} </p> <hr> <h4>Nome e cognome</h4> <p> ${utente.name} </p> <hr> <h4>Email</h4> <p> ${utente.email} </p> <hr> <h4>Numero</h4> <p> ${utente.phone} </p> <hr> <h4>Sito web</h4> <p> ${utente.website} </p> <hr> <h4>Indirizzo</h4> <h5>Via</h5> <p> ${utente.address.street} </p> <h5>N° civico</h5> <p> ${utente.address.suite} </p> <h5>Città</h5> <p> ${utente.address.city} </p> <h5>CAP</h5> <p> ${utente.address.zipcode} </p>`));
@@ -238,6 +237,52 @@ salvaModifica.addEventListener('click', function () {
 
     })
 })
+
+
+// ************* SEARCH BAR
+
+const userCardTemplate = document.querySelector('[data-user-template]')
+const userCardContainer = document.querySelector('[data-user-cards-container]')
+const searchInput = document.querySelector('[data-search]')
+
+let users = []
+
+searchInput.addEventListener("input", e => {
+    const value = e.target.value.toLowerCase()
+    users.forEach(user => {
+        const isVisible =
+            user.name.toLowerCase().includes(value) ||
+            user.email.toLowerCase().includes(value)
+        user.element.classList.toggle('hide', !isVisible)
+        if (searchInput.value == '') {
+            userCardContainer.classList.add('d-none')
+        } else {
+            userCardContainer.classList.remove('d-none')
+        }
+
+    });
+})
+
+fetch(APPURL)
+    .then(res => res.json())
+    .then(data => {
+        users = data.map(user => {
+            const card = userCardTemplate.content.cloneNode(true).children[0]
+            console.log(card);
+            const header = card.querySelector('[data-header]')
+            const body = card.querySelector('[data-body')
+            header.textContent = user.name
+            body.textContent = user.email
+            userCardContainer.append(card)
+            return { name: user.name, email: user.email, element: card }
+
+        })
+    })
+
+
+
+
+// ************* FINE SEARCH BAR
 
 
 
