@@ -266,8 +266,7 @@ let selectPages = document.getElementById('selectPages');
 let usersPerPage = selectPages.value;
 console.log(usersPerPage);
 let currentPage = 1;
-let start = 4;
-let end = 8;
+let start = 0;
 
 fetch(APPURL)
     .then(res => res.json())
@@ -281,25 +280,15 @@ fetch(APPURL)
                 console.log(Math.ceil(data.length / (data.length / 10)));
             }
             // CONTINUARE DA QUI ...
-
+            let elementiVisibili = data.length - this.value;
+            console.log(elementiVisibili);
+            let elementiDaCancellare = data.length - elementiVisibili;
+            let elementiNonVisibili = (data.slice(elementiDaCancellare));
+            for (let singolo of elementiNonVisibili) {
+                console.log(singolo);
+            }
+            console.log(elementiNonVisibili);
         })
-    })
-
-// fetch(APPURL)
-//     .then(res => res.json())
-//     .then(data => {
-//         console.log(data.length)
-//         function pageNumber() {
-//             if (usersPerPage == 2 || usersPerPage == 5 || usersPerPage == 10) {
-//                 data.length / (data.length / usersPerPage);
-//             }
-//         }
-//     })
-
-fetch(APPURL)
-    .then(res => res.json())
-    .then(data => {
-        console.log(data.slice(start, end))
     })
 
 function prevPage() {
@@ -315,27 +304,3 @@ function nextPage() {
         changePage(currentPage);
     }
 }
-
-// function jsp_change_page(page) {
-//     const btnPrev = document.getElementById('btnIndietro');
-//     const btnNext = document.getElementById('btnAvanti');
-//     const listingTable = document.getElementById('utenti');
-//     let page_span = document.getElementById('page');
-
-//     if (page < 1) {
-//         page = 1;
-//     }
-//     if (page > jsp_num_pages()) {
-//         page = jsp_num_pages();
-//     }
-
-//     listing_table.innerHTML = '';
-
-//     for (let i = (page - 1) * jsp_records_per_page; i < (page * jsp_records_per_page) && i < jsp_json_object.length; i++) {
-//         listing_table.innerHTML += `${jsp_json_object[i].json_item}<br>`;
-//     }
-//     page_span.innerHTML = `${page}/${jsp_num_pages()}`;
-
-//     btn_prev.style.display = (page === 1) ? 'none' : 'inline-block';
-//     btn_next.style.display = (page === jsp_num_pages()) ? 'none' : 'inline-block';
-// }
