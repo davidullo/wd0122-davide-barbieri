@@ -1,35 +1,3 @@
-/*
-// ********************** PARTE DI FLAVIO
-//indicare id utente da eliminare alla fine
-fetch("http://jsonplaceholder.typicode.com/users/13", {
-    method: 'DELETE'
-})
-
-//Aggiunta
-let data = {
-    name: "Flavio",
-    username: "Flavio213",
-    email: "mail@maiul.com",
-}
-fetch("http://jsonplaceholder.typicode.com/users/", {
-    method: 'POST',
-    body: JSON.stringify(data),
-    headers: { 'Content-type': 'Application/json'}
-})
-
-//Edit
-fetch("http://jsonplaceholder.typicode.com/users/13", {
-    method: 'PATCH',
-    body: JSON.stringify(data),
-    headers: { 'Content-type': 'Application/json'}
-}).then(function(response){
-    console.log(response);
-})
-
-
-fetch("http://jsonplaceholder.typicode.com/users/13").then(res=>res.json()).then(res=>{})
-*/
-
 const APPURL = 'https://jsonplaceholder.typicode.com/users'
 let tabella = document.querySelector('#tbody')
 let editNome = document.getElementById('editNome')
@@ -95,21 +63,6 @@ fetch(APPURL)
             tdVedi.append(btnVedi)
             tr.append(tdVedi)
 
-            // let bottoneVedi = document.getElementsByClassName('viewButton');
-            // console.log(bottoneVedi);
-            // let vediModal = document.getElementById('viewModalContent');
-            // let provaTesto = 'bla bla bla';
-            // console.log(bottoneVedi.length);
-            // for (let vedi of bottoneVedi) {
-            //     console.log(vedi);
-            //     vedi.addEventListener('click', function () {
-            //         vediModal.append(provaTesto);
-            //         console.log(provaTesto);
-            //     });
-            // }
-
-            // ****** FINE BOTTONE VEDI
-
             // ****** BOTTONE MODIFICA
             let tdModifica = document.createElement('td')
             tdModifica.classList.add('text-center')
@@ -140,8 +93,6 @@ fetch(APPURL)
             tdModifica.append(btnModifica)
             tr.append(tdModifica)
 
-            // ****** FINE BOTTONE MODIFICA
-
             // ***** BOTTONE ELIMINA
             let tdElimina = document.createElement('td')
             tdElimina.classList.add('text-center')
@@ -163,11 +114,8 @@ fetch(APPURL)
             })
             tdElimina.append(btnElimina)
             tr.append(tdElimina)
-            // ****** FINE BOTTONE ELIMINA
-
             tabella.append(tr)
-
-            console.log(APPURL + '/' + utente.id);
+            // console.log(APPURL + '/' + utente.id);
         }
     })
 
@@ -263,15 +211,6 @@ const userCardTemplate = document.querySelector('[data-user-template]')
 const userCardContainer = document.querySelector('[data-user-cards-container]')
 
 const card = document.querySelectorAll('.card')
-// const arrayCard = Array.from(card);
-
-// for (const carta of card) {
-//     let buttonVedi = document.createElement('button')
-//     cardA.appendChild(buttonVedi)
-
-
-
-// }
 const searchInput = document.querySelector('[data-search]')
 
 let users = []
@@ -287,8 +226,6 @@ searchInput.addEventListener("input", e => {
             userCardContainer.classList.add('d-none')
         } else {
             userCardContainer.classList.remove('d-none')
-
-
         }
 
     });
@@ -301,7 +238,6 @@ fetch(APPURL)
     .then(data => {
         users = data.map(user => {
             const card = userCardTemplate.content.cloneNode(true).children[0]
-            console.log(card);
             const header = card.querySelector('[data-header]')
             const body = card.querySelector('[data-body')
             header.textContent = user.name
@@ -309,72 +245,69 @@ fetch(APPURL)
             userCardContainer.append(card)
             card.addEventListener("click", () => {
                 document.getElementsByClassName("viewButton")[user.id - 1].click()
-
-
                 const id = card.querySelector('[data-id]')
                 id.textContent = user.id
-
-                // for (let id of user.id) {
-
-                // }
-
-
-
-                // let ordine = user.id
-
-
-
-
             })
-
-
             return { name: user.name, email: user.email, element: card }
-
         })
     })
 
 
+// ******** PAGINAZIONE
+let currentPage = 1;
+let usersPerPage = 2;
+let start = 2
+let end = 4
 
+fetch(APPURL)
+    .then(res => res.json())
+    .then(data => {
+        console.log(data.length)
+        function pageNumber() {
+            return Math.ceil(data.length / usersPerPage);
+        }
+    })
 
+fetch(APPURL)
+    .then(res => res.json())
+    .then(data => {
+        console.log(data.slice(start, end))
+    })
 
-// ************* FINE SEARCH BAR
+function prevPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        changePage(currentPage);
+    }
+}
 
+function nextPage() {
+    if (currentPage < pageNumber()) {
+        currentPage++;
+        changePage(currentPage);
+    }
+}
 
+// function jsp_change_page(page) {
+//     const btnPrev = document.getElementById('btnIndietro');
+//     const btnNext = document.getElementById('btnAvanti');
+//     const listingTable = document.getElementById('utenti');
+//     let page_span = document.getElementById('page');
 
-// for (var i = 0; i < bottoneVedi.length; i++) {
-//     bottoneVedi[i].addEventListener('click', function () {
-//         console.log(provaTesto);
-//     });
+//     if (page < 1) {
+//         page = 1;
+//     }
+//     if (page > jsp_num_pages()) {
+//         page = jsp_num_pages();
+//     }
+
+//     listing_table.innerHTML = '';
+
+//     for (let i = (page - 1) * jsp_records_per_page; i < (page * jsp_records_per_page) && i < jsp_json_object.length; i++) {
+//         listing_table.innerHTML += `${jsp_json_object[i].json_item}<br>`;
+//     }
+//     page_span.innerHTML = `${page}/${jsp_num_pages()}`;
+
+//     btn_prev.style.display = (page === 1) ? 'none' : 'inline-block';
+//     btn_next.style.display = (page === jsp_num_pages()) ? 'none' : 'inline-block';
 // }
-
-
-// for (let vedi of bottoneVedi) {
-//     vedi.addEventListener('click', function () {
-//         vediModal.append(provaTesto)
-//         console.log('test2');
-//     })
-// }
-
-// bottoneVedi.addEventListener('click', function () {
-//     console.log('test_vedi');
-// })
-
-// consigli flavio:
-// Non usare file .json
-// Utilizziamo il file json online con l'URL, ma non potremo aggiungere o cancellare nel json
-
-// ****** BOTTONE MODIFICA (BACKUP)
-// let tdModifica = document.createElement('td')
-// let btnModifica = document.createElement('button')
-// btnModifica.innerHTML = '<i class="bi bi-pencil-square"></i>'
-// btnModifica.classList.add('btn', 'btn-warning')
-// btnModifica.addEventListener('click', function () {
-//     fetch(APPURL + '/' + utente.id, {
-//         method: 'PUT'
-//     }).then(function (res) {
-//         console.log(res);
-//     })
-// })
-// tdModifica.append(btnModifica)
-// tr.append(tdModifica)
-// ****** FINE BOTTONE MODIFICA
