@@ -254,19 +254,36 @@ fetch(APPURL)
 
 
 // ******** PAGINAZIONE
+let selectPages = document.getElementById('selectPages');
+let usersPerPage = selectPages.value;
+console.log(usersPerPage);
 let currentPage = 1;
-let usersPerPage = 2;
-let start = 2
-let end = 4
+let start = 2;
+let end = 4;
 
 fetch(APPURL)
     .then(res => res.json())
     .then(data => {
         console.log(data.length)
-        function pageNumber() {
-            return Math.ceil(data.length / usersPerPage);
-        }
+        selectPages.addEventListener('change', function pageNumber() {
+            console.log('Hai selezionato: ', this.value);
+            if (this.value == 2 || this.value == 5 || this.value == 10) {
+                console.log(Math.ceil(data.length / (data.length / this.value)));
+            }
+            // CONTINUARE DA QUI ...
+        })
     })
+
+// fetch(APPURL)
+//     .then(res => res.json())
+//     .then(data => {
+//         console.log(data.length)
+//         function pageNumber() {
+//             if (usersPerPage == 2 || usersPerPage == 5 || usersPerPage == 10) {
+//                 data.length / (data.length / usersPerPage);
+//             }
+//         }
+//     })
 
 fetch(APPURL)
     .then(res => res.json())
