@@ -11,9 +11,63 @@ let editCitta = document.getElementById('editCitta')
 let editCap = document.getElementById('editCap')
 let editID = document.getElementById('idUtente')
 let vediModal = document.getElementById('viewModalContent')
+let btnAvanti = document.getElementById('btnAvanti')
+let btnIndietro = document.getElementById('btnIndietro')
+let selectPages = document.getElementById('selectPages');
+let usersPerPage = selectPages.value;
+console.log(usersPerPage);
+let currentPage = 0;
+let start = 0;
+let righe = [];
+
+function avanti() {
+    currentPage++
+    tabella.innerHTML = ''
+    for (let l = currentPage * selectPages.value; l < selectPages.value * (currentPage + 1); l++) {
+        tabella.append(righe[l]);
+    }
+}
+function indietro() {
+    currentPage--
+    tabella.innerHTML = ''
+    for (let l = currentPage * selectPages.value; l > selectPages.value * (currentPage - 1); l--) {
+        tabella.append(righe[l]);
+    }
+}
+
+btnAvanti.addEventListener('click', avanti)
+btnIndietro.addEventListener('click', indietro)
+
 fetch(APPURL)
     .then(res => res.json())
     .then(res => {
+        //**** paginazione */
+
+        selectPages.addEventListener('change', function pageNumber() {
+            // console.log('Hai selezionato: ', this.value);
+
+            // if (this.value == 2 || this.value == 5 || this.value == 10) {
+            //     console.log(Math.ceil(res.length / (res.length / this.value)));
+            // } else {
+            //     console.log(Math.ceil(res.length / (res.length / 10)));
+            // }
+
+            // CONTINUARE DA QUI ...
+            // let elementiVisibili = res.length - this.value;
+            // console.log(elementiVisibili);
+            // let elementiDaCancellare = res.length - elementiVisibili;
+            // let elementiNonVisibili = (res.slice(elementiDaCancellare));
+
+            // for (let singolo of elementiNonVisibili) {
+            //     console.log(singolo);
+            // }
+            // console.log(elementiNonVisibili);
+            tabella.innerHTML = ''
+            for (let l = 0; l <= this.value - 1; l++) {
+                tabella.append(righe[l]);
+            }
+        })
+
         console.log(res);
         for (let utente of res) {
             let table = document.getElementById('utenti')
@@ -40,6 +94,8 @@ fetch(APPURL)
             tdWebsite.innerHTML = utente.website
             tdWebsite.classList.add('align-middle')
             tr.append(tdID, tdUser, tdName, tdEmail, tdPhone, tdWebsite)
+
+
 
             // ****** BOTTONE VEDI
             let tdVedi = document.createElement('td')
@@ -117,7 +173,10 @@ fetch(APPURL)
             tabella.append(tr)
             // console.log(APPURL + '/' + utente.id);
         }
+        righe = document.querySelectorAll('#tbody tr')
     })
+
+
 
 //******* AGGIUNGI UTENTE
 let bottone = document.querySelector('#aggiungi')
@@ -260,36 +319,36 @@ fetch(APPURL)
     })
 
 // ******** PAGINAZIONE
-let btnAvanti = document.getElementById('btnAvanti')
-let btnIndietro = document.getElementById('btnIndietro')
-let selectPages = document.getElementById('selectPages');
-let usersPerPage = selectPages.value;
-console.log(usersPerPage);
-let currentPage = 1;
-let start = 0;
+// let btnAvanti = document.getElementById('btnAvanti')
+// let btnIndietro = document.getElementById('btnIndietro')
+// let selectPages = document.getElementById('selectPages');
+// let usersPerPage = selectPages.value;
+// console.log(usersPerPage);
+// let currentPage = 1;
+// let start = 0;
 
-fetch(APPURL)
-    .then(res => res.json())
-    .then(data => {
-        console.log(data.length)
-        selectPages.addEventListener('change', function pageNumber() {
-            console.log('Hai selezionato: ', this.value);
-            if (this.value == 2 || this.value == 5 || this.value == 10) {
-                console.log(Math.ceil(data.length / (data.length / this.value)));
-            } else {
-                console.log(Math.ceil(data.length / (data.length / 10)));
-            }
-            // CONTINUARE DA QUI ...
-            let elementiVisibili = data.length - this.value;
-            console.log(elementiVisibili);
-            let elementiDaCancellare = data.length - elementiVisibili;
-            let elementiNonVisibili = (data.slice(elementiDaCancellare));
-            for (let singolo of elementiNonVisibili) {
-                console.log(singolo);
-            }
-            console.log(elementiNonVisibili);
-        })
-    })
+// fetch(APPURL)
+//     .then(res => res.json())
+//     .then(data => {
+//         console.log(data.length)
+//         selectPages.addEventListener('change', function pageNumber() {
+//             console.log('Hai selezionato: ', this.value);
+//             if (this.value == 2 || this.value == 5 || this.value == 10) {
+//                 console.log(Math.ceil(data.length / (data.length / this.value)));
+//             } else {
+//                 console.log(Math.ceil(data.length / (data.length / 10)));
+//             }
+//             // CONTINUARE DA QUI ...
+//             let elementiVisibili = data.length - this.value;
+//             console.log(elementiVisibili);
+//             let elementiDaCancellare = data.length - elementiVisibili;
+//             let elementiNonVisibili = (data.slice(elementiDaCancellare));
+//             for (let singolo of elementiNonVisibili) {
+//                 console.log(singolo);
+//             }
+//             console.log(elementiNonVisibili);
+//         })
+//     })
 
 function prevPage() {
     if (currentPage > 1) {
