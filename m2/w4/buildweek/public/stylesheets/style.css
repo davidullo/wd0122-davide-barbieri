@@ -1,19 +1,10 @@
 body {
-  padding: 50px;
-  /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
+  padding: 50px 0;
 }
 
 a {
   color: #00B7FF;
 }
-
-/* .accordion-button {
-  background-color: #198754;
-}
-
-.accordion-button:not(.collapsed) {
-  background-color: #42a577;
-} */
 
 .search-wrapper {
   display: flex;
@@ -51,10 +42,30 @@ input {
 }
 
 .card>.header {
-  margin-bottom: .25rem;
+  margin-bottom: 0rem;
+  font-weight: bold;
+}
+
+.card>.header::before {
+  content: "👤 ";
 }
 
 .card>.body {
+  font-size: .8rem;
+  color: #777;
+}
+
+.card>.username {
+  font-size: .8rem;
+  color: #777;
+}
+
+.card>.website {
+  font-size: .8rem;
+  color: #777;
+}
+
+.card>.phone {
   font-size: .8rem;
   color: #777;
 }

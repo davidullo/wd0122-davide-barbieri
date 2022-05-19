@@ -220,7 +220,10 @@ searchInput.addEventListener("input", e => {
     users.forEach(user => {
         const isVisible =
             user.name.toLowerCase().includes(value) ||
-            user.email.toLowerCase().includes(value)
+            user.username.toLowerCase().includes(value) ||
+            user.email.toLowerCase().includes(value) ||
+            user.website.toLowerCase().includes(value) ||
+            user.phone.toLowerCase().includes(value)
         user.element.classList.toggle('hide', !isVisible)
         if (searchInput.value == '') {
             userCardContainer.classList.add('d-none')
@@ -231,35 +234,40 @@ searchInput.addEventListener("input", e => {
     });
 })
 
-
-
 fetch(APPURL)
     .then(res => res.json())
     .then(data => {
         users = data.map(user => {
             const card = userCardTemplate.content.cloneNode(true).children[0]
             const header = card.querySelector('[data-header]')
-            const body = card.querySelector('[data-body')
-            header.textContent = user.name
-            body.textContent = user.email
+            const username = card.querySelector('[data-username]')
+            const body = card.querySelector('[data-body]')
+            const website = card.querySelector('[data-website]')
+            const phone = card.querySelector('[data-phone]')
+            header.textContent = `${user.name}`
+            username.textContent = `Username: ${user.username}`
+            body.textContent = `Email: ${user.email}`
+            website.textContent = `Sito web: ${user.website}`
+            phone.textContent = `Numero: ${user.phone}`
             userCardContainer.append(card)
             card.addEventListener("click", () => {
                 document.getElementsByClassName("viewButton")[user.id - 1].click()
                 const id = card.querySelector('[data-id]')
                 id.textContent = user.id
             })
-            return { name: user.name, email: user.email, element: card }
+            return { name: user.name, username: user.username, email: user.email, website: user.website, phone: user.phone, element: card }
         })
     })
 
-
 // ******** PAGINAZIONE
+let btnAvanti = document.getElementById('btnAvanti')
+let btnIndietro = document.getElementById('btnIndietro')
 let selectPages = document.getElementById('selectPages');
 let usersPerPage = selectPages.value;
 console.log(usersPerPage);
 let currentPage = 1;
-let start = 2;
-let end = 4;
+let start = 4;
+let end = 8;
 
 fetch(APPURL)
     .then(res => res.json())
@@ -269,8 +277,11 @@ fetch(APPURL)
             console.log('Hai selezionato: ', this.value);
             if (this.value == 2 || this.value == 5 || this.value == 10) {
                 console.log(Math.ceil(data.length / (data.length / this.value)));
+            } else {
+                console.log(Math.ceil(data.length / (data.length / 10)));
             }
             // CONTINUARE DA QUI ...
+
         })
     })
 

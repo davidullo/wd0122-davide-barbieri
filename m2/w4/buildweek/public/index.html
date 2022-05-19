@@ -19,6 +19,7 @@
                 <div class="row align-items-center">
                     <div class="col-12 col-md-9">
                         <h1 class="display-1 fw-bold">🛠 Buildweek</h1>
+                        <h3 class="text-secondary">Simulazione di un pannello per la gestione degli utenti.</h3>
                     </div>
                     <div class="col-12 col-md-3" id="searchBar">
                         <div class="search-wrapper">
@@ -33,7 +34,10 @@
                         <template data-user-template>
                             <div class="card">
                                 <div class=" header" data-header></div>
+                                <div class="username" data-username></div>
                                 <div class="body" data-body></div>
+                                <div class="website" data-website></div>
+                                <div class="phone" data-phone></div>
                                 <div class="id" data-id></div>
                             </div>
                         </template>
@@ -98,10 +102,10 @@
                     </table>
                 </div>
                 <div class="container">
-                    <div class="row d-flex justify-content-end">
-                        <div class="col-8">
+                    <div class="row d-flex justify-content-end align-items-start">
+                        <div class="col-6 col-sm-8">
                             <div class="pagination d-flex justify-content-center">
-                                <nav aria-label="Page navigation example">
+                                <nav aria-label="Page navigation example" class="d-flex align-items-center pt-1">
                                     <ul class="pagination">
                                         <li class="page-item"><a class="page-link" href="#"
                                                 id="btnIndietro">Indietro</a>
@@ -112,10 +116,11 @@
                                 </nav>
                             </div>
                         </div>
-                        <div class="col-2">
+                        <div class="col-3 col-sm-2">
                             <div class="selectPages">
-                                <p class="text-end"><small>Elementi per pagina:</small></p>
-                                <select class="form-select form-select-sm" aria-label="Default select example"
+                                <p class="text-end d-none d-sm-block mb-1"><small>Elementi per
+                                        pagina:</small></p>
+                                <select class="form-select form-select-sm mt-2" aria-label="Default select example"
                                     name="pages" id="selectPages">
                                     <option selected value="10">10</option>
                                     <option value="5">5</option>
