@@ -6,6 +6,16 @@ a {
   color: #00B7FF;
 }
 
+.homeLink {
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+
+.homeLink:hover {
+  color: red;
+}
+
 .search-wrapper {
   display: flex;
   flex-direction: column;
@@ -21,8 +31,6 @@ input {
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: .25rem;
   margin-top: 1rem;
-  /* overflow: hidden;
-  height: 62px; */
   z-index: 10;
   position: absolute;
 }
@@ -76,4 +84,10 @@ input {
 
 .hide {
   display: none;
+}
+
+.disabled {
+  pointer-events: none;
+  background-color: rgb(225, 225, 225);
+  color: gray;
 }

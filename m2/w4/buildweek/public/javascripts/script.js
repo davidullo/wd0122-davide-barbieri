@@ -33,7 +33,16 @@ let currentPage = 0;
 let start = 0;
 let righe = [];
 
-/* form validation - nuovo utente modal */
+window.onload = (event) => {
+    btnIndietro.classList.add('disabled');
+    btnAvanti.classList.add('disabled');
+};
+
+let nPagine = righe.length / Number.parseInt(selectPages.value)
+console.log(righe.length);
+if (currentPage == nPagine - 1) {
+    btnAvanti.classList.add('disabled')
+}
 
 const validate = (e) => {
     e.preventDefault();
@@ -87,14 +96,12 @@ const validate = (e) => {
     return true;
 }
 
-// bottone.addEventListener('click', validate);
 bottone.addEventListener('click', (e) => {
     e.preventDefault()
     validate(e)
     post(e)
 })
 
-/* form validation - edit modal */
 const validateEdit = (e) => {
     e.preventDefault(e);
     if (editNome.value === "") {
@@ -147,26 +154,33 @@ const validateEdit = (e) => {
 }
 salvaModifica.addEventListener('click', validateEdit);
 
-// PAGINAZIONE 
 function avanti() {
     currentPage++
     tabella.innerHTML = ''
+    btnIndietro.classList.remove('disabled')
     for (let l = currentPage * selectPages.value; l < selectPages.value * (currentPage + 1); l++) {
         tabella.append(righe[l]);
+    }
+    let nPagine = righe.length / Number.parseInt(selectPages.value)
+    if (currentPage == nPagine - 1) {
+        btnAvanti.classList.add('disabled')
     }
 }
 function indietro() {
     currentPage--
     tabella.innerHTML = ''
-    for (let l = currentPage * selectPages.value; l > selectPages.value * (currentPage - 1); l--) {
+    btnAvanti.classList.remove('disabled')
+
+    for (let l = currentPage * selectPages.value; l < (currentPage + 1) * selectPages.value; l++) {
         tabella.append(righe[l]);
+    }
+    if (currentPage == 0) {
+        btnIndietro.classList.add('disabled')
     }
 }
 
 btnAvanti.addEventListener('click', avanti)
 btnIndietro.addEventListener('click', indietro)
-
-// FINE PAGINAZIONE
 
 fetch(APPURL)
     .then(res => res.json())
@@ -175,6 +189,13 @@ fetch(APPURL)
             tabella.innerHTML = ''
             for (let l = 0; l <= this.value - 1; l++) {
                 tabella.append(righe[l]);
+                let nPagine = righe.length / Number.parseInt(selectPages.value)
+                console.log(righe.length);
+                if (currentPage == nPagine - 1) {
+                    btnAvanti.classList.add('disabled')
+                } else {
+                    btnAvanti.classList.remove('disabled')
+                }
             }
         })
 
@@ -205,9 +226,6 @@ fetch(APPURL)
             tdWebsite.classList.add('align-middle')
             tr.append(tdID, tdUser, tdName, tdEmail, tdPhone, tdWebsite)
 
-
-
-            // ****** BOTTONE VEDI
             let tdVedi = document.createElement('td')
             tdVedi.classList.add('text-center')
             let btnVedi = document.createElement('button')
@@ -229,7 +247,6 @@ fetch(APPURL)
             tdVedi.append(btnVedi)
             tr.append(tdVedi)
 
-            // ****** BOTTONE MODIFICA
             let tdModifica = document.createElement('td')
             tdModifica.classList.add('text-center')
             let btnModifica = document.createElement('button')
@@ -259,7 +276,6 @@ fetch(APPURL)
             tdModifica.append(btnModifica)
             tr.append(tdModifica)
 
-            // ***** BOTTONE ELIMINA
             let tdElimina = document.createElement('td')
             tdElimina.classList.add('text-center')
             let btnElimina = document.createElement('button')
@@ -281,19 +297,11 @@ fetch(APPURL)
             tdElimina.append(btnElimina)
             tr.append(tdElimina)
             tabella.append(tr)
-            // console.log(APPURL + '/' + utente.id);
         }
         righe = document.querySelectorAll('#tbody tr')
-        // if (currentPage > ) {
-        //     btnAvanti.classList.add('disabled')
-        // } else{
-        //     btnAvanti.classList.remove('disabled')
-        // }
     })
 
 
-
-//******* AGGIUNGI UTENTE
 
 function post(e) {
     e.preventDefault()
@@ -371,8 +379,6 @@ salvaModifica.addEventListener('click', function (e) {
 })
 
 
-// ************* SEARCH BAR
-
 const userCardTemplate = document.querySelector('[data-user-template]')
 const userCardContainer = document.querySelector('[data-user-cards-container]')
 
@@ -417,46 +423,15 @@ fetch(APPURL)
             phone.textContent = `Numero: ${user.phone}`
             userCardContainer.append(card)
             card.addEventListener("click", () => {
-                // document.getElementsByClassName("viewButton")[user.id - 1].click()
                 righe[user.id - 1].querySelector(".viewButton").click()
-                const id = card.querySelector('[data-id]')
-                id.textContent = user.id
+                let array = Array.from(righe)
+                let utente = array.find(element => element.querySelector(".fw-bold").innerHTML == user.id)
+                utente.querySelector(".viewButton").click()
+                $('#viewModal').modal('show')
             })
             return { name: user.name, username: user.username, email: user.email, website: user.website, phone: user.phone, element: card }
         })
     })
-
-// ******** PAGINAZIONE
-// let btnAvanti = document.getElementById('btnAvanti')
-// let btnIndietro = document.getElementById('btnIndietro')
-// let selectPages = document.getElementById('selectPages');
-// let usersPerPage = selectPages.value;
-// console.log(usersPerPage);
-// let currentPage = 1;
-// let start = 0;
-
-// fetch(APPURL)
-//     .then(res => res.json())
-//     .then(data => {
-//         console.log(data.length)
-//         selectPages.addEventListener('change', function pageNumber() {
-//             console.log('Hai selezionato: ', this.value);
-//             if (this.value == 2 || this.value == 5 || this.value == 10) {
-//                 console.log(Math.ceil(data.length / (data.length / this.value)));
-//             } else {
-//                 console.log(Math.ceil(data.length / (data.length / 10)));
-//             }
-//             // CONTINUARE DA QUI ...
-//             let elementiVisibili = data.length - this.value;
-//             console.log(elementiVisibili);
-//             let elementiDaCancellare = data.length - elementiVisibili;
-//             let elementiNonVisibili = (data.slice(elementiDaCancellare));
-//             for (let singolo of elementiNonVisibili) {
-//                 console.log(singolo);
-//             }
-//             console.log(elementiNonVisibili);
-//         })
-//     })
 
 function prevPage() {
     if (currentPage > 1) {
