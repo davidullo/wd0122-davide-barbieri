@@ -44,24 +44,6 @@ fetch(APPURL)
         //**** paginazione */
 
         selectPages.addEventListener('change', function pageNumber() {
-            // console.log('Hai selezionato: ', this.value);
-
-            // if (this.value == 2 || this.value == 5 || this.value == 10) {
-            //     console.log(Math.ceil(res.length / (res.length / this.value)));
-            // } else {
-            //     console.log(Math.ceil(res.length / (res.length / 10)));
-            // }
-
-            // CONTINUARE DA QUI ...
-            // let elementiVisibili = res.length - this.value;
-            // console.log(elementiVisibili);
-            // let elementiDaCancellare = res.length - elementiVisibili;
-            // let elementiNonVisibili = (res.slice(elementiDaCancellare));
-
-            // for (let singolo of elementiNonVisibili) {
-            //     console.log(singolo);
-            // }
-            // console.log(elementiNonVisibili);
             tabella.innerHTML = ''
             for (let l = 0; l <= this.value - 1; l++) {
                 tabella.append(righe[l]);
