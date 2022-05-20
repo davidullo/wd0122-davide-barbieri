@@ -161,6 +161,8 @@ function avanti() {
     for (let l = currentPage * selectPages.value; l < selectPages.value * (currentPage + 1); l++) {
         tabella.append(righe[l]);
     }
+    let allElements = document.getElementById('all')
+    allElements.value = righe.length;
     let nPagine = righe.length / Number.parseInt(selectPages.value)
     if (currentPage == nPagine - 1) {
         btnAvanti.classList.add('disabled')
