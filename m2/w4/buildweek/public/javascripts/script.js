@@ -35,8 +35,8 @@ let righe = [];
 
 /* form validation - nuovo utente modal */
 
-const validate = () => {
-    // e.preventDefault();
+const validate = (e) => {
+    e.preventDefault();
     if (nome.value === "") {
         alert("Inserisci il tuo nome e cognome.");
         nome.focus();
@@ -87,11 +87,16 @@ const validate = () => {
     return true;
 }
 
-bottone.addEventListener('click', validate);
+// bottone.addEventListener('click', validate);
+bottone.addEventListener('click', (e) => {
+    e.preventDefault()
+    validate(e)
+    post(e)
+})
 
 /* form validation - edit modal */
-const validateEdit = () => {
-    // e.preventDefault();
+const validateEdit = (e) => {
+    e.preventDefault(e);
     if (editNome.value === "") {
         alert("Inserisci il nome e cognome.");
         editNome.focus();
@@ -142,7 +147,7 @@ const validateEdit = () => {
 }
 salvaModifica.addEventListener('click', validateEdit);
 
-
+// PAGINAZIONE 
 function avanti() {
     currentPage++
     tabella.innerHTML = ''
@@ -160,6 +165,8 @@ function indietro() {
 
 btnAvanti.addEventListener('click', avanti)
 btnIndietro.addEventListener('click', indietro)
+
+// FINE PAGINAZIONE
 
 fetch(APPURL)
     .then(res => res.json())
@@ -277,14 +284,18 @@ fetch(APPURL)
             // console.log(APPURL + '/' + utente.id);
         }
         righe = document.querySelectorAll('#tbody tr')
+        // if (currentPage > ) {
+        //     btnAvanti.classList.add('disabled')
+        // } else{
+        //     btnAvanti.classList.remove('disabled')
+        // }
     })
 
 
 
 //******* AGGIUNGI UTENTE
 
-
-bottone.addEventListener('click', function (e) {
+function post(e) {
     e.preventDefault()
 
     let user = {
@@ -301,7 +312,7 @@ bottone.addEventListener('click', function (e) {
         }
     }
 
-    if (validate()) {
+    if (validate(e)) {
         fetch(APPURL, {
             method: 'POST',
             headers: {
@@ -322,10 +333,10 @@ bottone.addEventListener('click', function (e) {
             })
     } else {
     }
-})
+}
 
 console.log('test1');
-salvaModifica.addEventListener('click', function () {
+salvaModifica.addEventListener('click', function (e) {
 
     let user = {
         name: editNome.value,
@@ -406,7 +417,8 @@ fetch(APPURL)
             phone.textContent = `Numero: ${user.phone}`
             userCardContainer.append(card)
             card.addEventListener("click", () => {
-                document.getElementsByClassName("viewButton")[user.id - 1].click()
+                // document.getElementsByClassName("viewButton")[user.id - 1].click()
+                righe[user.id - 1].querySelector(".viewButton").click()
                 const id = card.querySelector('[data-id]')
                 id.textContent = user.id
             })
