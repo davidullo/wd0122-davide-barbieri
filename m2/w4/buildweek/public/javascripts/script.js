@@ -10,6 +10,19 @@ let editCivico = document.getElementById('editCivico')
 let editCitta = document.getElementById('editCitta')
 let editCap = document.getElementById('editCap')
 let editID = document.getElementById('idUtente')
+let salvaModifica = document.getElementById('salvaModifica')
+
+let bottone = document.querySelector('#aggiungi')
+let nome = document.querySelector('#name')
+let username = document.querySelector('#username')
+let email = document.querySelector('#email')
+let telefono = document.querySelector('#telefono')
+let website = document.querySelector('#website')
+let via = document.querySelector('#via')
+let civico = document.querySelector('#civico')
+let citta = document.querySelector('#citta')
+let cap = document.querySelector('#cap')
+
 let vediModal = document.getElementById('viewModalContent')
 let btnAvanti = document.getElementById('btnAvanti')
 let btnIndietro = document.getElementById('btnIndietro')
@@ -19,6 +32,116 @@ console.log(usersPerPage);
 let currentPage = 0;
 let start = 0;
 let righe = [];
+
+/* form validation - nuovo utente modal */
+
+const validate = () => {
+    // e.preventDefault();
+    if (nome.value === "") {
+        alert("Inserisci il tuo nome e cognome.");
+        nome.focus();
+        editNome.focus();
+        return false;
+    }
+    if (username.value === "") {
+        alert("Inserisci il tuo username.");
+        username.focus();
+        return false;
+    }
+    if (email.value === "") {
+        alert("Inserisci la tua email.");
+        email.focus();
+        return false;
+    }
+    if (telefono.value === "") {
+        alert("Inserisci il tuo numero di telefono.");
+        telefono.focus();
+        return false;
+    }
+    if (website.value === "") {
+        alert("Inserisci il tuo sito web.");
+        website.focus();
+        return false;
+    }
+    if (via.value === "") {
+        alert("Inserisci la tua via.");
+        via.focus();
+        return false;
+    }
+    if (civico.value === "") {
+        alert("Inserisci il tuo civico.");
+        civico.focus();
+        return false;
+    }
+    if (citta.value === "") {
+        alert("Inserisci una città.");
+        citta.focus();
+        return false;
+    }
+    if (cap.value === "") {
+        alert("Inserisci il CAP.");
+        cap.focus();
+        return false;
+    }
+
+    return true;
+}
+
+bottone.addEventListener('click', validate);
+
+/* form validation - edit modal */
+const validateEdit = () => {
+    // e.preventDefault();
+    if (editNome.value === "") {
+        alert("Inserisci il nome e cognome.");
+        editNome.focus();
+        return false;
+    }
+    if (editUsername.value === "") {
+        alert("Inserisci il tuo username.");
+        editUsername.focus();
+        return false;
+    }
+    if (editEmail.value === "") {
+        alert("Inserisci la tua email.");
+        editEmail.focus();
+        return false;
+    }
+    if (editTelefono.value === "") {
+        alert("Inserisci il tuo numero di telefono.");
+        editTelefono.focus();
+        return false;
+    }
+    if (editWebsite.value === "") {
+        alert("Inserisci il tuo sito web.");
+        editWebsite.focus();
+        return false;
+    }
+    if (editVia.value === "") {
+        alert("Inserisci la tua via.");
+        editVia.focus();
+        return false;
+    }
+    if (editCivico.value === "") {
+        alert("Inserisci il tuo civico.");
+        editCivico.focus();
+        return false;
+    }
+    if (editCitta.value === "") {
+        alert("Inserisci una città.");
+        editCitta.focus();
+        return false;
+    }
+    if (editCap.value === "") {
+        alert("Inserisci il CAP.");
+        editCap.focus();
+        return false;
+    }
+
+    return true;
+}
+salvaModifica.addEventListener('click', validateEdit);
+
 
 function avanti() {
     currentPage++
@@ -41,8 +164,6 @@ btnIndietro.addEventListener('click', indietro)
 fetch(APPURL)
     .then(res => res.json())
     .then(res => {
-        //**** paginazione */
-
         selectPages.addEventListener('change', function pageNumber() {
             tabella.innerHTML = ''
             for (let l = 0; l <= this.value - 1; l++) {
@@ -161,23 +282,13 @@ fetch(APPURL)
 
 
 //******* AGGIUNGI UTENTE
-let bottone = document.querySelector('#aggiungi')
+
 
 bottone.addEventListener('click', function (e) {
     e.preventDefault()
 
-    let name = document.querySelector('#name')
-    let username = document.querySelector('#username')
-    let email = document.querySelector('#email')
-    let telefono = document.querySelector('#telefono')
-    let website = document.querySelector('#website')
-    let via = document.querySelector('#via')
-    let civico = document.querySelector('#civico')
-    let citta = document.querySelector('#citta')
-    let cap = document.querySelector('#cap')
-
     let user = {
-        name: name.value,
+        name: nome.value,
         username: username.value,
         email: email.value,
         phone: telefono.value,
@@ -190,29 +301,30 @@ bottone.addEventListener('click', function (e) {
         }
     }
 
-    fetch(APPURL, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(user)
-    })
-        .then(res => res.json())
-        .then(function (res) {
-            console.log(res);
-        }).then(res => {
-            Swal.fire({
-                icon: 'success',
-                title: 'Utente aggiunto',
-                html: `L'utente ${user.name} è stato aggiunto con successo!`,
-            })
-
+    if (validate()) {
+        fetch(APPURL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(user)
         })
+            .then(res => res.json())
+            .then(function (res) {
+                console.log(res);
+            }).then(res => {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Utente aggiunto',
+                    html: `L'utente ${user.name} è stato aggiunto con successo!`,
+                })
+
+            })
+    } else {
+    }
 })
 
 console.log('test1');
-
-let salvaModifica = document.getElementById('salvaModifica')
 salvaModifica.addEventListener('click', function () {
 
     let user = {
@@ -229,20 +341,22 @@ salvaModifica.addEventListener('click', function () {
         }
     }
 
-    fetch(APPURL + '/' + editID.value, {
-        method: 'PUT',
-        body: JSON.stringify(user)
-    }).then(function (res) {
-        console.log(res);
+    if (validateEdit()) {
+        fetch(APPURL + '/' + editID.value, {
+            method: 'PUT',
+            body: JSON.stringify(user)
+        }).then(function (res) {
+            console.log(res);
 
-    }).then(res => {
-        Swal.fire({
-            icon: 'success',
-            title: 'Utente aggiornato',
-            html: `L'utente ${user.name} è stato aggiornato con successo!`,
+        }).then(res => {
+            Swal.fire({
+                icon: 'success',
+                title: 'Utente aggiornato',
+                html: `L'utente ${user.name} è stato aggiornato con successo!`,
+            })
+
         })
-
-    })
+    } else { }
 })
 
 
