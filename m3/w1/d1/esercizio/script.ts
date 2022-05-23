@@ -46,6 +46,10 @@ if (giocatore1.numero == numeroVincente) {
     risultato.innerHTML = `<b>${giocatore2.nome}</b><br> ha indovinato il numero!`
 } else if (differenza1 < differenza2) {
     risultato.innerHTML = `<b>${giocatore1.nome}</b><br> si è avvicinato di più al numero vincente!`
-} else {
+} else if (differenza1 > differenza2) {
     risultato.innerHTML = `<b>${giocatore2.nome}</b><br> si è avvicinato di più al numero vincente!`
+} else if (differenza1 == differenza2) {
+    risultato.innerHTML = `<b>${giocatore1.nome}</b> e <b>${giocatore2.nome}</b><br> si sono entrambi avvicinati al numero vincente!`
+} else {
+    risultato.innerHTML = `<b>${giocatore1.nome}</b> e <b>${giocatore2.nome}</b><br> hanno indovinato il numero vincente!`
 }

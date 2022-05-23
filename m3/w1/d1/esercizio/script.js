@@ -42,6 +42,12 @@ else if (giocatore2.numero == numeroVincente) {
 else if (differenza1 < differenza2) {
     risultato.innerHTML = "<b>".concat(giocatore1.nome, "</b><br> si \u00E8 avvicinato di pi\u00F9 al numero vincente!");
 }
-else {
+else if (differenza1 > differenza2) {
     risultato.innerHTML = "<b>".concat(giocatore2.nome, "</b><br> si \u00E8 avvicinato di pi\u00F9 al numero vincente!");
+}
+else if (differenza1 == differenza2) {
+    risultato.innerHTML = "<b>".concat(giocatore1.nome, "</b> e <b>").concat(giocatore2.nome, "</b><br> si sono entrambi avvicinati al numero vincente!");
+}
+else {
+    risultato.innerHTML = "<b>".concat(giocatore1.nome, "</b> e <b>").concat(giocatore2.nome, "</b><br> hanno indovinato il numero vincente!");
 }
