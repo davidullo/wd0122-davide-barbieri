@@ -1,36 +1,3 @@
-// class SonAccount {
-//     public firstName: string;
-//     public balanceInit: number = 0;
-//     public totale: number = 0;
-//     constructor(firstName: string, balanceInit: number) {
-//         this.firstName = firstName;
-//         this.balanceInit = balanceInit;
-//     }
-//     public oneDeposit(x: number): number {
-//         let totale: number = this.balanceInit + x;
-//         console.log(totale);
-//         totale = this.balanceInit + x
-//         return totale;
-//     }
-//     public oneWithdraw(x: number): number {
-//         return this.balanceInit - x;
-//     }
-// }
-// let son = new SonAccount('Davide', 100)
-// console.log(son);
-// console.log(son.oneDeposit(203));
-// console.log(son.oneDeposit(203));
-// console.log(son.oneWithdraw(203));
-// class MotherAccount extends SonAccount {
-//     public interest: number = 10;
-//     constructor(firstName: string, balanceInit: number) {
-//         super(firstName, balanceInit)
-//     }
-// }
-// let mother = new MotherAccount('Maria', 1000, 10)
-// console.log(mother);
-// console.log(mother.oneDeposit(100));
-// console.log(mother.oneDeposit(100));
 var SonAccount = /** @class */ (function () {
     function SonAccount(balanceInit) {
         this.balanceInit = balanceInit;
