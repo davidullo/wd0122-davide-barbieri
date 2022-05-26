@@ -52,8 +52,7 @@ fetch(APPURL)
             console.log(`Prezzo del capo scontato: ${capo.getAcquistoCapo()} €`);
             console.log('---');
 
-            let capoDettagli: any = new Capi(capo.id, capo.codProd, capo.collezione, capo.capo, capo.modello, capo.quantita, capo.colore, capo.prezzoIvaEsclusa, capo.prezzoIvaInclusa, capo.disponibile, capo.saldo)
-            console.log(capoDettagli);
+            console.log(capo);
 
         }
     })
