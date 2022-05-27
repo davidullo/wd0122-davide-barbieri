@@ -98,7 +98,7 @@ class ThirdUser implements ISmartphone {
 
     public ricarica(quantita: number): void {
         this.carica += quantita;
-        console.log(`L'utente ${utente3.nome} ha effettuato ${utente3.numeroChiamate} chiamate. Credito residuo: ${utente3.carica}€.`);
+        console.log(`L'utente ${utente3.nome} ha effettuato una ricarica di ${quantita}€. Credito residuo: ${utente3.carica}€.`);
     }
 
     public chiamata(minuti: number): void {

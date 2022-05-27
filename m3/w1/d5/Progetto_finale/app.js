@@ -61,7 +61,7 @@ class ThirdUser {
     }
     ricarica(quantita) {
         this.carica += quantita;
-        console.log(`L'utente ${utente3.nome} ha effettuato ${utente3.numeroChiamate} chiamate. Credito residuo: ${utente3.carica}€.`);
+        console.log(`L'utente ${utente3.nome} ha effettuato una ricarica di ${quantita}€. Credito residuo: ${utente3.carica}€.`);
     }
     chiamata(minuti) {
         // let costoAlMinuto: any = 0.20; // mettendo il tipo number restituisce errore
