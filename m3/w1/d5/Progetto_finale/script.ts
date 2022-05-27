@@ -16,7 +16,7 @@ class FirstUser implements ISmartphone {
     public numeroTelefono: number;
     public carica: number;
     public numeroChiamate: number = 0;
-    costoAlMinuto: number = 0.20;
+    public costoAlMinuto: number = 0.20;
 
     constructor(nome: string, numeroTelefono: number, carica: number) {
         this.nome = nome;
@@ -52,7 +52,7 @@ class SecondUser implements ISmartphone {
     public numeroTelefono: number;
     public carica: number;
     public numeroChiamate: number = 0;
-    costoAlMinuto: number = 0.20;
+    public costoAlMinuto: number = 0.20;
 
     constructor(nome: string, numeroTelefono: number, carica: number) {
         this.nome = nome;
@@ -88,7 +88,7 @@ class ThirdUser implements ISmartphone {
     public numeroTelefono: number;
     public carica: number;
     public numeroChiamate: number = 0;
-    costoAlMinuto: number = 0.20;
+    public costoAlMinuto: number = 0.20;
 
     constructor(nome: string, numeroTelefono: number, carica: number) {
         this.nome = nome;
