@@ -1,0 +1,18 @@
+<input
+  type="text"
+  class="form-control"
+  placeholder="Scrivi..."
+  (keyup)="cambiaNome($event)"
+/>
+
+{{ nome }}
+
+<!-- si deve chiamare necessariamente $event -->
+
+<button
+  class="btn btn-warning"
+  (click)="mostraNascondiPassword()"
+  [innerText]="cambiaEtichetta()"
+>
+  Mostra password
+</button>
