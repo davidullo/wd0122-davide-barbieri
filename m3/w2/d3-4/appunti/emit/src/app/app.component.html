@@ -1,0 +1,36 @@
+<div class="container">
+  <form action="">
+    <!-- ngModel mi serve per leggere e scrivere il valore dei form, ma devo installare il modulo in app module -->
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="name"
+      placeholder="nome"
+      name="name"
+    />
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="lastname"
+      placeholder="cognome"
+      name="lastname"
+    />
+    <button (click)="aggiungiUomo()" class="btn btn-primary">
+      Inserisci uomo
+    </button>
+    <button (click)="aggiungiDonna()" class="btn btn-primary">
+      Inserisci donna
+    </button>
+  </form>
+</div>
+
+{{ name }}
+
+<table class="table table-sm">
+  <tr>
+    <th>Name</th>
+    <th>Last name</th>
+    <th>Gender</th>
+  </tr>
+  <tr *ngFor="let user of users"></tr>
+</table>
