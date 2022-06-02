@@ -1,0 +1,10 @@
+nav {
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: royalblue;
+}
+
+h1 {
+  color: white;
+}

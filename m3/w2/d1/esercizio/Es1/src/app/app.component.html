@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>
+
+<button (click)="aggiungi()">Aggiungi utente</button>
+<!-- <button (click)="isVisible = !isVisible">Mostra</button> -->
+
+<!-- <table *ngIf="isVisible"> -->
+<table *ngIf="users.length > 0">
+  <tr>
+    <th>Username</th>
+    <th>Nome e cognome</th>
+    <th>Azioni</th>
+  </tr>
+  <tr *ngFor="let u of users">
+    <td>{{ u.username }}</td>
+    <td>{{ u.name }}</td>
+    <td>
+      <button (click)="edit(u.id)">Edit</button>
+      <button (click)="elimina(u.id)">Del</button>
+    </td>
+  </tr>
+</table>
+
+<div>
+  <h1>Dettagli</h1>
+</div>
