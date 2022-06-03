@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="input">
+    <input type="text" placeholder="Scrivi qualcosa..." [(ngModel)]="newTodo" />
+    <button (click)="addTodo()">Aggiungi</button>
+  </div>
+  <ul>
+    <li *ngFor="let Todo of Todos; let i = index">
+      {{ i }} - {{ Todo }} <button (click)="completeTodo(i)">✅</button>
+    </li>
+  </ul>
+</div>
