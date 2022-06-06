@@ -3,6 +3,6 @@
 <div *ngFor="let photo of splicedPhotos" class="photo">
   <img src="{{ photo.thumbnailUrl }}" alt="" />
   <p>{{ photo.title }}</p>
-  <button (click)="eliminaFoto(photo.id)">Cancella</button>
-  <button (click)="contaLikes()">Mi Piace</button>
+  <button (click)="eliminaFoto(photo.id)" class="cancella">Cancella</button>
+  <button (click)="contaLikes()" class="like">Mi Piace</button>
 </div>
