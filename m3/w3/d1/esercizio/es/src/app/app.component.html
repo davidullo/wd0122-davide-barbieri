@@ -1,0 +1,8 @@
+<h1>Test</h1>
+<h2>Numero mi piace: {{ count }}</h2>
+<div *ngFor="let photo of splicedPhotos" class="photo">
+  <img src="{{ photo.thumbnailUrl }}" alt="" />
+  <p>{{ photo.title }}</p>
+  <button (click)="eliminaFoto(photo.id)">Cancella</button>
+  <button (click)="contaLikes()">Mi Piace</button>
+</div>
