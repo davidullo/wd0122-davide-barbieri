@@ -5,10 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule], // HttpClientModule mi serve per fare chiamate ajax. Ricorda di importarlo correttamente sopra
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule], // HttpClientModule mi serve per fare chiamate ajax. Ricorda di importarlo correttamente sopra
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,8 +1,36 @@
-<button (click)="fetchUsersPippo()">get</button>
-<div>
-  <h1>Utenti:</h1>
-  <div *ngFor="let user of users">
-    {{ user.first_name }}
-    {{ user.last_name }}
+<h1>Aggiungi Utente</h1>
+<form action="">
+  <input
+    type="text"
+    placeholder="Nome"
+    name="first_name"
+    [(ngModel)]="newUser.first_name"
+  />
+  <input
+    type="text"
+    placeholder="Cognome"
+    name="last_name"
+    [(ngModel)]="newUser.last_name"
+  />
+  <button class="btn btn-success" (click)="salvaUser()">crea</button>
+</form>
+
+{{ newUser | json }}
+
+<hr />
+<div class="container">
+  <button class="btn btn-primary" (click)="fetchUsersPippo()">get</button>
+  <div *ngIf="!isLoading && users.length > 0">
+    <h1>Utenti:</h1>
+    <div *ngFor="let user of users">
+      {{ user.id }}
+      {{ user.first_name }}
+      {{ user.last_name }}
+      <button class="btn btn-danger" (click)="eliminaUser(user.id)">
+        Elimina
+      </button>
+    </div>
+    <div *ngIf="!isLoading && users.length == 0">Non ci sono utenti</div>
+    <div *ngIf="isLoading">Loading...</div>
   </div>
 </div>
