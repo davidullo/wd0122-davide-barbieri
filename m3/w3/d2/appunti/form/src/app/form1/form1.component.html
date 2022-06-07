@@ -1,0 +1,53 @@
+<div class="container">
+  <form action="" (ngSubmit)="submit(f)" #f="ngForm">
+    <div class="form-group">
+      <label for="email"></label>
+      <!-- se metto le quadre attorno value non serve che metto le graffe al suo contenuto -->
+      <input
+        ngModel
+        name="email"
+        id="email"
+        type="email"
+        class="form-control"
+        placeholder="Email"
+      />
+      <!-- <input
+        [(ngModel)]="email"
+        name="email"
+        id="email"
+        type="email"
+        class="form-control"
+        placeholder="Email"
+      /> -->
+      <!-- <input
+        [value]="email"
+        id="email"
+        type="email"
+        class="form-control"
+        placeholder="Email"
+      /> -->
+    </div>
+    <div class="form-group">
+      <label for="password"></label>
+      <input
+        ngModel
+        name="password"
+        id="password"
+        type="password"
+        class="form-control"
+        placeholder="Password"
+      />
+    </div>
+    <div class="form-group">
+      <label for="city"></label>
+      <select class="form-select" ngModel name="city" id="city">
+        <option value="">Seleziona</option>
+        <option value="roma">Roma</option>
+        <option value="milano">Milano</option>
+        <option value="reggio-emilia">Reggio Emilia</option>
+      </select>
+    </div>
+    <button class="btn btn-primary mt-4">Invia</button>
+  </form>
+</div>
+{{ email }}
