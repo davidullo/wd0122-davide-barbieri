@@ -17,8 +17,9 @@ export class LoginComponent implements OnInit {
   };
 
   login() {
-    this.auth.login(this.authData).subscribe((res) => {
+    this.auth.login(this.authData).subscribe((res: any) => {
       console.log(res);
+      this.auth.logUser(res.accessToken);
     });
   }
 }

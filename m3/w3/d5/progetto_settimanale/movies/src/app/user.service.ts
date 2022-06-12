@@ -11,6 +11,10 @@ export class UserService {
   apiUrl: string = 'http://localhost:4201/users';
 
   registerUser(user: any) {
-    return this.http.post(this.apiUrl, user);
+    return this.http.post(this.apiUrlRegister, user);
+  }
+
+  getUser(id: number) {
+    return this.http.get((this.apiUrl = '/' + id));
   }
 }
