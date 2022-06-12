@@ -1,9 +1,16 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
+  constructor(private http: HttpClient) {}
 
-  constructor() { }
+  apiUrlRegister: string = 'http://localhost:4201/register';
+  apiUrl: string = 'http://localhost:4201/users';
+
+  registerUser(user: any) {
+    return this.http.post(this.apiUrl, user);
+  }
 }

@@ -1,4 +1,20 @@
 {
-  "users": [],
-  "movie": []
+  "users": [
+    {
+      "email": "ertertert@gmail.com",
+      "password": "$2a$10$jjLbfUx5t2pGoH85jpmP9evgn3iEtSPd7S7OvCxWL/UU5jUtMdUyG",
+      "id": 1
+    },
+    {
+      "email": "admin@admin.it",
+      "password": "$2a$10$NkaUcD.IOQKbICbE7erZA.DfNcxBNWwLvDizOhxFOUZjsZL8IHBoi",
+      "id": 2
+    },
+    {
+      "email": "test@1.com",
+      "password": "$2a$10$HtiJC5/YCe/CeRTOZG1Ji.jLCjV2xqnheGxMkO92OD7Sx7gD8T2L.",
+      "id": 3
+    }
+  ],
+  "movies": []
 }
