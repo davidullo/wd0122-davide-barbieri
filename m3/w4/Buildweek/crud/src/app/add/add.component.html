@@ -1,11 +1,22 @@
-<form action="" class="form-control" #f="ngForm">
-  <input type="text" placeholder="Titolo" name="title" [ngModel]="data.title" />
+<form action="" class="" #f="ngForm">
+  <label for="title" class="form-label">Titolo</label>
+  <input
+    class="form-control"
+    type="text"
+    placeholder="Titolo.."
+    name="title"
+    id="title"
+    [(ngModel)]="data.title"
+  />
+  <label for="body" class="form-label">Contenuto</label>
   <textarea
-    name="content"
-    id=""
+    class="form-control"
+    name="body"
+    id="body"
     cols="30"
     rows="10"
-    [ngModel]="data.body"
+    placeholder="Scrivi..."
+    [(ngModel)]="data.body"
   ></textarea>
-  <button (click)="addPost()" class="btn btn-primary">Crea</button>
+  <button (click)="addPost()" class="btn btn-success">Create post</button>
 </form>

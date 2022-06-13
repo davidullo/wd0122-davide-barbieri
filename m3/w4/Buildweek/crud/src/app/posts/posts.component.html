@@ -1,1 +1,21 @@
-<p>posts works!</p>
+<h1>posts</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Titolo</th>
+      <th>Body</th>
+      <th>Interagisci</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let post of posts">
+      <td>{{ post.id }}</td>
+      <td>{{ post.title }}</td>
+      <td>{{ post.body }}</td>
+      <td>
+        <button class="btn btn-primary">🔍</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

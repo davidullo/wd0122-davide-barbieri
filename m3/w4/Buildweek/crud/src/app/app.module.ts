@@ -8,9 +8,10 @@ import { PostsComponent } from './posts/posts.component';
 import { AddComponent } from './add/add.component';
 import { NavComponent } from './nav/nav.component';
 import { FormsModule } from '@angular/forms';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
-  declarations: [AppComponent, PostsComponent, AddComponent, NavComponent],
+  declarations: [AppComponent, PostsComponent, AddComponent, NavComponent, DetailsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
