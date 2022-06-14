@@ -1,14 +1,3 @@
-<form action="">
-  <input
-    class="form-control"
-    type="number"
-    placeholder="ID"
-    name="id"
-    [(ngModel)]="num"
-  />
-  <button (click)="getPost(5)" class="btn btn-primary">Get post</button>
-</form>
-<hr />
 <form action="" class="" #f="ngForm">
   <input
     class="form-control"
@@ -26,4 +15,5 @@
     [(ngModel)]="data.body"
   ></textarea>
   <button (click)="detailsPost()" class="btn btn-warning">Edit post</button>
+  <button (click)="detailsPost()" class="btn btn-danger">Delete</button>
 </form>

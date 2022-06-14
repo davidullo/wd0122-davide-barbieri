@@ -1,9 +1,9 @@
 {
   "posts": [
     {
+      "id": 1,
       "title": "test 1",
-      "body": "body 1",
-      "id": 1
+      "body": "dciwesubciwebvcied"
     },
     {
       "title": "test 13",
@@ -16,9 +16,9 @@
       "id": 3
     },
     {
+      "id": 4,
       "title": "test title bla",
-      "body": "test body bla",
-      "id": 4
+      "body": "test body gbgb"
     },
     {
       "title": "test pippo",

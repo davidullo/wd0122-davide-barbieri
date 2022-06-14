@@ -9,9 +9,10 @@ import { AddComponent } from './add/add.component';
 import { NavComponent } from './nav/nav.component';
 import { FormsModule } from '@angular/forms';
 import { DetailsComponent } from './details/details.component';
+import { DetailsPostComponent } from './details-post/details-post.component';
 
 @NgModule({
-  declarations: [AppComponent, PostsComponent, AddComponent, NavComponent, DetailsComponent],
+  declarations: [AppComponent, PostsComponent, AddComponent, NavComponent, DetailsComponent, DetailsPostComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
