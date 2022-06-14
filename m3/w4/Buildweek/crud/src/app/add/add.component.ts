@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 import { OperationsService } from '../operations.service';
 
 @Component({
@@ -19,6 +20,13 @@ export class AddComponent implements OnInit {
   addPost() {
     this.operations.createPost(this.data).subscribe({
       next: (res) => console.log(res),
+    });
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Your work has been saved',
+      showConfirmButton: false,
+      timer: 1500,
     });
   }
 }

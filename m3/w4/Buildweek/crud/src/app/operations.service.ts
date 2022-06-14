@@ -27,7 +27,7 @@ export class OperationsService {
     return this.http.get(APIURL + '/' + id);
   }
 
-  deletePost(id: number): Observable<any> {
+  deletePost(id: any): Observable<any> {
     return this.http.delete(APIURL + '/' + id);
   }
 
