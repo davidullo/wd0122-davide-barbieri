@@ -10,15 +10,24 @@ import { NavComponent } from './nav/nav.component';
 import { FormsModule } from '@angular/forms';
 import { DetailsComponent } from './details/details.component';
 import { DetailsPostComponent } from './details-post/details-post.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
-  declarations: [AppComponent, PostsComponent, AddComponent, NavComponent, DetailsComponent, DetailsPostComponent],
+  declarations: [
+    AppComponent,
+    PostsComponent,
+    AddComponent,
+    NavComponent,
+    DetailsComponent,
+    DetailsPostComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
     FormsModule,
+    NgxSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

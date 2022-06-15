@@ -1,0 +1,8 @@
+.btn-secondary {
+  background-color: gainsboro;
+  border-color: gainsboro;
+  &:hover {
+    background-color: gray;
+    border-color: gray;
+  }
+}

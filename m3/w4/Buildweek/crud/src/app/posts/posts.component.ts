@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Blueprint } from '../model/blueprint.model';
 import { OperationsService } from '../operations.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-posts',
@@ -8,7 +9,10 @@ import { OperationsService } from '../operations.service';
   styleUrls: ['./posts.component.scss'],
 })
 export class PostsComponent implements OnInit {
-  constructor(private operations: OperationsService) {}
+  constructor(
+    private operations: OperationsService,
+    private spinner: NgxSpinnerService
+  ) {}
 
   posts: Blueprint[] = [];
 
@@ -17,8 +21,10 @@ export class PostsComponent implements OnInit {
   }
 
   getAllPosts() {
+    this.spinner.show();
     this.operations.getAll().subscribe((res) => {
       this.posts = res;
+      this.spinner.hide();
     });
   }
 }

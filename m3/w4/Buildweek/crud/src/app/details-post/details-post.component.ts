@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { OperationsService } from '../operations.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-details-post',
@@ -12,7 +13,8 @@ export class DetailsPostComponent implements OnInit {
   constructor(
     private operations: OperationsService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private spinner: NgxSpinnerService
   ) {}
 
   data = {
@@ -20,6 +22,14 @@ export class DetailsPostComponent implements OnInit {
     body: '',
     id: '',
   };
+
+  // isLoading = false;
+  // toggleLoading = () => {
+  //   this.isLoading = true;
+  //   setTimeout(() => {
+  //     this.isLoading = false;
+  //   }, 3000);
+  // };
 
   ngOnInit(): void {
     this.route.params.subscribe((p) => {
@@ -29,10 +39,12 @@ export class DetailsPostComponent implements OnInit {
   }
 
   getPost(id: number) {
+    this.spinner.show();
     this.operations.getPost(id).subscribe({
       next: (res) => {
         this.data = res;
         console.log(this.data);
+        this.spinner.hide();
       },
     });
   }
