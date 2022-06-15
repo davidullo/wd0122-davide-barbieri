@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { OperationsService } from '../operations.service';
 
@@ -8,7 +9,7 @@ import { OperationsService } from '../operations.service';
   styleUrls: ['./add.component.scss'],
 })
 export class AddComponent implements OnInit {
-  constructor(private operations: OperationsService) {}
+  constructor(private router: Router, private operations: OperationsService) {}
 
   ngOnInit(): void {}
 
@@ -22,11 +23,13 @@ export class AddComponent implements OnInit {
       next: (res) => console.log(res),
     });
     Swal.fire({
-      position: 'top-end',
       icon: 'success',
       title: 'Your work has been saved',
       showConfirmButton: false,
-      timer: 1500,
+      timer: 1000,
     });
+    setTimeout(() => {
+      this.router.navigate(['/']);
+    }, 1000);
   }
 }
