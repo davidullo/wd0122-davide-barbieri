@@ -70,8 +70,13 @@ export class DetailsPostComponent implements OnInit {
             console.log(res);
           },
         });
-        Swal.fire('Edited!', 'Your file has been edited.', 'success');
-        this.router.navigate(['/']);
+        Swal.fire('Edited!', 'Your file has been edited.', 'success').then(
+          (result) => {
+            if (result) {
+              this.router.navigate(['/']);
+            }
+          }
+        );
       }
     });
   }
@@ -92,8 +97,13 @@ export class DetailsPostComponent implements OnInit {
             console.log(res);
           },
         });
-        Swal.fire('Deleted!', 'Your file has been deleted.', 'success');
-        this.router.navigate(['/']);
+        Swal.fire('Deleted!', 'Your file has been deleted.', 'success').then(
+          (result) => {
+            if (result) {
+              this.router.navigate(['/']);
+            }
+          }
+        );
       }
     });
   }
