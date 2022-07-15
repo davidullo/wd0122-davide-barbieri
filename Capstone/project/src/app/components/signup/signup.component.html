@@ -1,0 +1,107 @@
+<div class="container">
+  <div class="row justify-content-center align-items-center py-5">
+    <div class="col-md-6">
+      <div class="card p-5">
+        <div class="text-center mb-5">
+          <h1>Sign up</h1>
+          <h6>Please enter your details.</h6>
+        </div>
+        <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+          <!-- <div class="mb-3">
+            <label for="nameInput" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nameInput"
+              ngModel
+              name="name"
+              required
+            />
+            <span
+              class="text-danger"
+              *ngIf="
+                signupForm.controls['name'].dirty &&
+                signupForm.hasError('required', 'name')
+              "
+            >
+              *Name required
+            </span>
+          </div>
+          <div class="mb-3">
+            <label for="lastnameInput" class="form-label">Last name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="lastnameInput"
+              ngModel
+              name="lastname"
+              required
+            />
+            <span
+              class="text-danger"
+              *ngIf="
+                signupForm.controls['lastname'].dirty &&
+                signupForm.hasError('required', 'lastname')
+              "
+            >
+              *Last name required
+            </span>
+          </div> 
+          <hr class="my-5" /> -->
+          <div class="">
+            <label for="emailInput" class="form-label">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="emailInput"
+              aria-describedby="emailHelp"
+              ngModel
+              name="email"
+              required
+              email
+            />
+            <!-- <span
+              class="text-danger"
+              *ngIf="
+                signupForm.controls['email'].dirty &&
+                signupForm.hasError('required', 'email')
+              "
+            >
+              *Email required
+            </span> -->
+          </div>
+          <div class="mb-3">
+            <label for="passwordInput" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="passwordInput"
+              ngModel
+              name="password"
+              required
+              minlength="6"
+            />
+            <!-- <span
+              class="text-danger"
+              *ngIf="
+                signupForm.controls['password'].dirty &&
+                signupForm.hasError('required', 'password')
+              "
+            >
+              *Password required
+            </span> -->
+          </div>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button
+              [disabled]="!signupForm.valid"
+              type="submit"
+              class="btn btn-success fw-bold"
+            >
+              Sign Up
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

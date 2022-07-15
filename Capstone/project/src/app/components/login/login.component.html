@@ -1,0 +1,83 @@
+<div class="container">
+  <div class="row justify-content-center align-items-center py-5">
+    <div class="col-md-6">
+      <div class="card p-5">
+        <div class="text-center mb-5">
+          <h1>Login</h1>
+          <h6>Please enter your Email and Password.</h6>
+        </div>
+        <form
+          #loginForm="ngForm"
+          (ngSubmit)="onSubmit(loginForm)"
+          class="needs-validation"
+        >
+          <div class="mb-3">
+            <label for="emailInput" class="form-label">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="emailInput"
+              ngModel
+              name="email"
+              required
+              email
+            />
+            <!-- <span
+              class="text-danger"
+              *ngIf="
+                loginForm.controls['email'].dirty &&
+                loginForm.hasError('required', 'email')
+              "
+            >
+              *Email required
+            </span> -->
+          </div>
+          <div class="mb-3">
+            <label for="passwordInput" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="passwordInput"
+              ngModel
+              name="password"
+              required
+              password
+              minlength="6"
+            />
+            <!-- <span
+              class="text-danger"
+              *ngIf="
+                loginForm.controls['password'].dirty &&
+                loginForm.hasError('required', 'password')
+              "
+            >
+              *Password required
+            </span> -->
+          </div>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button
+              type="submit"
+              class="btn btn-success fw-bold"
+              [disabled]="!loginForm.valid"
+            >
+              Login
+            </button>
+          </div>
+        </form>
+
+        <div class="or-div my-4">
+          <span>Or</span>
+        </div>
+        <div class="d-grid gap-2 col-12 mx-auto">
+          <button
+            class="btn btn-success"
+            role="button"
+            [routerLink]="['/signup']"
+          >
+            Sign up
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

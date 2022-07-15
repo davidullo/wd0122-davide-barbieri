@@ -1,0 +1,111 @@
+<header class="p-3 bg-success text-white">
+  <div class="container">
+    <div class="row">
+      <div
+        class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+      >
+        <a
+          [routerLink]="['/home']"
+          href="/"
+          class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
+        >
+          <img id="logo" src="../../../assets/logo.svg" alt="" />
+        </a>
+
+        <ul
+          class="nav col-12 col-lg-auto me-lg-auto ms-lg-auto mb-2 algin-self-end justify-content-center mb-md-0 align-items-center"
+        >
+          <li>
+            <a href="#" class="nav-link px-2 text-white" [routerLink]="['/']"
+              >Intro</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="nav-link px-2 text-white"
+              [routerLink]="['/home']"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="nav-link px-2 text-white"
+              [routerLink]="['/explore']"
+              >Explore</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="#"
+              class="nav-link px-2 text-white"
+              [routerLink]="['/customers']"
+              *ngIf="isAdmin"
+              >Customers (private)</a
+            >
+          </li>
+        </ul>
+
+        <!-- <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+            <input type="search" class="form-control form-control-dark text-white bg-dark" placeholder="Search..." aria-label="Search">
+          </form> -->
+
+        <div class="text-end">
+          <!-- <a
+            href=""
+            class="btn btn-outline-light me-2 fw-bold"
+            role="button"
+            [routerLink]="['/profile']"
+            *ngIf="isAuthenticated"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-person-circle"
+              viewBox="0 0 16 16"
+              style="margin-bottom: 3px"
+            >
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+              <path
+                fill-rule="evenodd"
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+              />
+            </svg>
+            Profile</a
+          > -->
+          <a
+            href=""
+            class="btn btn-outline-light me-2 fw-bold"
+            role="button"
+            *ngIf="isAuthenticated"
+            (click)="onLogout()"
+            >Logout</a
+          >
+          <a
+            href=""
+            class="btn btn-outline-light me-2 fw-bold"
+            role="button"
+            [routerLink]="['/login']"
+            *ngIf="!isAuthenticated"
+            >Login</a
+          >
+          <a
+            href=""
+            class="btn btn-light fw-bold"
+            role="button"
+            [routerLink]="['/signup']"
+            *ngIf="!isAuthenticated"
+            >Sign up</a
+          >
+          <!-- <button type="button" class="btn btn-outline-light me-2">
+            Login
+          </button>
+          <button type="button" class="btn btn-light">Sign-up</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

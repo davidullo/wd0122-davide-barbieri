@@ -1,0 +1,132 @@
+{
+  "customers": [
+    {
+      "name": "Mimmo",
+      "lastname": "Fantasia",
+      "email": "test@io.it",
+      "number": "4378543785438",
+      "password": "iausdgiagsd29328",
+      "area": "1200",
+      "bar": "true",
+      "restaurant": "true",
+      "shower": "true",
+      "waiter": "true",
+      "photo1": "https://images.unsplash.com/photo-1655992944141-a16e719b3287?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "photo2": "https://images.unsplash.com/photo-1559494007-9f5847c49d94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "photo3": "https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&q=80",
+      "address": {
+        "beachName": "The Beach Club",
+        "beachDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "beachNumber": "019238747",
+        "street": "Via dell'invenzione",
+        "city": "Soverato",
+        "state": "Italia",
+        "zip": "88060"
+      },
+      "id": 1
+    },
+    {
+      "name": "Gianni",
+      "lastname": "Fantoni",
+      "email": "giannifantoni@gianni.it",
+      "number": "83276428623",
+      "password": "asdguidaugi8239",
+      "area": "630",
+      "bar": "true",
+      "restaurant": "true",
+      "shower": "true",
+      "waiter": "false",
+      "photo1": "https://images.unsplash.com/reserve/O7A9fAvYSXC7NTdz8gLQ_IMGP1039.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fGJlYWNofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "photo2": "https://images.unsplash.com/photo-1515404929826-76fff9fef6fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "photo3": "https://images.unsplash.com/photo-1443397646383-16272048780e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+      "address": {
+        "beachName": "L'Ancora",
+        "beachDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+        "beachNumber": "871264313",
+        "street": "Via Roma 24",
+        "city": "Cagliari",
+        "state": "Italia",
+        "zip": "98473"
+      },
+      "id": 2
+    },
+    {
+      "name": "Gigi",
+      "lastname": "Marzulli",
+      "email": "Gigi@Marzulli.co.uk",
+      "number": "12312534",
+      "password": "fsf9f9934ffer",
+      "area": "390",
+      "bar": "true",
+      "restaurant": "false",
+      "shower": "true",
+      "waiter": "true",
+      "photo1": "https://images.unsplash.com/photo-1521170813716-0b3f42fcfb65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      "photo2": "https://images.unsplash.com/photo-1535262412227-85541e910204?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80",
+      "photo3": "https://images.unsplash.com/photo-1591797762236-77dd6dcaa956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+      "address": {
+        "beachName": "Aquarius",
+        "beachDescription": "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat",
+        "beachNumber": "92382863685",
+        "street": "Viale Augusto 23",
+        "city": "Palermo",
+        "state": "Italia",
+        "zip": "184382"
+      },
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "name": "Scott Holman",
+      "lastname": "Fitzpatrick",
+      "email": "loku@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "id": 1
+    },
+    {
+      "name": "Admin",
+      "lastname": "Admin",
+      "email": "admin@admin.it",
+      "password": "adminpassword1234",
+      "id": 2
+    },
+    {
+      "name": "Admin",
+      "lastname": "Admin",
+      "email": "admin@admin.it",
+      "password": "adminpassword1234",
+      "id": 3
+    },
+    {
+      "name": "Fabio",
+      "lastname": "Test",
+      "email": "dfsdasfgd@2902932.it",
+      "password": "test1234",
+      "id": 4
+    },
+    {
+      "email": "sdbfsiu@test.io",
+      "password": "$2a$10$jjrS9q705xVkeMxQ8BObg.hrkImQ4MHY6R61uBlRgk36djFPy6Jd2",
+      "name": "davide",
+      "lastname": "test",
+      "id": 5
+    },
+    {
+      "email": "ttttt@gmail.com",
+      "password": "$2a$10$iEsTptDBbfcZnBgjon4oLuRN5TCibk8mjvLqmbFJ.66kAnnthOQJa",
+      "name": "asdjhiasd",
+      "lastname": "dffgdfg",
+      "id": 6
+    }
+  ],
+  "bookings": [
+    {
+      "id": 1,
+      "customer_id": 1,
+      "date": "2018-01-01",
+      "time": "12:00",
+      "people": 1
+    }
+  ]
+}

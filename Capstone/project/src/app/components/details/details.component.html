@@ -1,0 +1,288 @@
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Beach Phone Number</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body text-center">
+        <p class="text-center fw-bold fs-4">Tap to call:</p>
+        <a
+          class="numLink text-success fw-bold fs-2"
+          href="tel:{{ single.address.beachNumber }}"
+          >{{ single.address.beachNumber }}</a
+        >
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-3 border rounded mb-5">
+  <div class="row">
+    <div class="col-12">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide mt-3"
+        data-bs-ride="true"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="{{ single.photo1 }}"
+              class="imgCarousel d-block w-100 rounded"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="{{ single.photo2 }}"
+              class="imgCarousel d-block w-100 rounded"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="{{ single.photo3 }}"
+              class="imgCarousel d-block w-100 rounded"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- <p>{{ single.id }}</p> -->
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col-12 col-md-9">
+        <h1 id="BeachTitleDetails" class="fw-bolder display-1">
+          {{ single.address.beachName }}
+        </h1>
+        <h3 id="BeachLocationDetails" class="fw-bolder">
+          <i class="bi bi-geo-alt"></i>
+          {{ single.address.city }},
+          <em class="text-muted fs-5">{{ single.address.state }}</em>
+        </h3>
+        <hr />
+        <h2 id="BeachDetailsDetails" class="fw-bolder">
+          <i class="bi bi-list-check"></i>
+          Details
+        </h2>
+        <div class="container-flex mt-3">
+          <table class="table table-bordered rounded align-middle">
+            <thead>
+              <tr>
+                <th class="text-center">Area</th>
+                <th class="text-center">Bar</th>
+                <th class="text-center">Restaurant</th>
+                <th class="text-center">Shower</th>
+                <th class="text-center">Waiter Service</th>
+              </tr>
+            </thead>
+            <tbody class="">
+              <tr>
+                <td class="text-center align-middle">
+                  <p class="fs-4 align-middle">
+                    <b>{{ single.area }}</b> m²
+                  </p>
+                </td>
+                <td class="py-2 text-center align-middle">
+                  <i
+                    *ngIf="single.bar == 'true'"
+                    class="bi bi-patch-check-fill text-success fs-3"
+                  ></i>
+                  <i
+                    *ngIf="single.bar == 'false'"
+                    class="bi bi-x-circle-fill text-danger fs-3"
+                  ></i>
+                </td>
+                <td class="py-2 text-center align-middle">
+                  <i
+                    *ngIf="single.restaurant == 'true'"
+                    class="bi bi-patch-check-fill text-success fs-3"
+                  ></i>
+                  <i
+                    *ngIf="single.restaurant == 'false'"
+                    class="bi bi-x-circle-fill text-danger fs-3"
+                  ></i>
+                </td>
+                <td class="py-2 text-center align-middle">
+                  <i
+                    *ngIf="single.shower == 'true'"
+                    class="bi bi-patch-check-fill text-success fs-3"
+                  ></i>
+                  <i
+                    *ngIf="single.shower == 'false'"
+                    class="bi bi-x-circle-fill text-danger fs-3"
+                  ></i>
+                </td>
+                <td class="py-2 text-center align-middle">
+                  <i
+                    *ngIf="single.waiter == 'true'"
+                    class="bi bi-patch-check-fill text-success fs-3"
+                  ></i>
+                  <i
+                    *ngIf="single.waiter == 'false'"
+                    class="bi bi-x-circle-fill text-danger fs-3"
+                  ></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr />
+        <h2 id="BeachDescriptionDetailsTitle" class="fw-bolder">
+          <i class="bi bi-list"></i>
+          Description
+        </h2>
+        <div class="container-flex">
+          <p id="BeachDescriptionDetails">
+            {{ single.address.beachDescription }}
+          </p>
+        </div>
+      </div>
+      <div class="col-12 col-xl-3 mb-4">
+        <div class="card">
+          <img src="{{ mapUrlComplete }}" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <div class="d-grid">
+              <button
+                class="btn btn-success fw-bold fs-2"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <i class="bi bi-telephone-outbound pe-1"></i> Call
+              </button>
+            </div>
+            <hr />
+            <h3 id="BeachDetailsDetails" class="fw-bolder mb-3">
+              <i class="bi bi-stars"></i>
+              Like & Share
+            </h3>
+            <div id="shareDetails" class="border rounded-pill">
+              <div class="row flex-nowrap">
+                <div id="likeIconDetails" class="col-2">
+                  <a href="#"
+                    ><i class="bi bi-suit-heart fs-4 fw-bold text-danger"></i
+                  ></a>
+                </div>
+                <div id="separatorIconDetails" class="col-2">
+                  <i class="bi bi-dot fs-4"></i>
+                </div>
+                <div id="facebookIconDetails" class="col-2">
+                  <a
+                    href="https://www.facebook.com/sharer/sharer.php?u=http://lidiwebapp.com/deatils/{{
+                      single.id
+                    }}"
+                    target="_blank"
+                  >
+                    <i class="bi bi-facebook fs-4 text-success"></i>
+                  </a>
+                </div>
+                <div id="twitterIconDetails" class="col-2">
+                  <a
+                    href="http://twitter.com/share?text=Check out this beach in {{
+                      single.address.city
+                    }}! Link:&url=http://lidiwebapp.com/deatils/{{
+                      single.id
+                    }}&hashtags=Lidi,SummerOnTheBeach,EPICODE"
+                    ><i class="bi bi-twitter fs-4 text-success"></i
+                  ></a>
+                </div>
+                <div id="instagramIconDetails" class="col-2">
+                  <a href="#" class="instagramShare"
+                    ><i class="bi bi-instagram fs-4 text-success"></i
+                  ></a>
+                </div>
+                <div id="whatsappIconDetails" class="col-2">
+                  <a
+                    href="https://wa.me/?text=Check out this beach in {{
+                      single.address.city
+                    }}! Link: http://lidiwebapp.com/deatils/{{ single.id }}"
+                    ><i class="bi bi-whatsapp fs-4 text-success"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <p>{{ single.address.beachName }}</p> -->
+  <!-- <p>{{ single.address.beachDescription }}</p> -->
+  <!-- <p>{{ single.address.beachNumber }}</p> -->
+
+  <!-- <p>{{ single.address.city }}</p> -->
+  <!-- <p>{{ single.address.street }}</p> -->
+  <!-- <p>{{ single.address.zip }}</p> -->
+  <!-- <p>{{ single.address.state }}</p> -->
+
+  <!-- <p>{{ single.area }}</p> -->
+  <!-- <p>{{ single.bar }}</p> -->
+  <!-- <p>{{ single.restaurant }}</p> -->
+  <!-- <p>{{ single.shower }}</p> -->
+  <!-- <p>{{ single.waiter }}</p> -->
+
+  <!-- <p>{{ single.photo1 }}</p>
+  <p>{{ single.photo2 }}</p>
+  <p>{{ single.photo3 }}</p> -->
+</div>
