@@ -62,7 +62,7 @@ export class AuthService implements HttpInterceptor {
   login(email: string, password: string) {
     return this.http
       .post<AuthResponseData>(
-        'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCABbL4GL9GQn8d7xKKw1PpDsxKDXmVfxY',
+        'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[YOUR_FIREBASE_API_KEY]',
         {
           email: email,
           password: password,
